@@ -1,13 +1,19 @@
 import './App.css'
-import UserPanelLayout from './layouts/UserPanelLayout'
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import UserPanelRoute from './routes/UserPanelRoute'
 
 function App() {
-
-  return (
-    <>
-      <UserPanelLayout />
-    </>
-  )
+    return (
+        <>
+            <BrowserRouter>
+                <Routes>
+                    {UserPanelRoute.map((route) => (
+                        <Route path={route.path} element={route.component} />
+                    ))}
+                </Routes>
+            </BrowserRouter>
+        </>
+    )
 }
 
 export default App

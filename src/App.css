@@ -1,3 +1,19 @@
 .user-panel-border {
     border-radius: 20px;
 }
+
+.user-panel-main {
+    max-width: 1920px;
+}
+
+.cafe-card {
+    max-width: 450px;
+}
+
+.offcanvas-link {
+    vertical-align: sub;
+}
+
+.cafe-card-image {
+    height: 200px;
+}
