@@ -1,24 +1,40 @@
-import React from "react"
+import React, { useState } from "react"
 import UserPanelLayout from "../layouts/UserPanelLayout"
 import cafeDummyData from "../dummyData/cafeDummyData.json"
 
 const Cafe = () => {
+
+    const [cafeFilter, setCafeFilter] = useState("all")
+
+    var filteredCafeData = cafeDummyData.filter(cafeItem => {
+        if (cafeFilter === "all") {
+            return cafeDummyData
+        }
+        else {
+            return cafeItem.category === cafeFilter
+        }
+    })
+
+    function handleCafeItems(selected_filter) {
+        setCafeFilter(selected_filter)
+    }
+
     return (
         <UserPanelLayout>
-            <div className="row">
+            <div onChange={handleCafeItems} className="row">
                 <div className="col-sm-12 col-md-8">
                     <div className="justify-content-center d-flex flex-wrap btn-group">
-                        <button className="btn btn-outline-primary">ALL</button>
-                        <button className="btn btn-outline-primary">PASTA</button>
-                        <button className="btn btn-outline-primary">SALAD</button>
-                        <button className="btn btn-outline-primary">SNACK</button>
-                        <button className="btn btn-outline-primary">COLD DRINK</button>
-                        <button className="btn btn-outline-primary">HOT DRINK</button>
-                        <button className="btn btn-outline-primary">TREAT</button>
-                        <button className="btn btn-outline-primary">DESSERT</button>
+                        <button className="btn btn-outline-primary" onClick={() => handleCafeItems("all")}>ALL</button>
+                        <button className="btn btn-outline-primary" onClick={() => handleCafeItems("pasta")}>PASTA</button>
+                        <button className="btn btn-outline-primary" onClick={() => handleCafeItems("salad")}>SALAD</button>
+                        <button className="btn btn-outline-primary" onClick={() => handleCafeItems("snack")}>SNACK</button>
+                        <button className="btn btn-outline-primary" onClick={() => handleCafeItems("cold_drink")}>COLD DRINK</button>
+                        <button className="btn btn-outline-primary" onClick={() => handleCafeItems("hot_drink")}>HOT DRINK</button>
+                        <button className="btn btn-outline-primary" onClick={() => handleCafeItems("treat")}>TREAT</button>
+                        <button className="btn btn-outline-primary" onClick={() => handleCafeItems("dessert")}>DESSERT</button>
                     </div>
                     <div className="row justify-content-center justify-content-md-start">
-                        {cafeDummyData.map((item, index) => (
+                        {filteredCafeData.map((item, index) => (
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-5 px-md-3 mt-4 cafe-card">
                                 <div key={index} className="card">
                                     <img src={item.photo} className="card-img-top cafe-card-image" alt="..." />
