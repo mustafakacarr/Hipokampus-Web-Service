@@ -6,6 +6,11 @@
     max-width: 1920px;
 }
 
+.user-panel-offcanvas {
+    border-end-end-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
 .cafe-card {
     max-width: 450px;
 }
