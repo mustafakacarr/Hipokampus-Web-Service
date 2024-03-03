@@ -6,7 +6,7 @@ import { faBullhorn, faCubes, faMugSaucer, faUtensils, faWallet, faUser, faMessa
 
 const UserPanelOffcanvas = () => {
     return (
-        <div className="offcanvas offcanvas-start border user-panel-offcanvas" tabIndex="-1" id="userPanelOffcanvas" aria-labelledby="userPanelOffcanvas">
+        <div className="offcanvas offcanvas-start border" tabIndex="-1" id="userPanelOffcanvas" aria-labelledby="userPanelOffcanvas">
             <div className="offcanvas-header">
                 <h5 className="offcanvas-title" id="userPanelOffcanvasLabel">Hipokampus Web Service</h5>
                 <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
