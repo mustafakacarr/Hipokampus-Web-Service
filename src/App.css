@@ -11,8 +11,16 @@
     min-width: 125px;
 }
 
-.sticky-top {
-    top: 75px;
+.user-panel-sidebar-active {
+    color: #cf480a;
+    text-decoration: none;
+    vertical-align: sub;
+}
+
+.user-panel-sidebar-not-active {
+    color: black;
+    text-decoration: none;
+    vertical-align: sub;
 }
 
 .offcanvas-link {

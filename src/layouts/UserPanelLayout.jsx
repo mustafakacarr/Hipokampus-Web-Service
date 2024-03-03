@@ -5,8 +5,8 @@ import UserPanelSidebar from "../components/user-panel-components/UserPanelSideb
 
 const UserPanelLayout = ({ children }) => {
   return (
-    <div>
-      <div className="row g-0 mx-auto user-panel-main">
+    <div className="user-panel-main mx-auto">
+      <div className="row g-0">
         <div className="col-sm-4 col-md-3 col-xl-2">
           <UserPanelSidebar />
         </div>
