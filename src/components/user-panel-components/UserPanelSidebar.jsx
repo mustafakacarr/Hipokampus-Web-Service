@@ -21,7 +21,7 @@ const UserPanelSidebar = () => {
         >
             <a
                 href="/"
-                className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none"
+                className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none brand-logo"
             >
                 <img
                     src="https://hipokampus.com.tr/images/logo-228x48.webp"

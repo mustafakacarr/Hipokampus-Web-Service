@@ -2,6 +2,10 @@
     max-width: 1920px;
 }
 
+.brand-logo {
+    z-index: 50;
+}
+
 .cafe-card {
     max-width: 450px;
 }

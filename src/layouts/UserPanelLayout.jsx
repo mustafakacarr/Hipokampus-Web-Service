@@ -14,11 +14,11 @@ const UserPanelLayout = ({ children }) => {
           <UserPanelHeader />
           <br />
           {children}
+          <div className="container-fluid">
+            <hr />
+            <UserPanelFooter />
+          </div>
         </div>
-      </div>
-      <hr />
-      <div className="container-fluid">
-        <UserPanelFooter />
       </div>
     </div>
   );
