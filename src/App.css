@@ -34,3 +34,7 @@
 .cafe-card-image {
     height: 150px;
 }
+
+.dropdown-button {
+    cursor: pointer;
+}
