@@ -15,10 +15,22 @@
     min-width: 125px;
 }
 
+.catering-order-card {
+    max-width: 400px;
+}
+
+.catering-order-card-title {
+    vertical-align: middle;
+}
+
 .user-panel-sidebar-active {
     color: #cf480a;
     text-decoration: none;
     vertical-align: sub;
+}
+
+.catering-sign {
+    color: #cf480a;
 }
 
 .user-panel-sidebar-not-active {
