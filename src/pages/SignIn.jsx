@@ -6,19 +6,19 @@ const SignIn = () => {
             <div className="m-auto py-5">
                 <div className="w-100 sign-in-form border border-primary rounded">
                     <div className="d-flex justify-content-center row gx-0">
-                        <img class="mb-4 sign-in-image" src="https://hipokampus.com.tr/images/logo-228x48.webp" />
+                        <img className="mb-4 sign-in-image" src="https://hipokampus.com.tr/images/logo-228x48.webp" />
                         <p className="h3 mb-4 fw-normal text-center">Sign in</p>
                         <div class="form-floating">
-                            <input type="text" class="form-control sign-in-username" id="signInUsername" placeholder="Username" />
+                            <input type="text" className="form-control sign-in-username" id="signInUsername" placeholder="Username" />
                             <label for="signInUsername">Username</label>
                         </div>
                         <div class="form-floating">
-                            <input type="password" class="form-control sign-in-password" id="signInPassword" placeholder="Password" />
+                            <input type="password" className="form-control sign-in-password" id="signInPassword" placeholder="Password" />
                             <label for="signInPassword">Password</label>
                         </div>
                         <div class="form-check text-start my-4">
                             <input class="form-check-input" type="checkbox" value="remember-me" id="rememberMe" />
-                            <label class="form-check-label" for="rememberMe">
+                            <label class="form-check-label" htmlFor="rememberMe">
                                 Remember me
                             </label>
                         </div>
@@ -27,6 +27,15 @@ const SignIn = () => {
                                 Sign in
                             </button>
                         </a>
+                        <a href="forgot-password" className="text-center my-1 row gx-0 text-decoration-none">
+                            <button className="btn btn-outline-primary w-100">
+                                Forgot password?
+                            </button>
+                        </a>
+                        <div className="my-4">
+                            Don't have an account?
+                            <a className="ms-2" href="/sign-up">Sign up</a>
+                        </div>
                     </div>
                 </div>
                 <span className="d-flex justify-content-center my-4">
