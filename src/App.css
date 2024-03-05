@@ -29,6 +29,31 @@
     vertical-align: sub;
 }
 
+.sign-in-form {
+    max-width: 340px;
+    padding: 15px;
+}
+
+.sign-in-image {
+    width: 250px;
+}
+
+.sign-in-username {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.sign-in-password {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-floating:focus-within {
+    z-index: 2;
+  }
+
 .catering-sign {
     color: #cf480a;
 }
