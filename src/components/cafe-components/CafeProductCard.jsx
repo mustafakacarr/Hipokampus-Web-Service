@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CafeProductCard = ({ item, index }) => {
     return (
-        <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 px-5 px-md-1 px-lg-3 mt-4 cafe-card">
+        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-5 px-md-2 px-lg-2 px-xxl-3 mt-4 cafe-card">
             <div key={index} className="card">
                 <img
                     src={item.photo}
@@ -27,7 +27,7 @@ const CafeProductCard = ({ item, index }) => {
                             </a>
                         </div>
                         <div className="col-auto">
-                            <a className="btn btn-primary ms-2 px-4">
+                            <a className="btn btn-primary ms-0 px-4">
                                 <FontAwesomeIcon icon={faCartShopping} />
                             </a>
                         </div>
