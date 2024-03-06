@@ -50,6 +50,23 @@
     border-top-right-radius: 0;
 }
 
+.sign-up-password {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.sign-up-password-check {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.sign-up-pdpa {
+    text-decoration: underline;
+    color: #cf480a;
+}
+
 .form-floating:focus-within {
     z-index: 2;
   }

@@ -8,22 +8,22 @@ const SignIn = () => {
                     <div className="d-flex justify-content-center row gx-0">
                         <img className="mb-4 sign-in-image" src="https://hipokampus.com.tr/images/logo-228x48.webp" />
                         <p className="h3 mb-4 fw-normal text-center">Sign in</p>
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input type="text" className="form-control sign-in-username" id="signInUsername" placeholder="Username" />
                             <label for="signInUsername">Username</label>
                         </div>
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input type="password" className="form-control sign-in-password" id="signInPassword" placeholder="Password" />
                             <label for="signInPassword">Password</label>
                         </div>
-                        <div class="form-check text-start my-4">
-                            <input class="form-check-input" type="checkbox" value="remember-me" id="rememberMe" />
-                            <label class="form-check-label" htmlFor="rememberMe">
+                        <div className="form-check text-start my-4">
+                            <input className="form-check-input" type="checkbox" value="remember-me" id="rememberMe" />
+                            <label className="form-check-label" htmlFor="rememberMe">
                                 Remember me
                             </label>
                         </div>
                         <a href="/cafe">
-                            <button class="btn btn-primary w-100 py-2 my-2" type="submit">
+                            <button className="btn btn-primary w-100 py-2 my-2" type="submit">
                                 Sign in
                             </button>
                         </a>
