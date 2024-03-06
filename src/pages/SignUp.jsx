@@ -4,12 +4,12 @@ const SignUp = () => {
     return (
         <div className="d-flex align-items-center min-vh-100 bg-tertiary">
             <div className="m-auto py-5">
-                <div className="w-100 sign-in-form border border-primary rounded">
+                <div className="w-100 sign-up-form border border-primary rounded">
                     <div className="d-flex justify-content-center row gx-0">
-                        <img className="mb-4 sign-in-image" src="https://hipokampus.com.tr/images/logo-228x48.webp" />
+                        <img className="mb-4 sign-up-image" src="https://hipokampus.com.tr/images/logo-228x48.webp" />
                         <p className="h3 mb-3 fw-normal text-center">Sign up</p>
                         <div className="form-floating my-3">
-                            <input type="tel" className="form-control" id="signUpNameSurname" placeholder="Name surname" required/>
+                            <input type="text" className="form-control" id="signUpNameSurname" placeholder="Name surname" required/>
                             <label for="signUpNameSurname">Name surname</label>
                         </div>
                         <div className="form-floating mb-3">

@@ -27,7 +27,7 @@ const SignIn = () => {
                                 Sign in
                             </button>
                         </a>
-                        <a href="forgot-password" className="text-center my-1 row gx-0 text-decoration-none">
+                        <a href="/password-recovery" className="text-center my-1 row gx-0 text-decoration-none">
                             <button className="btn btn-outline-primary w-100">
                                 Forgot password?
                             </button>

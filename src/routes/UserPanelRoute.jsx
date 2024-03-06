@@ -3,6 +3,7 @@ import Packages from "../pages/Packages"
 import Catering from "../pages/Catering"
 import SignIn from "../pages/SignIn"
 import SignUp from "../pages/SignUp"
+import PasswordRecovery from "../pages/PasswordRecovery"
 
 const UserPanelRoute = [
     {
@@ -12,6 +13,10 @@ const UserPanelRoute = [
     {
         path: "/sign-up",
         component: <SignUp />
+    },
+    {
+        path: "/password-recovery",
+        component: <PasswordRecovery />
     },
     {
         path: "/cafe",

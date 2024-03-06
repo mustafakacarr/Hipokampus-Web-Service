@@ -67,6 +67,24 @@
     color: #cf480a;
 }
 
+.sign-up-form {
+    max-width: 340px;
+    padding: 15px;
+}
+
+.sign-up-image {
+    width: 250px;
+}
+
+.password-recovery-form {
+    max-width: 340px;
+    padding: 15px;
+}
+
+.password-recovery-image {
+    width: 250px;
+}
+
 .form-floating:focus-within {
     z-index: 2;
   }
