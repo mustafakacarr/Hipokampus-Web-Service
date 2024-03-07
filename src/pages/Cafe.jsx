@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import UserPanelLayout from "../layouts/UserPanelLayout";
-import cafeDummyData from "../dummyData/cafeDummyData.json";
+import cafeDummyData from "../dummy-data/cafeDummyData.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faCartShopping,
-    faMinus,
-    faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import CafeProductCard from "../components/cafe-components/CafeProductCard";
 

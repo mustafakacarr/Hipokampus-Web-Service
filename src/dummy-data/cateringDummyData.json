@@ -1,0 +1,48 @@
+{
+    "Group_1": [
+        {
+            "name": "Stuffed Peppers",
+            "image": "https://hipokampus.com.tr/images/yemekler/en/stuffed-peppers.jpg"
+        },
+        {
+            "name": "Baked Potatoes With Meatballs",
+            "image": "https://hipokampus.com.tr/images/yemekler/en/oven-baked-potatoes-with-meatballs.jpeg"
+        },
+        {
+            "name": "Creamy Chicken With Mushrooms",
+            "image": "https://hipokampus.com.tr/images/yemekler/en/creamy-chicken-mushroom-saute.webp"
+        },
+        {
+            "name": "Green Beans",
+            "image": "https://hipokampus.com.tr/images/yemekler/en/fresh-beans.jpg"
+        }
+    ],
+    "Group_2": [
+        {
+            "name": "Wheat Soup",
+            "image": "https://hipokampus.com.tr/images/yemekler/en/wheat-soup.jpeg"
+        },
+        {
+            "name": "Çeşmi Nigar Soup",
+            "image": "https://hipokampus.com.tr/images/yemekler/en/cesmi-nigar-soup.jpeg"
+        },
+        {
+            "name": "Rice",
+            "image": "https://hipokampus.com.tr/images/yemekler/en/rice-pilaf.jpg"
+        }
+    ],
+    "Group_3": [
+        {
+            "name": "Broccoli Cauliflower Salad",
+            "image": "https://hipokampus.com.tr/images/yemekler/en/broccoli-cauliflower-salad.jpeg"
+        },
+        {
+            "name": "Haricot Beans Salad",
+            "image": "https://hipokampus.com.tr/images/yemekler/en/piyaz.jpg"
+        },
+        {
+            "name": "Purslane With Yoghurt",
+            "image": "https://hipokampus.com.tr/images/yemekler/en/yogurt-purslane.jpeg"
+        }
+    ]
+}
