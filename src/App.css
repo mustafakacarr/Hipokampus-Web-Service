@@ -28,6 +28,26 @@
     height: 150px;
 }
 
+.package-card {
+    background-color: #f8f9fa;
+}
+
+.package-card-list {
+    background-color: #f8f9fa;
+}
+
+.package-offer {
+    background-color: #f8f9fa;
+}
+
+.package-offer-text {
+    align-self: center;
+}
+
+.package-title {
+    color: #cf480a;
+}
+
 .user-panel-sidebar-active {
     color: #cf480a;
     text-decoration: none;
