@@ -22,25 +22,25 @@ const Catering = () => {
 
     return (
         <UserPanelLayout>
-            <h5 className="text-center mx-5 mb-4">HIPOKAMPUS {currentDate} DAILY CATERING LIST</h5>
-            <div className="d-flex justify-content-center my-4 col col-md-9 mx-auto">
-                <div className="alert alert-info fw-bold w-100 mx-5 mx-sm-3" role="alert">
-                    <p><FontAwesomeIcon icon={faCircleInfo} size="xl" className="me-2" />You can choose one from each group.</p>
-                    <p><FontAwesomeIcon icon={faCircleInfo} size="xl" className="me-2" />You can place your order until 12:00.</p>
-                    <p><FontAwesomeIcon icon={faCircleInfo} size="xl" className="me-2" />Your orders will be ready between 13.30-14.00.</p>
-                    <p><FontAwesomeIcon icon={faCircleInfo} size="xl" className="me-2" />After you create an order in the online system, you can pay to the cashier.</p>
+            <h5 className="text-center mx-5 mb-3">HIPOKAMPUS {currentDate} DAILY CATERING LIST</h5>
+            <div className="d-flex justify-content-center mt-3 mb-0 col col-md-9 mx-auto">
+                <div className="alert alert-info fw-bold w-100 mx-3 py-2" role="alert">
+                    <p className="my-2"><FontAwesomeIcon icon={faCircleInfo} className="me-2" />You can choose one from each group.</p>
+                    <p className="my-2"><FontAwesomeIcon icon={faCircleInfo} className="me-2" />You can place your order until 12:00.</p>
+                    <p className="my-2"><FontAwesomeIcon icon={faCircleInfo} className="me-2" />Your orders will be ready between 13.30-14.00.</p>
+                    <p className="my-2"><FontAwesomeIcon icon={faCircleInfo} className="me-2" />After you create an order in the online system, you can pay to the cashier.</p>
                 </div>
             </div>
-            <h5 className="text-center mx-5 mt-2 mb-5">
+            <h5 className="text-center mx-5 my-2">
                 Group 1 <span className="catering-sign">+ </span>
                 Group 2 <span className="catering-sign">+ </span>
                 Group 3 <span className="catering-sign">= </span>
                 130 ₺ <span style={{ whiteSpace: "nowrap" }}>( 4.13 $)</span>
             </h5>
-            <hr className="mx-5 mb-5" />
+            <hr className="mx-5 mb-3" />
             <div className="row gx-0">
-                <div className="col-sm-12 col-md-7 col-xl-8 col-xxl-9">
-                    <div className="pb-4 px-4">
+                <div className="col-sm-12 col-md-6 col-xl-7 col-xxl-8">
+                    <div className="pb-4 px-4 px-md-1 px-xxl-4">
                         <div className="row gx-0 gap-3">
                             <div className="row gx-0 pb-4 justify-content-center justify-content-md-start">
                                 <div className="text-center text-primary fw-bold fs-4">
@@ -90,7 +90,7 @@ const Catering = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-sm-12 col-md-5 col-xl-4 col-xxl-3 px-5 px-sm-1 px-md-3 px-lg-4">
+                <div className="col-sm-12 col-md-6 col-xl-5 col-xxl-4 px-5 px-sm-1 px-md-2 px-lg-4">
                     <div className="card text-center mx-auto catering-order-card">
                         <h4 className="card-header">
                             <FontAwesomeIcon icon={faReceipt} />

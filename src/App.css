@@ -29,7 +29,14 @@
 }
 
 .package-card {
+    border: 2px solid #cf480a;
+    border-radius: .375rem;
     background-color: #f8f9fa;
+}
+
+.package-ticket-card {
+    border: 2px solid #cf480a;
+    border-radius: .375rem;
 }
 
 .package-card-list {
@@ -44,8 +51,18 @@
     align-self: center;
 }
 
+.packages-card-footer {
+    background-color: white;
+}
+
+.packages-ticket-card-footer {
+    background-color: #f8f9fa;
+}
+
 .package-title {
-    color: #cf480a;
+    color: white;
+    font-weight: bold;
+    background-color: #cf480a;
 }
 
 .user-panel-sidebar-active {
@@ -112,7 +129,7 @@
 
 .form-floating:focus-within {
     z-index: 2;
-  }
+}
 
 .catering-sign {
     color: #cf480a;
