@@ -40,21 +40,22 @@ const Catering = () => {
             <hr className="mx-5 mb-3" />
             <div className="row gx-0">
                 <div className="col-sm-12 col-md-6 col-xl-7 col-xxl-8">
-                    <div className="pb-4 px-4 px-md-1 px-xxl-4">
+                    <div className="pb-4 px-1 px-xxl-2">
                         <div className="row gx-0 gap-3">
                             <div className="row gx-0 pb-4 justify-content-center justify-content-md-start">
                                 <div className="text-center text-primary fw-bold fs-4">
                                     <FontAwesomeIcon icon={faRectangleList} /> Group 1
                                 </div>
                                 {cateringDummyData.Group_1.map((item, index) => (
-                                    <div key={index} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
-                                        <div class="card w-100">
+                                    <label key={index} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
+                                        <input type="radio" name="group-1-radio" className="catering-input" />
+                                        <div className="card d-flex card-input w-100">
                                             <img src={item.image} class="card-img-top catering-card-image" alt="..." />
                                             <div class="card-body">
                                                 <p class="card-text fw-bold text-center fs-5">{item.name}</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </label>
                                 ))}
                             </div>
                             <div className="row gx-0 gap-0 pt-3 py-4 justify-content-center justify-content-md-start">
@@ -62,14 +63,15 @@ const Catering = () => {
                                     <FontAwesomeIcon icon={faRectangleList} /> Group 2
                                 </div>
                                 {cateringDummyData.Group_2.map((item, index) => (
-                                    <div key={index} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
-                                        <div class="card w-100">
+                                    <label key={index} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
+                                        <input type="radio" name="group-2-radio" className="catering-input" />
+                                        <div className="card d-flex card-input w-100">
                                             <img src={item.image} class="card-img-top catering-card-image" alt="..." />
                                             <div class="card-body">
                                                 <p class="card-text fw-bold text-center fs-5">{item.name}</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </label>
                                 ))}
                             </div>
                             <div className="row gx-0 gap-0 pt-3 py-4 justify-content-center justify-content-md-start">
@@ -77,14 +79,15 @@ const Catering = () => {
                                     <FontAwesomeIcon icon={faRectangleList} /> Group 3
                                 </div>
                                 {cateringDummyData.Group_3.map((item, index) => (
-                                    <div key={index} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
-                                        <div class="card w-100">
+                                    <label key={index} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
+                                        <input type="radio" name="group-3-radio" className="catering-input" />
+                                        <div className="card d-flex card-input w-100">
                                             <img src={item.image} class="card-img-top catering-card-image" alt="..." />
                                             <div class="card-body">
                                                 <p class="card-text fw-bold text-center fs-5">{item.name}</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </label>
                                 ))}
                             </div>
                         </div>
