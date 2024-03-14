@@ -18,9 +18,9 @@ function getDate() {
 
 const Catering = () => {
 
-    const [groupOne, setGroupOne] = useState(null)
-    const [groupTwo, setGroupTwo] = useState(null)
-    const [groupThree, setGroupThree] = useState(null)
+    const [groupOne, setGroupOne] = useState(undefined)
+    const [groupTwo, setGroupTwo] = useState(undefined)
+    const [groupThree, setGroupThree] = useState(undefined)
 
     function handleGroupOne(meal) {
         setGroupOne(meal)
@@ -64,11 +64,11 @@ const Catering = () => {
                                 </div>
                                 {cateringDummyData.Group_1.map((item, index) => (
                                     <label key={index} onClick={() => handleGroupOne(item.name)} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
-                                        <input type="radio" name="group-1-radio" className="catering-input" checked={item.name == groupOne}/>
+                                        <input type="radio" name="group-1-radio" className="catering-input" checked={item.name == groupOne} readOnly/>
                                         <div className="card d-flex card-input w-100">
-                                            <img src={item.image} class="card-img-top catering-card-image" alt="..." />
-                                            <div class="card-body">
-                                                <p class="card-text fw-bold text-center fs-5">{item.name}</p>
+                                            <img src={item.image} className="card-img-top catering-card-image" alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text fw-bold text-center fs-5">{item.name}</p>
                                             </div>
                                         </div>
                                     </label>
@@ -80,11 +80,11 @@ const Catering = () => {
                                 </div>
                                 {cateringDummyData.Group_2.map((item, index) => (
                                     <label key={index} onClick={() => handleGroupTwo(item.name)} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
-                                        <input type="radio" name="group-2-radio" className="catering-input" checked={item.name == groupTwo}/>
+                                        <input type="radio" name="group-2-radio" className="catering-input" checked={item.name == groupTwo} readOnly/>
                                         <div className="card d-flex card-input w-100">
-                                            <img src={item.image} class="card-img-top catering-card-image" alt="..." />
-                                            <div class="card-body">
-                                                <p class="card-text fw-bold text-center fs-5">{item.name}</p>
+                                            <img src={item.image} className="card-img-top catering-card-image" alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text fw-bold text-center fs-5">{item.name}</p>
                                             </div>
                                         </div>
                                     </label>
@@ -96,11 +96,11 @@ const Catering = () => {
                                 </div>
                                 {cateringDummyData.Group_3.map((item, index) => (
                                     <label key={index} onClick={() => handleGroupThree(item.name)} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
-                                        <input type="radio" name="group-3-radio" className="catering-input" checked={item.name == groupThree}/>
+                                        <input type="radio" name="group-3-radio" className="catering-input" checked={item.name == groupThree} readOnly/>
                                         <div className="card d-flex card-input w-100">
-                                            <img src={item.image} class="card-img-top catering-card-image" alt="..." />
-                                            <div class="card-body">
-                                                <p class="card-text fw-bold text-center fs-5">{item.name}</p>
+                                            <img src={item.image} className="card-img-top catering-card-image" alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text fw-bold text-center fs-5">{item.name}</p>
                                             </div>
                                         </div>
                                     </label>
@@ -119,25 +119,25 @@ const Catering = () => {
                             <input type="text" className="form-control" placeholder="Name Surname" aria-label="Name Surname" />
                             <input type="text" className="form-control" placeholder="Table Number" aria-label="Table Number" />
                             <hr className="my-2" />
-                            <div class="input-group mb-1">
-                                <label class="input-group-text fw-bold" for="group-1-select">Group 1</label>
-                                <select value={groupOne} class="form-select" id="group-1-select">
+                            <div className="input-group mb-1">
+                                <label className="input-group-text fw-bold" htmlFor="group-1-select">Group 1</label>
+                                <select value={groupOne} className="form-select" id="group-1-select">
                                     {cateringDummyData.Group_1.map((item, index) => (
                                         <option key={index} value={item.name} onClick={() => handleGroupOne(item.name)}>{item.name}</option>
                                     ))}
                                 </select>
                             </div>
-                            <div class="input-group mb-1">
-                                <label class="input-group-text fw-bold" for="group-2-select">Group 2</label>
-                                <select value={groupTwo} class="form-select" id="group-2-select">
+                            <div className="input-group mb-1">
+                                <label className="input-group-text fw-bold" htmlFor="group-2-select">Group 2</label>
+                                <select value={groupTwo} className="form-select" id="group-2-select">
                                     {cateringDummyData.Group_2.map((item, index) => (
                                         <option key={index} value={item.name} onClick={() => handleGroupTwo(item.name)}>{item.name}</option>
                                     ))}
                                 </select>
                             </div>
-                            <div class="input-group">
-                                <label class="input-group-text fw-bold" for="group-3-select">Group 3</label>
-                                <select value={groupThree} class="form-select" id="group-3-select">
+                            <div className="input-group">
+                                <label className="input-group-text fw-bold" htmlFor="group-3-select">Group 3</label>
+                                <select value={groupThree} className="form-select" id="group-3-select">
                                     {cateringDummyData.Group_3.map((item, index) => (
                                         <option key={index} value={item.name} onClick={() => handleGroupThree(item.name)}>{item.name}</option>
                                     ))}
