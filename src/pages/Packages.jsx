@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import UserPanelLayout from "../layouts/UserPanelLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesRight, faComments } from "@fortawesome/free-solid-svg-icons";
+import { faComments } from "@fortawesome/free-solid-svg-icons";
 import packagesDummyData from "../dummy-data/packagesDummyData.json";
-import PackageCard from "../components/PackageCard";
+import PackageCard from "../components/packages-components/PackageCard";
 
 var filteredPackagesData,
   filteredTicketData = packagesDummyData;
@@ -14,7 +14,7 @@ const Packages = () => {
 
   if (packageFilter == "coworking_space") {
     filteredPackagesData = packagesDummyData.coworking_space;
-    filteredTicketData = packagesDummyData.coworking_space_Ticket;
+    filteredTicketData = packagesDummyData.coworking_space_ticket;
 
     /*
       We have to implement .filter method to find ticketbox packages. Like using packageType="TICKETBOX"
@@ -31,9 +31,9 @@ const Packages = () => {
     showTicket = false;
   }
 
-  if (packageFilter == "Fethiye_Meeting_Room") {
-    filteredPackagesData = packagesDummyData.Fethiye_Meeting_Room;
-    filteredTicketData = packagesDummyData.Fethiye_Meeting_Room_Ticket;
+  if (packageFilter == "meeting_room") {
+    filteredPackagesData = packagesDummyData.meeting_room;
+    filteredTicketData = packagesDummyData.meeting_room_ticket;
     showTicket = true;
   }
 
@@ -63,7 +63,7 @@ const Packages = () => {
           </button>
           <button
             className="btn btn-outline-primary"
-            onClick={() => handlePackages("Fethiye_Meeting_Room")}
+            onClick={() => handlePackages("meeting_room")}
           >
             FETHIYE MEETING ROOM
           </button>

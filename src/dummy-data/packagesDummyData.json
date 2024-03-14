@@ -1,8 +1,8 @@
 {
-    "virtual_office":[
+    "virtual_office": [
         {
             "packageId": 2,
-            "packageName": "Meeting Room BCX Paketi",
+            "packageName": "Virtual Office BCX Package",
             "packageDescription": "string string string string string string string ",
             "packageType": "TICKETBOX",
             "serviceType": "MEETING_ROOM",
@@ -27,7 +27,7 @@
         },
         {
             "packageId": 3,
-            "packageName": "Meeting Room ASD Paketi",
+            "packageName": "Virtual Office ASD Package",
             "packageDescription": "string",
             "packageType": "TICKETBOX",
             "serviceType": "MEETING_ROOM",
@@ -52,7 +52,7 @@
         },
         {
             "packageId": 5,
-            "packageName": "Meeting Room EHE Paketi",
+            "packageName": "Virtual Office EHE Package",
             "packageDescription": "string",
             "packageType": "TICKETBOX",
             "serviceType": "MEETING_ROOM",
@@ -78,237 +78,309 @@
     ],
     "coworking_space": [
         {
-            "name": "CO SHORT TIME",
-            "price": [
-                "127.87₺"
-            ],
-            "price_dollar": [
-                "4$"
-            ],
-            "benefits": [
-                "Unlimited tea, coffee, water, and snacks",
-                "1 hour of cycling per day",
-                "Unlimited fiber internet"
-            ],
-            "time_periods": [
-                "Hourly",
-                "Half Day (2-4 Hours)"
+            "packageId": 2,
+            "packageName": "Coworking Space BCX Package",
+            "packageDescription": "string string string string string string string ",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
             ]
         },
         {
-            "name": "CO STANDARD",
-            "price": [
-                "415.57₺"
-            ],
-            "price_dollar": [
-                "13$"
-            ],
-            "benefits": [
-                "Indoor workspaces from 9:00 AM to 9:00 PM",
-                "24/7 access to the garden area",
-                "Unlimited tea, coffee, water, and snacks",
-                "2 hours of meeting room usage per day",
-                "1 hour of cycling per day",
-                "Event ticket",
-                "Unlimited fiber internet"
-            ],
-            "time_periods": [
-                "Daily",
-                "Weekly",
-                "Monthly",
-                "3 Months",
-                "6 Months"
+            "packageId": 3,
+            "packageName": "Coworking Space ASD Package",
+            "packageDescription": "string",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
             ]
         },
         {
-            "name": "CO DEDICATED DESK",
-            "price": [
-                "2557.37₺"
-            ],
-            "price_dollar": [
-                "80$"
-            ],
-            "benefits": [
-                "24/7 access",
-                "Unlimited tea, coffee, water, and snacks",
-                "2 hours of meeting room usage per day",
-                "1 hour of cycling per day",
-                "Dedicated fixed desk",
-                "Event ticket",
-                "Unlimited fiber internet"
-            ],
-            "time_periods": [
-                "Weekly",
-                "Monthly",
-                "3 Months",
-                "6 Months",
-                "12 Months"
+            "packageId": 5,
+            "packageName": "Coworking Space EHE Package",
+            "packageDescription": "string",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 6,
+                    "periodName": "100 million hours ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 105
+                },
+                {
+                    "periodId": 9,
+                    "periodName": "1 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 1
+                }
             ]
         }
     ],
     "meeting_room": [
         {
-            "name": "TS PRIVATE OFFICE",
-            "price": [
-                "5615.98₺"
-            ],
-            "price_dollar": [
-                "175$"
-            ],
-            "benefits": [
-                "A1, A2, A3, A5, A6, A7, A8, A9 Offices",
-                "Max 4 people",
-                "Monitor",
-                "Flipchart",
-                "Unlimited fiber internet",
-                "Unlimited tea, coffee, and water"
-            ],
-            "time_periods": [
-                "Weekly",
-                "Monthly",
-                "Hourly",
-                "Half Day (2-4 Hours)",
-                "Full Day (5-16 Hours)"
+            "packageId": 2,
+            "packageName": "Meeting Room BCX Package",
+            "packageDescription": "string string string string string string string ",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
             ]
         },
         {
-            "name": "TS TEAM ROOM",
-            "price": [
-                "7220.54₺"
-            ],
-            "price_dollar": [
-                "225$"
-            ],
-            "benefits": [
-                "A4, B1, B2, B3, B4, B5 Offices",
-                "15-30 m2 office space",
-                "Max 15 people",
-                "160-inch screen monitor",
-                "Flipchart",
-                "Unlimited fiber internet"
-            ],
-            "time_periods": [
-                "Weekly",
-                "Monthly",
-                "Hourly",
-                "Half Day (2-4 Hours)",
-                "Full Day (5-16 Hours)"
+            "packageId": 3,
+            "packageName": "Meeting Room ASD Package",
+            "packageDescription": "string",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
             ]
         },
         {
-            "name": "TS WORKSHOP",
-            "price": [
-                "673.92₺"
-            ],
-            "price_dollar": [
-                "21$"
-            ],
-            "benefits": [
-                "C2, C3, B4, B5, D1 areas",
-                "Options ranging from 50-300 m2",
-                "Capacity for 5-150 participants",
-                "Indoor or outdoor space",
-                "Smartboard, monitor, projector",
-                "Sound system and mixer"
-            ],
-            "time_periods": [
-                "Half Day (2-4 Hours)",
-                "Full Day (5-16 Hours)"
+            "packageId": 5,
+            "packageName": "Meeting Room EHE Package",
+            "packageDescription": "string",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 6,
+                    "periodName": "100 million hours ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 105
+                },
+                {
+                    "periodId": 9,
+                    "periodName": "1 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 1
+                }
             ]
         }
     ],
-    "coworking_space_Ticket": [
+    "coworking_space_ticket": [
         {
-            "name": "CO SHORT TIME TICKET",
-            "price": [
-                "320.91₺"
-            ],
-            "price_dollar": [
-                "10$"
-            ],
-            "time_periods": [
-                "Half Daily (2-4 Hours) Ticket",
-                "10 Hours Ticket",
-                "5 Half Days Ticket",
-                "10 Half Days Ticket"
+            "packageId": 2,
+            "packageName": "Coworking Space BCX Package",
+            "packageDescription": "string string string string string string string ",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
             ]
         },
         {
-            "name": "CO STANDARD TICKET",
-            "price": [
-                "1989.66₺"
-            ],
-            "price_dollar": [
-                "62$"
-            ],
-            "time_periods": [
-                "5 Days",
-                "10 Days",
-                "15 Days",
-                "30 Days"
+            "packageId": 3,
+            "packageName": "Coworking Space ASD Package",
+            "packageDescription": "string",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
             ]
         },
         {
-            "name": "CO DEDICATED DESK TICKET",
-            "price": [
-                "2557.37₺"
-            ],
-            "price_dollar": [
-                "80$"
-            ],
-            "time_periods": [
-                "Weekly Ticket"
+            "packageId": 5,
+            "packageName": "Coworking Space EHE Package",
+            "packageDescription": "string",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 6,
+                    "periodName": "100 million hours ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 105
+                },
+                {
+                    "periodId": 9,
+                    "periodName": "1 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 1
+                }
             ]
         }
     ],
-    "meeting_room_Ticket": [
+    "meeting_room_ticket": [
         {
-            "name": "TS PRIVATE OFFICE TICKET",
-            "price": [
-                "1123.20₺"
-            ],
-            "price_dollar": [
-                "35$"
-            ],
-            "time_periods": [
-                "5 Hours Ticket",
-                "10 Hours Ticket",
-                "Half Daily (2-4 Hours) Ticket",
-                "10 Hours Ticket",
-                "5 Half Days Ticket",
-                "10 Half Days Ticket",
-                "5 Full Days Ticket",
-                "10 Full Days Ticket"
+            "packageId": 2,
+            "packageName": "Meeting Room BCX Package",
+            "packageDescription": "string string string string string string string ",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
             ]
         },
         {
-            "name": "TS TEAM ROOM TICKET",
-            "price": [
-                "3084.67₺"
-            ],
-            "price_dollar": [
-                "95$"
-            ],
-            "time_periods": [
-                "5 Half Days Ticket",
-                "10 Half Days Ticket",
-                "5 Full Days Ticket",
-                "10 Full Days Ticket"
+            "packageId": 3,
+            "packageName": "Meeting Room ASD Package",
+            "packageDescription": "string",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
             ]
         },
         {
-            "name": "TS WORKSHOP TICKET",
-            "price": [
-                "2920.31₺"
-            ],
-            "price_dollar": [
-                "91$"
-            ],
-            "time_periods": [
-                "5 Half Days Ticket",
-                "10 Half Days Ticket",
-                "5 Full Days Ticket",
-                "10 Full Days Ticket"
+            "packageId": 5,
+            "packageName": "Meeting Room EHE Package",
+            "packageDescription": "string",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 6,
+                    "periodName": "100 million hours ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 105
+                },
+                {
+                    "periodId": 9,
+                    "periodName": "1 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 1
+                }
             ]
         }
     ]
