@@ -1,65 +1,82 @@
 {
-    "Fethiye_Virtual_Office": [
+    "virtual_office":[
         {
-            "name": "SO BASIC",
-            "price": [
-                "3530.04₺"
-            ],
-            "price_dollar": [
-                "110$"
-            ],
-            "benefits": [
-                "Legal address",
-                "Mail and package reception",
-                "Free use of C3 and D3 areas"
-            ],
-            "time_periods": [
-                "3 Months",
-                "6 Months",
-                "12 Months"
+            "packageId": 2,
+            "packageName": "Meeting Room BCX Paketi",
+            "packageDescription": "string string string string string string string ",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
             ]
         },
         {
-            "name": "SO STANDARD",
-            "price": [
-                "5455.52₺"
-            ],
-            "price_dollar": [
-                "170$"
-            ],
-            "benefits": [
-                "Legal address",
-                "Mail and package reception",
-                "Co Standard package membership"
-            ],
-            "time_periods": [
-                "Monthly",
-                "3 Months",
-                "6 Months",
-                "12 Months"
+            "packageId": 3,
+            "packageName": "Meeting Room ASD Paketi",
+            "packageDescription": "string",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
             ]
         },
         {
-            "name": "SO EXTRA",
-            "price": [
-                "7381.00₺"
-            ],
-            "price_dollar": [
-                "230$"
-            ],
-            "benefits": [
-                "Legal address",
-                "Mail and package reception",
-                "Co Dedicated Desk package membership"
-            ],
-            "time_periods": [
-                "3 Months",
-                "6 Months",
-                "12 Months"
+            "packageId": 5,
+            "packageName": "Meeting Room EHE Paketi",
+            "packageDescription": "string",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 6,
+                    "periodName": "100 million hours ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 105
+                },
+                {
+                    "periodId": 9,
+                    "periodName": "1 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 1
+                }
             ]
         }
     ],
-    "Fethiye_Coworking_Space": [
+    "coworking_space": [
         {
             "name": "CO SHORT TIME",
             "price": [
@@ -129,7 +146,7 @@
             ]
         }
     ],
-    "Fethiye_Meeting_Room": [
+    "meeting_room": [
         {
             "name": "TS PRIVATE OFFICE",
             "price": [
@@ -200,7 +217,7 @@
             ]
         }
     ],
-    "Fethiye_Coworking_Space_Ticket": [
+    "coworking_space_Ticket": [
         {
             "name": "CO SHORT TIME TICKET",
             "price": [
@@ -244,7 +261,7 @@
             ]
         }
     ],
-    "Fethiye_Meeting_Room_Ticket": [
+    "meeting_room_Ticket": [
         {
             "name": "TS PRIVATE OFFICE TICKET",
             "price": [
