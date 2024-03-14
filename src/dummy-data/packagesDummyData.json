@@ -4,7 +4,7 @@
             "packageId": 2,
             "packageName": "Virtual Office BCX Package",
             "packageDescription": "string string string string string string string ",
-            "packageType": "TICKETBOX",
+            "packageType": "STANDARD",
             "serviceType": "MEETING_ROOM",
             "prices": [
                 {
@@ -29,7 +29,7 @@
             "packageId": 3,
             "packageName": "Virtual Office ASD Package",
             "packageDescription": "string",
-            "packageType": "TICKETBOX",
+            "packageType": "STANDARD",
             "serviceType": "MEETING_ROOM",
             "prices": [
                 {
@@ -54,7 +54,7 @@
             "packageId": 5,
             "packageName": "Virtual Office EHE Package",
             "packageDescription": "string",
-            "packageType": "TICKETBOX",
+            "packageType": "STANDARD",
             "serviceType": "MEETING_ROOM",
             "prices": [
                 {
@@ -81,7 +81,7 @@
             "packageId": 2,
             "packageName": "Coworking Space BCX Package",
             "packageDescription": "string string string string string string string ",
-            "packageType": "TICKETBOX",
+            "packageType": "STANDARD",
             "serviceType": "MEETING_ROOM",
             "prices": [
                 {
@@ -106,7 +106,7 @@
             "packageId": 3,
             "packageName": "Coworking Space ASD Package",
             "packageDescription": "string",
-            "packageType": "TICKETBOX",
+            "packageType": "STANDARD",
             "serviceType": "MEETING_ROOM",
             "prices": [
                 {
@@ -130,6 +130,81 @@
         {
             "packageId": 5,
             "packageName": "Coworking Space EHE Package",
+            "packageDescription": "string",
+            "packageType": "STANDARD",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 6,
+                    "periodName": "100 million hours ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 105
+                },
+                {
+                    "periodId": 9,
+                    "periodName": "1 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 1
+                }
+            ]
+        },
+        {
+            "packageId": 2,
+            "packageName": "Coworking Space BCX Ticket",
+            "packageDescription": "string string string string string string string ",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
+            ]
+        },
+        {
+            "packageId": 3,
+            "packageName": "Coworking Space ASD Ticket",
+            "packageDescription": "string",
+            "packageType": "TICKETBOX",
+            "serviceType": "MEETING_ROOM",
+            "prices": [
+                {
+                    "periodId": 2,
+                    "periodName": "5 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 5,
+                    "price": 10
+                },
+                {
+                    "periodId": 3,
+                    "periodName": "10 saat ticket",
+                    "type": "TICKETBOX",
+                    "maxDuration": 3600,
+                    "totalUsageRight": 10,
+                    "price": 15
+                }
+            ]
+        },
+        {
+            "packageId": 5,
+            "packageName": "Coworking Space EHE Ticket",
             "packageDescription": "string",
             "packageType": "TICKETBOX",
             "serviceType": "MEETING_ROOM",
@@ -158,7 +233,7 @@
             "packageId": 2,
             "packageName": "Meeting Room BCX Package",
             "packageDescription": "string string string string string string string ",
-            "packageType": "TICKETBOX",
+            "packageType": "STANDARD",
             "serviceType": "MEETING_ROOM",
             "prices": [
                 {
@@ -183,7 +258,7 @@
             "packageId": 3,
             "packageName": "Meeting Room ASD Package",
             "packageDescription": "string",
-            "packageType": "TICKETBOX",
+            "packageType": "STANDARD",
             "serviceType": "MEETING_ROOM",
             "prices": [
                 {
@@ -208,7 +283,7 @@
             "packageId": 5,
             "packageName": "Meeting Room EHE Package",
             "packageDescription": "string",
-            "packageType": "TICKETBOX",
+            "packageType": "STANDARD",
             "serviceType": "MEETING_ROOM",
             "prices": [
                 {
@@ -228,12 +303,10 @@
                     "price": 1
                 }
             ]
-        }
-    ],
-    "coworking_space_ticket": [
+        },
         {
             "packageId": 2,
-            "packageName": "Coworking Space BCX Package",
+            "packageName": "Meeting Room BCX Ticket",
             "packageDescription": "string string string string string string string ",
             "packageType": "TICKETBOX",
             "serviceType": "MEETING_ROOM",
@@ -258,7 +331,7 @@
         },
         {
             "packageId": 3,
-            "packageName": "Coworking Space ASD Package",
+            "packageName": "Meeting Room ASD Ticket",
             "packageDescription": "string",
             "packageType": "TICKETBOX",
             "serviceType": "MEETING_ROOM",
@@ -283,84 +356,7 @@
         },
         {
             "packageId": 5,
-            "packageName": "Coworking Space EHE Package",
-            "packageDescription": "string",
-            "packageType": "TICKETBOX",
-            "serviceType": "MEETING_ROOM",
-            "prices": [
-                {
-                    "periodId": 6,
-                    "periodName": "100 million hours ticket",
-                    "type": "TICKETBOX",
-                    "maxDuration": 3600,
-                    "totalUsageRight": 5,
-                    "price": 105
-                },
-                {
-                    "periodId": 9,
-                    "periodName": "1 saat ticket",
-                    "type": "TICKETBOX",
-                    "maxDuration": 3600,
-                    "totalUsageRight": 10,
-                    "price": 1
-                }
-            ]
-        }
-    ],
-    "meeting_room_ticket": [
-        {
-            "packageId": 2,
-            "packageName": "Meeting Room BCX Package",
-            "packageDescription": "string string string string string string string ",
-            "packageType": "TICKETBOX",
-            "serviceType": "MEETING_ROOM",
-            "prices": [
-                {
-                    "periodId": 2,
-                    "periodName": "5 saat ticket",
-                    "type": "TICKETBOX",
-                    "maxDuration": 3600,
-                    "totalUsageRight": 5,
-                    "price": 10
-                },
-                {
-                    "periodId": 3,
-                    "periodName": "10 saat ticket",
-                    "type": "TICKETBOX",
-                    "maxDuration": 3600,
-                    "totalUsageRight": 10,
-                    "price": 15
-                }
-            ]
-        },
-        {
-            "packageId": 3,
-            "packageName": "Meeting Room ASD Package",
-            "packageDescription": "string",
-            "packageType": "TICKETBOX",
-            "serviceType": "MEETING_ROOM",
-            "prices": [
-                {
-                    "periodId": 2,
-                    "periodName": "5 saat ticket",
-                    "type": "TICKETBOX",
-                    "maxDuration": 3600,
-                    "totalUsageRight": 5,
-                    "price": 10
-                },
-                {
-                    "periodId": 3,
-                    "periodName": "10 saat ticket",
-                    "type": "TICKETBOX",
-                    "maxDuration": 3600,
-                    "totalUsageRight": 10,
-                    "price": 15
-                }
-            ]
-        },
-        {
-            "packageId": 5,
-            "packageName": "Meeting Room EHE Package",
+            "packageName": "Meeting Room EHE Ticket",
             "packageDescription": "string",
             "packageType": "TICKETBOX",
             "serviceType": "MEETING_ROOM",

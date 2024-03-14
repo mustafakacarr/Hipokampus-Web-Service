@@ -4,37 +4,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
 import packagesDummyData from "../dummy-data/packagesDummyData.json";
 import PackageCard from "../components/packages-components/PackageCard";
+import TicketBoxCard from "../components/packages-components/TicketBoxCard";
 
 var filteredPackagesData,
-  filteredTicketData = packagesDummyData;
-var showTicket = true;
+  filteredTicketBoxData = packagesDummyData;
 
 const Packages = () => {
   const [packageFilter, setPackageFilter] = useState("virtual_office");
 
-  if (packageFilter == "coworking_space") {
-    filteredPackagesData = packagesDummyData.coworking_space;
-    filteredTicketData = packagesDummyData.coworking_space_ticket;
-
-    /*
-      We have to implement .filter method to find ticketbox packages. Like using packageType="TICKETBOX"
-     So if you want, you can split objects as coworking_ticket_packages coworking_packages like now.
-      But ı think that its not necessary, we can prefer to split only by service instead of it.
-      we already have possibility to find ticket packages via filter method.
-      */
-
-    showTicket = true;
+  if (packageFilter === "coworking_space") {
+    filteredPackagesData = packagesDummyData.coworking_space.filter(packages => packages.packageType === "STANDARD");
+    filteredTicketBoxData = packagesDummyData.coworking_space.filter(packages => packages.packageType === "TICKETBOX");
   }
 
-  if (packageFilter == "virtual_office") {
-    filteredPackagesData = packagesDummyData.virtual_office;
-    showTicket = false;
+  if (packageFilter === "virtual_office") {
+    filteredPackagesData = packagesDummyData.virtual_office.filter(packages => packages.packageType === "STANDARD");
+    filteredTicketBoxData = packagesDummyData.virtual_office.filter(packages => packages.packageType === "TICKETBOX");
   }
 
-  if (packageFilter == "meeting_room") {
-    filteredPackagesData = packagesDummyData.meeting_room;
-    filteredTicketData = packagesDummyData.meeting_room_ticket;
-    showTicket = true;
+  if (packageFilter === "meeting_room") {
+    filteredPackagesData = packagesDummyData.meeting_room.filter(packages => packages.packageType === "STANDARD");
+    filteredTicketBoxData = packagesDummyData.meeting_room.filter(packages => packages.packageType === "TICKETBOX");
   }
 
   function handlePackages(selectedFilter) {
@@ -83,15 +73,15 @@ const Packages = () => {
               </button>
             </div>
           </div>
-          {showTicket
-            ? filteredTicketData.map((item, index) => (
-                <PackageCard
+          {
+            filteredTicketBoxData.map((item, index) => (
+                <TicketBoxCard
                   data={item}
                   index={index}
                   descriptionless={true}
-                ></PackageCard>
+                ></TicketBoxCard>
               ))
-            : null}
+            }
         </div>
       </div>
     </UserPanelLayout>

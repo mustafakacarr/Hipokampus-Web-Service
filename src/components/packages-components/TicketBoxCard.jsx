@@ -2,7 +2,7 @@ import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
-const PackageCard = ({ data, index , descriptionless=false}) => {
+const TicketBoxCard = ({ data, index , descriptionless=false}) => {
   const [selectedPeriodId, setSelectedPeriodId] = useState(2);
 
   const findPriceByPeriodId = () => {
@@ -18,7 +18,7 @@ const PackageCard = ({ data, index , descriptionless=false}) => {
       key={index}
       className="px-1 px-lg-2 px-lg-3 col-12 col-md-6 col-xl-4 mb-4 mb-md-3"
     >
-      <div className="card package-card h-100">
+      <div className="card package-ticket-card h-100">
         <div className="card-body p-0">
           <h4 className="card-title text-center py-4 m-0 package-title">
             {data.packageName}
@@ -41,12 +41,9 @@ const PackageCard = ({ data, index , descriptionless=false}) => {
                 </select>
               </div>
             </li>
-            <li className="list-group-item text-center package-card-list">
-              <ul className="text-start my-4">{data.packageDescription}</ul>
-            </li>
           </ul>
         </div>
-        <div className="card-footer packages-card-footer">
+        <div className="card-footer packages-ticket-card-footer">
           <button className="btn btn-primary btn-lg my-3 d-flex mx-auto">
             More
             <FontAwesomeIcon
@@ -61,4 +58,4 @@ const PackageCard = ({ data, index , descriptionless=false}) => {
   );
 };
 
-export default PackageCard;
+export default TicketBoxCard;
