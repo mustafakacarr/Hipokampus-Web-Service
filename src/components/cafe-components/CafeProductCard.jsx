@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { faCartShopping, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CafeProductCard = ({ item, index }) => {
+
+    const [quantity, setQuantity] = useState(0)
+
+    function handleDecrease() {
+        (quantity > 0) ? setQuantity(quantity - 1) : {}
+    }
+
+    function handleIncrease() {
+        (quantity < 9) ? setQuantity(quantity + 1) : {}
+    }
+
     return (
-        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-5 px-md-2 px-lg-2 px-xxl-3 mt-4 cafe-card">
+        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-5 px-md-2 px-lg-2 px-xxl-2 mt-4 cafe-card">
             <div key={index} className="card">
                 <img
                     src={item.photo}
@@ -18,11 +29,11 @@ const CafeProductCard = ({ item, index }) => {
                     </p>
                     <div className="justify-content-center my-1 row">
                         <div className="d-flex col-auto gx-0">
-                            <a className="btn">
+                            <a className="btn" onClick={() => handleDecrease()}>
                                 <FontAwesomeIcon icon={faMinus} />
                             </a>
-                            <strong className="my-auto mx-auto">0</strong>
-                            <a className="btn">
+                            <strong className="my-auto mx-auto">{quantity}</strong>
+                            <a className="btn" onClick={() => handleIncrease()}>
                                 <FontAwesomeIcon icon={faPlus} />
                             </a>
                         </div>

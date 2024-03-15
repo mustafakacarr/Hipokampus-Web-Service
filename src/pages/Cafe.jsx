@@ -82,7 +82,7 @@ const Cafe = () => {
                         ))}
                     </div>
                 </div>
-                <div className="col-sm-12 col-md-3 mt-3 mt-md-0 px-1 px-md-3 px-lg-4">
+                <div className="col-sm-12 col-md-3 mt-3 mt-md-0 px-1 px-md-3 px-lg-3">
                     <div className="card text-center cart-card mx-auto">
                         <h4 className="card-header">
                             <FontAwesomeIcon icon={faCartShopping} />
