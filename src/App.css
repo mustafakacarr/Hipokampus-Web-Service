@@ -196,3 +196,8 @@
 .dropdown-button {
     cursor: pointer;
 }
+
+.payment-card-body {
+    max-height: 300px;
+    overflow-y: scroll;
+}
