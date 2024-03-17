@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CafeProductCard = ({ item, index }) => {
 
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(1)
 
     function handleDecrease() {
-        (quantity > 0) ? setQuantity(quantity - 1) : {}
+        (quantity > 1) ? setQuantity(quantity - 1) : {}
     }
 
     function handleIncrease() {
@@ -15,7 +15,7 @@ const CafeProductCard = ({ item, index }) => {
     }
 
     return (
-        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-5 px-md-2 px-lg-2 px-xxl-2 mt-4 cafe-card">
+        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-5 px-md-2 px-lg-1 px-xxl-2 mt-4 cafe-card">
             <div key={index} className="card">
                 <img
                     src={item.photo}

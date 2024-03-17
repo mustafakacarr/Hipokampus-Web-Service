@@ -22,16 +22,35 @@ const Catering = () => {
     const [groupTwo, setGroupTwo] = useState(undefined)
     const [groupThree, setGroupThree] = useState(undefined)
 
-    function handleGroupOne(meal) {
-        setGroupOne(meal)
+    const groupTwoTitle = document.getElementById("groupTwoTitle")
+    const groupThreeTitle = document.getElementById("groupThreeTitle")
+    const cateringOrderCard = document.getElementById("cateringOrderCard")
+
+    function handleGroupOne(meal, isCardClick) {
+        if (isCardClick) {
+            setGroupOne(meal)
+            groupTwoTitle.scrollIntoView()
+        } else {
+            setGroupOne(meal)
+        }
     }
 
-    function handleGroupTwo(meal) {
-        setGroupTwo(meal)
+    function handleGroupTwo(meal, isCardClick) {
+        if (isCardClick) {
+            setGroupTwo(meal)
+            groupThreeTitle.scrollIntoView()
+        } else {
+            setGroupTwo(meal)
+        }
     }
 
-    function handleGroupThree(meal) {
-        setGroupThree(meal)
+    function handleGroupThree(meal, isCardClick) {
+        if (isCardClick) {
+            setGroupThree(meal)
+            cateringOrderCard.scrollIntoView()
+        } else {
+            setGroupThree(meal)
+        }
     }
 
     const [currentDate, setCurrentDate] = useState(getDate)
@@ -63,7 +82,7 @@ const Catering = () => {
                                     <FontAwesomeIcon icon={faRectangleList} /> Group 1
                                 </div>
                                 {cateringDummyData.Group_1.map((item, index) => (
-                                    <label key={index} onClick={() => handleGroupOne(item.name)} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
+                                    <label key={index} onClick={() => handleGroupOne(item.name, true)} className="col-sm-12 col-md-6 col-xl-4 col-xxl-3 px-5 px-md-2 catering-card d-flex">
                                         <input type="radio" name="group-1-radio" className="catering-input" checked={item.name == groupOne} readOnly/>
                                         <div className="card d-flex card-input w-100">
                                             <img src={item.image} className="card-img-top catering-card-image" alt="..." />
@@ -75,11 +94,11 @@ const Catering = () => {
                                 ))}
                             </div>
                             <div className="row gx-0 gap-0 pt-3 py-4 justify-content-center justify-content-md-start">
-                                <div className="text-center text-primary mb-2 fw-bold fs-4">
+                                <div id="groupTwoTitle" className="text-center text-primary mb-2 fw-bold fs-4">
                                     <FontAwesomeIcon icon={faRectangleList} /> Group 2
                                 </div>
                                 {cateringDummyData.Group_2.map((item, index) => (
-                                    <label key={index} onClick={() => handleGroupTwo(item.name)} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
+                                    <label key={index} onClick={() => handleGroupTwo(item.name, true)} className="col-sm-12 col-md-6 col-xl-4 col-xxl-3 px-5 px-md-2 catering-card d-flex">
                                         <input type="radio" name="group-2-radio" className="catering-input" checked={item.name == groupTwo} readOnly/>
                                         <div className="card d-flex card-input w-100">
                                             <img src={item.image} className="card-img-top catering-card-image" alt="..." />
@@ -91,11 +110,11 @@ const Catering = () => {
                                 ))}
                             </div>
                             <div className="row gx-0 gap-0 pt-3 py-4 justify-content-center justify-content-md-start">
-                                <div className="text-center text-primary mb-2 fw-bold fs-4">
+                                <div id="groupThreeTitle" className="text-center text-primary mb-2 fw-bold fs-4">
                                     <FontAwesomeIcon icon={faRectangleList} /> Group 3
                                 </div>
                                 {cateringDummyData.Group_3.map((item, index) => (
-                                    <label key={index} onClick={() => handleGroupThree(item.name)} className="col-sm-12 col-md-6 col-xl-3 px-5 px-md-2 catering-card d-flex">
+                                    <label key={index} onClick={() => handleGroupThree(item.name, true)} className="col-sm-12 col-md-6 col-xl-4 col-xxl-3 px-5 px-md-2 catering-card d-flex">
                                         <input type="radio" name="group-3-radio" className="catering-input" checked={item.name == groupThree} readOnly/>
                                         <div className="card d-flex card-input w-100">
                                             <img src={item.image} className="card-img-top catering-card-image" alt="..." />
@@ -110,7 +129,7 @@ const Catering = () => {
                     </div>
                 </div>
                 <div className="col-sm-12 col-md-6 col-xl-5 col-xxl-4 px-5 px-sm-1 px-md-2 px-lg-4">
-                    <div className="card text-center mx-auto catering-order-card">
+                    <div id="cateringOrderCard" className="card text-center mx-auto catering-order-card">
                         <h4 className="card-header">
                             <FontAwesomeIcon icon={faReceipt} />
                             <span className="ms-2">Quick Meal Order</span>

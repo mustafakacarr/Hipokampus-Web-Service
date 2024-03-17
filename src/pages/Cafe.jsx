@@ -25,7 +25,7 @@ const Cafe = () => {
     return (
         <UserPanelLayout>
             <div onChange={handleCafeItems} className="row gx-0">
-                <div className="col-sm-12 col-md-9">
+                <div className="col-sm-12 col-md-8 col-xl-9">
                     <div className="d-flex flex-wrap justify-content-center gap-2">
                         <button
                             className="btn btn-outline-primary"
@@ -76,13 +76,13 @@ const Cafe = () => {
                             DESSERT
                         </button>
                     </div>
-                    <div className="row gx-0 justify-content-center justify-content-md-start">
+                    <div className="row gx-0 px-2 px-md-0 justify-content-center justify-content-md-start">
                         {filteredCafeData.map((item, index) => (
                             <CafeProductCard item={item} index={index}></CafeProductCard>
                         ))}
                     </div>
                 </div>
-                <div className="col-sm-12 col-md-3 mt-3 mt-md-0 px-1 px-md-3 px-lg-3">
+                <div className="col-sm-12 col-md-4 col-xl-3 mt-3 mt-md-0 px-2 px-md-3 px-lg-3 mt-4 mb-3 mt-md-0 mb-3-0">
                     <div className="card text-center cart-card mx-auto">
                         <h4 className="card-header">
                             <FontAwesomeIcon icon={faCartShopping} />

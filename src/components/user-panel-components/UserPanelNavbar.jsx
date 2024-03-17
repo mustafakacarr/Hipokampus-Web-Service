@@ -1,10 +1,39 @@
 import React from "react";
+import useWindowSize from "../../hooks/useWindowSize";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import UserPanelOffcanvas from "./UserPanelOffcanvas";
 
 const UserPanelNavbar = () => {
+
+    const { width } = useWindowSize()
+
     return (
-        <nav className="navbar bg-light p-3">
+        <nav className={(width < 576) ? "navbar fixed-top bg-light p-3" : "navbar bg-light p-3"}>
             <div className="container-fluid">
-                <span className="navbar-brand fw-bold"></span>
+                <span className="navbar-brand fw-bold">
+                    {(width < 576) ?
+                        <div>
+                            <a data-bs-toggle="offcanvas" aria-controls="userPanelOffcanvas" href="#userPanelOffcanvas" role="button"
+                                id="offcanvasButton" className="d-inline align-middle">
+                                <FontAwesomeIcon icon={faBars} size="xl" />
+                            </a>
+                            <a
+                                href="/"
+                                className="align-items-center me-md-auto text-decoration-none brand-logo ms-3"
+                            >
+                                <img
+                                    src="https://hipokampus.com.tr/images/favicon.ico"
+                                    width={30}
+                                    className="align-middle"
+                                />
+                            </a>
+                        </div>
+                        :
+                        null
+                    }
+                </span>
+                <UserPanelOffcanvas />
                 <div className="dropdown">
                     <a href="#" className="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://hipokampus.com.tr/images/galeri/tr/fethiye-hipokampus-bahce-minik-ofis-zoom-kabini-verimli-toplantilar.webp" alt="" width="32" height="32" className="rounded-circle me-2" />

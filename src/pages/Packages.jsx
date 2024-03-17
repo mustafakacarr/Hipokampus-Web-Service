@@ -43,19 +43,19 @@ const Packages = () => {
             className="btn btn-outline-primary"
             onClick={() => handlePackages("virtual_office")}
           >
-            FETHIYE VIRTUAL OFFICE
+            VIRTUAL OFFICE
           </button>
           <button
             className="btn btn-outline-primary"
             onClick={() => handlePackages("coworking_space")}
           >
-            FETHIYE COWORKING SPACE
+            COWORKING SPACE
           </button>
           <button
             className="btn btn-outline-primary"
             onClick={() => handlePackages("meeting_room")}
           >
-            FETHIYE MEETING ROOM
+            MEETING ROOM
           </button>
         </div>
         <div className="row gx-0 px-5 px-md-3 py-3 d-flex justify-content-center">
@@ -75,13 +75,13 @@ const Packages = () => {
           </div>
           {
             filteredTicketBoxData.map((item, index) => (
-                <TicketBoxCard
-                  data={item}
-                  index={index}
-                  descriptionless={true}
-                ></TicketBoxCard>
-              ))
-            }
+              <TicketBoxCard
+                data={item}
+                index={index}
+                descriptionless={true}
+              ></TicketBoxCard>
+            ))
+          }
         </div>
       </div>
     </UserPanelLayout>

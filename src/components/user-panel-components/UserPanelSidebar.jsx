@@ -16,16 +16,17 @@ import {
     faHandshake
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const UserPanelSidebar = () => {
 
     const [rotateCaret, setRotateCaret] = useState("false")
-
     const handleCaretRotate = () => setRotateCaret(!rotateCaret)
-
     const rotate = rotateCaret ? "rotate(-90deg)" : "rotate(0)"
 
-    return (
+    const { width } = useWindowSize()
+
+    return (width < 576) ? null : (
         <div
             className="d-flex flex-column flex-shrink-0 px-3 pb-3 bg-light h-100"
             style={{ minHeight: "600px", paddingTop: "16px" }}
@@ -151,7 +152,7 @@ const UserPanelSidebar = () => {
                     </div>
                 </li>
             </ul>
-        </div >
+        </div>
     );
 };
 

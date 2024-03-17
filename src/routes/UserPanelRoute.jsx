@@ -4,6 +4,7 @@ import Catering from "../pages/Catering"
 import SignIn from "../pages/SignIn"
 import SignUp from "../pages/SignUp"
 import PasswordRecovery from "../pages/PasswordRecovery"
+import Payment from "../pages/Payment"
 
 const UserPanelRoute = [
     {
@@ -29,6 +30,10 @@ const UserPanelRoute = [
     {
         path: "/catering",
         component: <Catering />
+    },
+    {
+        path: "/payment",
+        component: <Payment />
     }
 ]
 

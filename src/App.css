@@ -2,14 +2,34 @@
     max-width: 1920px;
 }
 
+.user-panel-content {
+    max-width: 1366px;
+}
+
 .brand-logo {
     z-index: 50;
+}
+
+#offcanvasButton {
+    text-decoration: none;
+    color: #cf480a;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#offcanvasButton:hover {
+    color: #a73b09;
+}
+
+#offcanvasButton:active {
+    color: #863008;
 }
 
 .card-input {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.5);
     transition-duration: 0.18s;
     border-radius: 0.375rem;
+    border-width: 0;
 }
 
 .card-input:hover {
@@ -22,7 +42,7 @@
     transform: translateY(4px);
 }
 
-.catering-input:checked + .card-input {
+.catering-input:checked+.card-input {
     outline: 6px solid #cf480aa7;
 }
 
