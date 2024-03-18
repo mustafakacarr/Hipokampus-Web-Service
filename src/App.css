@@ -197,6 +197,11 @@
     cursor: pointer;
 }
 
+.payment-card {
+    max-width: 400px;
+    min-width: 200px;
+}
+
 .payment-card-body {
     max-height: 300px;
     overflow-y: scroll;

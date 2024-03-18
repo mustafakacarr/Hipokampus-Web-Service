@@ -37,7 +37,7 @@ const UserPanelSidebar = () => {
             >
                 <img
                     src="https://hipokampus.com.tr/images/logo-228x48.webp"
-                    width={220}
+                    style={{width:"95%", maxWidth:"220px"}}
                 />
             </a>
             <ul className="nav nav-pills flex-column mb-auto gap-3 mt-4">

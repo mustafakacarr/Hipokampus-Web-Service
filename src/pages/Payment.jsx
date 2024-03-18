@@ -6,11 +6,11 @@ import { faCreditCard, faTrash } from "@fortawesome/free-solid-svg-icons";
 const Payment = () => {
     return (
         <UserPanelLayout>
-            <div className="mx-4 px-4 mb-5 mt-2 row gx-0">
-                <div className="col-sm-12 col-md-8 col-xxl-9">
+            <div className="mx-0 px-md-3 px-4 mb-5 mt-2 row gx-0">
+                <div className="col-sm-12 col-md-7 col-lg-8 col-xl-9">
                 </div>
-                <div className="col-sm-12 col-md-4 col-xxl-3">
-                    <div className="card text-center">
+                <div className="col-sm-12 col-md-5 col-lg-4 col-xl-3">
+                    <div className="card payment-card text-center mx-auto">
                         <div className="card-header fs-4 fw-bold p-3">
                             <span className="me-2"><FontAwesomeIcon icon={faCreditCard} /></span>
                             Checkout
