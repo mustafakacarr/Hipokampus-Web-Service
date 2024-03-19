@@ -11,7 +11,7 @@ const UserPanelLayout = ({ children }) => {
   return (
     <div className="user-panel-main mx-auto">
       <div className="row g-0">
-        <div className="col-sm-4 col-md-3 col-xl-2 h-100" style={{position:"fixed", overflowY:"scroll"}}>
+        <div className="col-sm-4 col-md-3 col-xl-2 h-100" style={(width > 576) ? {position:"fixed", overflowY:"scroll"} : {}}>
           <UserPanelSidebar />
         </div>
         <div className="col-sm-8 col-md-9 col-xl-10 offset-sm-4 offset-md-3 offset-xl-2">
