@@ -197,12 +197,11 @@
     cursor: pointer;
 }
 
-.payment-card {
+.payment-checkout-card {
     max-width: 400px;
     min-width: 200px;
 }
 
-.payment-card-body {
-    max-height: 300px;
-    overflow-y: scroll;
+.payment-stepper-footer {
+    background-color: white;
 }
