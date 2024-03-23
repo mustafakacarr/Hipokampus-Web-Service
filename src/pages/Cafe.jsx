@@ -28,49 +28,49 @@ const Cafe = () => {
                 <div className="col-sm-12 col-md-8 col-xl-9">
                     <div className="d-flex flex-wrap justify-content-center gap-2">
                         <button
-                            className="btn btn-outline-primary"
+                            className="btn btn-outline-secondary"
                             onClick={() => handleCafeItems("all")}
                         >
                             ALL
                         </button>
                         <button
-                            className="btn btn-outline-primary"
+                            className="btn btn-outline-secondary"
                             onClick={() => handleCafeItems("pasta")}
                         >
                             PASTA
                         </button>
                         <button
-                            className="btn btn-outline-primary"
+                            className="btn btn-outline-secondary"
                             onClick={() => handleCafeItems("salad")}
                         >
                             SALAD
                         </button>
                         <button
-                            className="btn btn-outline-primary"
+                            className="btn btn-outline-secondary"
                             onClick={() => handleCafeItems("snack")}
                         >
                             SNACK
                         </button>
                         <button
-                            className="btn btn-outline-primary"
+                            className="btn btn-outline-secondary"
                             onClick={() => handleCafeItems("cold_drink")}
                         >
                             COLD DRINK
                         </button>
                         <button
-                            className="btn btn-outline-primary"
+                            className="btn btn-outline-secondary"
                             onClick={() => handleCafeItems("hot_drink")}
                         >
                             HOT DRINK
                         </button>
                         <button
-                            className="btn btn-outline-primary"
+                            className="btn btn-outline-secondary"
                             onClick={() => handleCafeItems("treat")}
                         >
                             TREAT
                         </button>
                         <button
-                            className="btn btn-outline-primary"
+                            className="btn btn-outline-secondary"
                             onClick={() => handleCafeItems("dessert")}
                         >
                             DESSERT

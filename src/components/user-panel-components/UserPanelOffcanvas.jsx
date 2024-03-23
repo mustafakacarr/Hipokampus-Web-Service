@@ -40,7 +40,7 @@ const UserPanelOffcanvas = () => {
                 <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body border-top mt-2">
-                <ul className="nav nav-pills flex-column mb-auto gap-3 mt-2">
+                <ul className="nav nav-pills flex-column mb-auto gap-4 mt-2">
                     <li>
                         <NavLink
                             className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}

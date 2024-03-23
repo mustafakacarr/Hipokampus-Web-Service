@@ -44,7 +44,7 @@ const TicketBoxCard = ({ data, index , descriptionless=false}) => {
           </ul>
         </div>
         <div className="card-footer packages-ticket-card-footer">
-          <button className="btn btn-primary btn-lg my-3 d-flex mx-auto">
+          <button className="btn btn-secondary btn-lg my-3 d-flex mx-auto">
             More
             <FontAwesomeIcon
               className="my-auto ms-2"

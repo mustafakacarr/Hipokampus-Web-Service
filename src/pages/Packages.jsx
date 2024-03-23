@@ -10,7 +10,7 @@ var filteredPackagesData,
   filteredTicketBoxData = packagesDummyData;
 
 const Packages = () => {
-  const [packageFilter, setPackageFilter] = useState("virtual_office");
+  const [packageFilter, setPackageFilter] = useState("coworking_space");
 
   if (packageFilter === "coworking_space") {
     filteredPackagesData = packagesDummyData.coworking_space.filter(packages => packages.packageType === "STANDARD");
@@ -40,19 +40,19 @@ const Packages = () => {
         </div>
         <div className="d-flex flex-wrap justify-content-center gap-2 my-5">
           <button
-            className="btn btn-outline-primary"
+            className="btn btn-outline-secondary"
             onClick={() => handlePackages("virtual_office")}
           >
             VIRTUAL OFFICE
           </button>
           <button
-            className="btn btn-outline-primary"
+            className="btn btn-outline-secondary"
             onClick={() => handlePackages("coworking_space")}
           >
             COWORKING SPACE
           </button>
           <button
-            className="btn btn-outline-primary"
+            className="btn btn-outline-secondary"
             onClick={() => handlePackages("meeting_room")}
           >
             MEETING ROOM
@@ -63,7 +63,7 @@ const Packages = () => {
             <PackageCard data={item} index={index}></PackageCard>
           ))}
           <div className="px-1 px-lg-2 px-lg-3 mb-3">
-            <div className="package-card my-2 p-4 package-offer d-flex justify-content-between row gx-0">
+            <div className="offer-card my-2 p-4 package-offer d-flex justify-content-between row gx-0">
               <span className="fw-bold fs-3 pe-md-2 align-bottom package-offer-text col-12 col-md-9">
                 GET AN OFFER FOR CUSTOMIZED SOLUTIONS
               </span>
@@ -78,7 +78,6 @@ const Packages = () => {
               <TicketBoxCard
                 data={item}
                 index={index}
-                descriptionless={true}
               ></TicketBoxCard>
             ))
           }

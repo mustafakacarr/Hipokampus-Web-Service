@@ -40,7 +40,7 @@ const UserPanelSidebar = () => {
                     style={{width:"95%", maxWidth:"220px"}}
                 />
             </a>
-            <ul className="nav nav-pills flex-column mb-auto gap-3 mt-4">
+            <ul className="nav nav-pills flex-column mb-auto gap-4 mt-5">
                 <li>
                     <NavLink
                         className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}

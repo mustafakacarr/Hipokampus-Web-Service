@@ -78,7 +78,7 @@ const Catering = () => {
                     <div className="pb-4 px-1 px-xxl-2">
                         <div className="row gx-0 gap-3">
                             <div className="row gx-0 pb-4 justify-content-center justify-content-md-start">
-                                <div className="text-center text-primary mb-2 fw-bold fs-4">
+                                <div className="text-center text-secondary mb-2 fw-bold fs-4">
                                     <FontAwesomeIcon icon={faRectangleList} /> Group 1
                                 </div>
                                 {cateringDummyData.Group_1.map((item, index) => (
@@ -94,7 +94,7 @@ const Catering = () => {
                                 ))}
                             </div>
                             <div className="row gx-0 gap-0 pt-3 py-4 justify-content-center justify-content-md-start">
-                                <div id="groupTwoTitle" className="text-center text-primary mb-2 fw-bold fs-4">
+                                <div id="groupTwoTitle" className="text-center text-secondary mb-2 fw-bold fs-4">
                                     <FontAwesomeIcon icon={faRectangleList} /> Group 2
                                 </div>
                                 {cateringDummyData.Group_2.map((item, index) => (
@@ -110,7 +110,7 @@ const Catering = () => {
                                 ))}
                             </div>
                             <div className="row gx-0 gap-0 pt-3 py-4 justify-content-center justify-content-md-start">
-                                <div id="groupThreeTitle" className="text-center text-primary mb-2 fw-bold fs-4">
+                                <div id="groupThreeTitle" className="text-center text-secondary mb-2 fw-bold fs-4">
                                     <FontAwesomeIcon icon={faRectangleList} /> Group 3
                                 </div>
                                 {cateringDummyData.Group_3.map((item, index) => (

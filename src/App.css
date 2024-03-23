@@ -1,5 +1,9 @@
-.user-panel-main {
+.user-panel-wrapper {
     max-width: 1920px;
+}
+
+.user-panel-main {
+    background-color: #fefefe;
 }
 
 .user-panel-content {
@@ -12,7 +16,7 @@
 
 #offcanvasButton {
     text-decoration: none;
-    color: #cf480a;
+    color: var(--bs-primary);
     cursor: pointer;
     transition: 0.2s;
 }
@@ -26,7 +30,7 @@
 }
 
 .card-input {
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgb(35, 38, 44);
     transition-duration: 0.18s;
     border-radius: 0.375rem;
     border-width: 0;
@@ -34,12 +38,13 @@
 
 .card-input:hover {
     cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(177, 56, 0, 0.7);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgb(23, 25, 29);
+    transform: translateY(4px);
 }
 
 .card-input:active {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(202, 70, 9, 0.9);
-    transform: translateY(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgb(8, 9, 10);
+    transform: translateY(-8px);
 }
 
 .catering-input:checked+.card-input {
@@ -73,13 +78,19 @@
 }
 
 .package-card {
-    border: 2px solid #cf480a;
+    border: 2px solid var(--bs-primary);
+    border-radius: .375rem;
+    background-color: #f8f9fa;
+}
+
+.offer-card {
+    border: 3px solid var(--bs-secondary);
     border-radius: .375rem;
     background-color: #f8f9fa;
 }
 
 .package-ticket-card {
-    border: 2px solid #cf480a;
+    border: 2px solid var(--bs-primary);
     border-radius: .375rem;
 }
 
@@ -92,6 +103,7 @@
 }
 
 .package-offer-text {
+    color: var(--bs-secondary);
     align-self: center;
 }
 
@@ -106,13 +118,7 @@
 .package-title {
     color: white;
     font-weight: bold;
-    background-color: #cf480a;
-}
-
-.user-panel-sidebar-active {
-    color: #cf480a;
-    text-decoration: none;
-    vertical-align: sub;
+    background-color: var(--bs-primary);
 }
 
 .sign-in-form {
@@ -150,7 +156,7 @@
 
 .sign-up-pdpa {
     text-decoration: underline;
-    color: #cf480a;
+    color: var(--bs-primary);
 }
 
 .sign-up-form {
@@ -176,7 +182,13 @@
 }
 
 .catering-sign {
-    color: #cf480a;
+    color: var(--bs-primary);
+}
+
+.user-panel-sidebar-active {
+    color: var(--bs-primary);
+    text-decoration: none;
+    vertical-align: sub;
 }
 
 .user-panel-sidebar-not-active {

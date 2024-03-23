@@ -9,7 +9,7 @@ const UserPanelNavbar = () => {
     const { width } = useWindowSize()
 
     return (
-        <nav className={(width < 576) ? "navbar fixed-top bg-light p-3" : "navbar bg-light p-3"}>
+        <nav className={(width < 576) ? "navbar fixed-top bg-light p-3" : "navbar bg-light p-3"} style={{borderBottom:"2px solid rgb(5, 5, 5, 0.1)"}}>
             <div className="container-fluid">
                 <span className="navbar-brand fw-bold">
                     {(width < 576) ?
