@@ -1,4 +1,4 @@
-import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { faAnglesRight, faArrowRight, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
@@ -20,7 +20,7 @@ const PackageCard = ({ data, index , descriptionless=false}) => {
     >
       <div className="card package-card h-100">
         <div className="card-body p-0">
-          <h4 className="card-title text-center py-4 m-0 package-title">
+          <h4 className="card-title text-center py-4 m-0 package-title px-2">
             {data.packageName}
           </h4>
           <ul className="list-group list-group-flush">
@@ -29,7 +29,7 @@ const PackageCard = ({ data, index , descriptionless=false}) => {
                 <p className="text-center fw-bold fs-4 my-0">{price} TL</p>
                 <p className="text-center mb-3">({price} $) </p>
                 <select
-                  className="form-select mb-1"
+                  className="form-select mb-1 border border-secondary"
                   aria-label="coShortTimeSelect"
                   onChange={(e) => setSelectedPeriodId(e.target.value)}
                 >
@@ -48,10 +48,10 @@ const PackageCard = ({ data, index , descriptionless=false}) => {
         </div>
         <div className="card-footer packages-card-footer">
           <button className="btn btn-secondary btn-lg my-3 d-flex mx-auto">
-            More
+            Buy It
             <FontAwesomeIcon
               className="my-auto ms-2"
-              icon={faAnglesRight}
+              icon={faShoppingCart}
               size="lg"
             />
           </button>

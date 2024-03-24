@@ -31,21 +31,21 @@ function MakePayment() {
         <>
             <ul className="nav nav-pills gap-2 nav-justified fs-5 fw-bold" id="paymentTab" role="tablist">
                 <li className="nav-item" role="presentation">
-                    <button className="nav-link active h-100" id="credit-card-tab"
+                    <button className="nav-link active h-100 " id="credit-card-tab"
                         data-bs-toggle="tab" data-bs-target="#credit-card-tab-pane" type="button" role="tab"
                         aria-controls="credit-card-tab-pane" aria-selected="active">
                         <FontAwesomeIcon icon={faCreditCard} className="me-1" /> Credit Card
                     </button>
                 </li>
                 <li className="nav-item" role="presentation">
-                    <button className="nav-link h-100" id="bank-tab"
+                    <button className="nav-link h-100 " id="bank-tab"
                         data-bs-toggle="tab" data-bs-target="#bank-tab-pane" type="button" role="tab"
                         aria-controls="bank-tab-pane" aria-selected="false">
                         <FontAwesomeIcon icon={faBuildingColumns} className="me-1" /> Bank
                     </button>
                 </li>
                 <li className="nav-item" role="presentation">
-                    <button className="nav-link h-100" id="pay-by-cashier-tab"
+                    <button className="nav-link h-100 " id="pay-by-cashier-tab"
                         data-bs-toggle="tab" data-bs-target="#pay-by-cashier-tab-pane" type="button" role="tab"
                         aria-controls="pay-by-cashier-tab-pane" aria-selected="false">
                         <FontAwesomeIcon icon={faUser} className="me-1" /> Pay by Cashier

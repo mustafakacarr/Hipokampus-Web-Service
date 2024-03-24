@@ -9,7 +9,7 @@ const UserPanelNavbar = () => {
     const { width } = useWindowSize()
 
     return (
-        <nav className={(width < 576) ? "navbar fixed-top bg-light p-3" : "navbar bg-light p-3"} style={{borderBottom:"2px solid rgb(5, 5, 5, 0.1)"}}>
+        <nav className={(width < 576) ? "navbar fixed-top bg-secondary p-3" : "navbar bg-secondary p-3"} style={{borderBottom:"2px solid rgb(5, 5, 5, 0.1)"}}>
             <div className="container-fluid">
                 <span className="navbar-brand fw-bold">
                     {(width < 576) ?
@@ -35,7 +35,7 @@ const UserPanelNavbar = () => {
                 </span>
                 <UserPanelOffcanvas />
                 <div className="dropdown">
-                    <a href="#" className="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="#" className="d-flex align-items-center text-light text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://hipokampus.com.tr/images/galeri/tr/fethiye-hipokampus-bahce-minik-ofis-zoom-kabini-verimli-toplantilar.webp" alt="" width="32" height="32" className="rounded-circle me-2" />
                         <strong>User</strong>
                     </a>

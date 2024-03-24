@@ -1,4 +1,4 @@
-import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { faAnglesRight, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
@@ -20,7 +20,7 @@ const TicketBoxCard = ({ data, index , descriptionless=false}) => {
     >
       <div className="card package-ticket-card h-100">
         <div className="card-body p-0">
-          <h4 className="card-title text-center py-4 m-0 package-title">
+          <h4 className="card-title text-center py-4 m-0 package-title px-2">
             {data.packageName}
           </h4>
           <ul className="list-group list-group-flush">
@@ -45,10 +45,10 @@ const TicketBoxCard = ({ data, index , descriptionless=false}) => {
         </div>
         <div className="card-footer packages-ticket-card-footer">
           <button className="btn btn-secondary btn-lg my-3 d-flex mx-auto">
-            More
+            Buy It
             <FontAwesomeIcon
               className="my-auto ms-2"
-              icon={faAnglesRight}
+              icon={faShoppingCart}
               size="lg"
             />
           </button>

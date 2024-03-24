@@ -1,219 +1,222 @@
 .user-panel-wrapper {
-    max-width: 1920px;
+  max-width: 1920px;
 }
 
 .user-panel-main {
-    background-color: #fefefe;
+  background-color: #fefefe;
 }
 
 .user-panel-content {
-    max-width: 1366px;
+  max-width: 1366px;
 }
 
 .brand-logo {
-    z-index: 50;
+  z-index: 50;
 }
 
 #offcanvasButton {
-    text-decoration: none;
-    color: var(--bs-primary);
-    cursor: pointer;
-    transition: 0.2s;
+  text-decoration: none;
+  color: var(--bs-primary);
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 #offcanvasButton:hover {
-    color: #a73b09;
+  color: #a73b09;
 }
 
 #offcanvasButton:active {
-    color: #863008;
+  color: #863008;
 }
-
-.card-input {
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgb(35, 38, 44);
-    transition-duration: 0.18s;
-    border-radius: 0.375rem;
-    border-width: 0;
+.catering-input {
+  display: none;
 }
 
 .card-input:hover {
-    cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgb(23, 25, 29);
-    transform: translateY(4px);
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 var(--bs-secondary), 0 6px 20px 0 var(--bs-secondary);
+  transform: translateY(4px);
+  opacity: 1;
+  color: black;
 }
 
+.card-input {
+  color: gray;
+  opacity: 0.7;
+}
 .card-input:active {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgb(8, 9, 10);
     transform: translateY(-8px);
 }
-
-.catering-input:checked+.card-input {
-    outline: 6px solid #cf480aa7;
+.catering-input:checked + .card-input {
+  box-shadow: 0 0 3px 3px var(--bs-primary);
+  color: black;
+  opacity: 1;
 }
 
 .cafe-card {
-    max-width: 450px;
+  max-width: 450px;
 }
 
 .cart-card {
-    max-width: 350px;
-    min-width: 125px;
+  max-width: 350px;
+  min-width: 125px;
 }
 
 .catering-order-card {
-    max-width: 400px;
+  max-width: 400px;
 }
 
 .catering-card {
-    padding: 10px;
-    max-width: 350px;
+  padding: 10px;
+  max-width: 350px;
 }
 
 .catering-card-image {
-    height: 150px;
-}
-
-.catering-input {
-    display: none;
+  height: 150px;
 }
 
 .package-card {
-    border: 2px solid var(--bs-primary);
-    border-radius: .375rem;
-    background-color: #f8f9fa;
+  border: 2px solid var(--bs-primary);
+  border-radius: 0.375rem;
+  background-color: #f8f9fa;
 }
 
 .offer-card {
-    border: 3px solid var(--bs-secondary);
-    border-radius: .375rem;
-    background-color: #f8f9fa;
+  border: 3px solid var(--bs-secondary);
+  border-radius: 0.375rem;
+  background-color: #f8f9fa;
 }
 
 .package-ticket-card {
-    border: 2px solid var(--bs-primary);
-    border-radius: .375rem;
+  border: 2px solid var(--bs-primary);
+  border-radius: 0.375rem;
 }
 
 .package-card-list {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 .package-offer {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 .package-offer-text {
-    color: var(--bs-secondary);
-    align-self: center;
+  color: var(--bs-secondary);
+  align-self: center;
 }
 
 .packages-card-footer {
-    background-color: white;
+  background-color: white;
 }
 
 .packages-ticket-card-footer {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 .package-title {
-    color: white;
-    font-weight: bold;
-    background-color: var(--bs-primary);
+  color: white;
+  font-weight: bold;
+  background-color: var(--bs-primary);
 }
 
 .sign-in-form {
-    max-width: 340px;
-    padding: 15px;
+  max-width: 340px;
+  padding: 15px;
 }
 
 .sign-in-image {
-    width: 250px;
+  width: 250px;
 }
 
 .sign-in-username {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .sign-in-password {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .sign-up-password {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .sign-up-password-check {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .sign-up-pdpa {
-    text-decoration: underline;
-    color: var(--bs-primary);
+  text-decoration: underline;
+  color: var(--bs-primary);
 }
 
 .sign-up-form {
-    max-width: 340px;
-    padding: 15px;
+  max-width: 400px;
+  padding: 15px;
 }
 
 .sign-up-image {
-    width: 250px;
+  width: 250px;
 }
 
 .password-recovery-form {
-    max-width: 340px;
-    padding: 15px;
+  max-width: 340px;
+  padding: 15px;
 }
 
 .password-recovery-image {
-    width: 250px;
+  width: 250px;
 }
 
 .form-floating:focus-within {
-    z-index: 2;
+  z-index: 2;
 }
 
 .catering-sign {
-    color: var(--bs-primary);
+  color: var(--bs-primary);
 }
 
 .user-panel-sidebar-active {
-    color: var(--bs-primary);
-    text-decoration: none;
-    vertical-align: sub;
+  color: var(--bs-primary);
+  text-decoration: none;
+  vertical-align: sub;
 }
 
 .user-panel-sidebar-not-active {
-    color: black;
-    text-decoration: none;
-    vertical-align: sub;
+  color: var(--bs-secondary);
+  font-weight: 450;
+  text-decoration: none;
+  vertical-align: sub;
 }
 
+.sidebar-icon{
+    color: var(--bs-primary) !important;
+}
 .offcanvas-link {
-    vertical-align: sub;
+  vertical-align: sub;
 }
 
 .cafe-card-image {
-    height: 150px;
+  height: 150px;
 }
 
 .dropdown-button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .payment-checkout-card {
-    max-width: 400px;
-    min-width: 200px;
+  max-width: 400px;
+  min-width: 200px;
 }
 
 .payment-stepper-footer {
-    background-color: white;
+  background-color: white;
 }

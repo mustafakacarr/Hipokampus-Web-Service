@@ -11,7 +11,11 @@ var filteredPackagesData,
 
 const Packages = () => {
   const [packageFilter, setPackageFilter] = useState("coworking_space");
-
+  const getButtonClassName = (name) => {
+    return packageFilter === name
+      ? "btn btn-outline-secondary active"
+      : "btn btn-outline-secondary";
+  }
   if (packageFilter === "coworking_space") {
     filteredPackagesData = packagesDummyData.coworking_space.filter(packages => packages.packageType === "STANDARD");
     filteredTicketBoxData = packagesDummyData.coworking_space.filter(packages => packages.packageType === "TICKETBOX");
@@ -36,23 +40,23 @@ const Packages = () => {
       <div>
         <div className="text-center">
           <h1 className="fs-1">HIPOKAMPUS MEMBERSHIP</h1>
-          <span>VAT NOT INCLUDED</span>
+          <small>(VAT NOT INCLUDED)</small>
         </div>
         <div className="d-flex flex-wrap justify-content-center gap-2 my-5">
           <button
-            className="btn btn-outline-secondary"
+            className={getButtonClassName("virtual_office")}
             onClick={() => handlePackages("virtual_office")}
           >
             VIRTUAL OFFICE
           </button>
           <button
-            className="btn btn-outline-secondary"
+            className={getButtonClassName("coworking_space")}
             onClick={() => handlePackages("coworking_space")}
           >
             COWORKING SPACE
           </button>
           <button
-            className="btn btn-outline-secondary"
+            className={getButtonClassName("meeting_room")}
             onClick={() => handlePackages("meeting_room")}
           >
             MEETING ROOM
@@ -67,20 +71,15 @@ const Packages = () => {
               <span className="fw-bold fs-3 pe-md-2 align-bottom package-offer-text col-12 col-md-9">
                 GET AN OFFER FOR CUSTOMIZED SOLUTIONS
               </span>
-              <button className="btn btn-primary btn-lg fs-5 fw-bold col-12 col-md-3 mt-4 mt-md-0">
+              <button className="btn btn-secondary btn-lg fs-5 fw-bold col-12 col-md-3 mt-4 mt-md-0">
                 <FontAwesomeIcon icon={faComments} className="me-2" size="xl" />
                 GET AN OFFER
               </button>
             </div>
           </div>
-          {
-            filteredTicketBoxData.map((item, index) => (
-              <TicketBoxCard
-                data={item}
-                index={index}
-              ></TicketBoxCard>
-            ))
-          }
+          {filteredTicketBoxData.map((item, index) => (
+            <TicketBoxCard data={item} index={index}></TicketBoxCard>
+          ))}
         </div>
       </div>
     </UserPanelLayout>

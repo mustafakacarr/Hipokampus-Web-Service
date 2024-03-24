@@ -8,23 +8,23 @@ const SignUp = () => {
                     <div className="d-flex justify-content-center row gx-0">
                         <img className="mb-4 sign-up-image" src="https://hipokampus.com.tr/images/logo-228x48.webp" />
                         <p className="h3 mb-3 fw-normal text-center">Sign up</p>
-                        <div className="form-floating my-3">
+                        <div className="form-floating my-2">
                             <input type="text" className="form-control" id="signUpNameSurname" placeholder="Name surname" required/>
                             <label for="signUpNameSurname">Name surname</label>
                         </div>
-                        <div className="form-floating mb-3">
+                        <div className="form-floating mb-2">
                             <input type="email" className="form-control" id="signUpEmail" placeholder="Email" required/>
                             <label for="signUpEmail">Email</label>
                         </div>
-                        <div className="form-floating">
+                        <div className="form-floating mb-2">
                             <input type="password" className="form-control sign-up-password" id="signUpUsername" placeholder="Choose password" required/>
                             <label for="signUpUsername">Choose password</label>
                         </div>
-                        <div className="form-floating">
+                        <div className="form-floating mb-2">
                             <input type="password" className="form-control sign-up-password-check" id="signUpPasswordCheck" placeholder="Confirm password" required/>
                             <label for="signUpPasswordCheck">Confirm password</label>
                         </div>
-                        <div className="form-floating mt-2">
+                        <div className="form-floating mb-2">
                             <input type="tel" className="form-control" id="signUpPhoneNumber" placeholder="Phone number" required/>
                             <label for="signUpPhoneNumber">Phone number</label>
                         </div>
