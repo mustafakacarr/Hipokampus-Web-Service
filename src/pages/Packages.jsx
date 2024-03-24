@@ -64,7 +64,7 @@ const Packages = () => {
         </div>
         <div className="row gx-0 px-5 px-md-3 py-3 d-flex justify-content-center">
           {filteredPackagesData.map((item, index) => (
-            <PackageCard data={item} index={index}></PackageCard>
+            <PackageCard key={index} data={item} index={index}></PackageCard>
           ))}
           <div className="px-1 px-lg-2 px-lg-3 mb-3">
             <div className="offer-card my-2 p-4 package-offer d-flex justify-content-between row gx-0">
@@ -78,7 +78,7 @@ const Packages = () => {
             </div>
           </div>
           {filteredTicketBoxData.map((item, index) => (
-            <TicketBoxCard data={item} index={index}></TicketBoxCard>
+            <TicketBoxCard key={index} data={item} index={index}></TicketBoxCard>
           ))}
         </div>
       </div>

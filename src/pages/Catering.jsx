@@ -225,7 +225,7 @@ const Catering = () => {
                     className="form-select"
                     id="group-1-select"
                   >
-                    <option value={0} disabled selected>
+                    <option value={0} disabled defaultChecked>
                       Choose first group food
                     </option>
 
@@ -252,7 +252,7 @@ const Catering = () => {
                     className="form-select"
                     id="group-2-select"
                   >
-                    <option value={0} disabled selected>
+                    <option value={0} disabled defaultChecked>
                       Choose second group food
                     </option>
 
@@ -279,7 +279,7 @@ const Catering = () => {
                     className="form-select"
                     id="group-3-select"
                   >
-                    <option value={0} disabled selected>
+                    <option value={0} disabled defaultChecked>
                       Choose third group food
                     </option>
 

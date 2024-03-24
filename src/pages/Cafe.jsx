@@ -83,7 +83,7 @@ const Cafe = () => {
             </div>
             <div className="row gx-0 px-2 px-md-0 justify-content-center justify-content-md-start">
               {filteredCafeData.map((item, index) => (
-                <CafeProductCard item={item} index={index}></CafeProductCard>
+                <CafeProductCard key={index} item={item} index={index}></CafeProductCard>
               ))}
             </div>
           </div>
