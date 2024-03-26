@@ -87,9 +87,9 @@ const Cafe = () => {
                 <CafeProductCard key={index} item={item} index={index}></CafeProductCard>
               ))}
             </div> :
-            <div className="alert alert-info my-3 mx-4 p-4 fs-4 text-center" role="alert">
+            <div className="my-3 mx-4 p-4 text-center" role="alert">
               <FontAwesomeIcon icon={faCircleInfo} className="me-2" />
-              <span>{cafeFilter.replace(/_/g, " ")} is currently not available</span>
+              <span>There is no product under {cafeFilter.replace(/_/g, " ")} category</span>
             </div>
           }
         </div>

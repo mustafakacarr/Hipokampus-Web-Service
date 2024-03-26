@@ -13,7 +13,8 @@ import {
     faCaretDown,
     faBriefcase,
     faUserGroup,
-    faHandshake
+    faHandshake,
+    faHome
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import useWindowSize from "../../hooks/useWindowSize";
@@ -41,6 +42,20 @@ const UserPanelSidebar = () => {
           />
         </a>
         <ul className="nav nav-pills flex-column mb-auto gap-4 mt-5">
+          <li>
+            <NavLink
+              className={(navOption) =>
+                navOption.isActive
+                  ? "user-panel-sidebar-active"
+                  : "user-panel-sidebar-not-active"
+              }
+              to="/dashboard"
+            >
+              <FontAwesomeIcon icon={faHome} size="lg" />
+              <span className="ms-2">Dashboard</span>
+            </NavLink>
+          </li>
+
           <li>
             <NavLink
               className={(navOption) =>
@@ -186,11 +201,7 @@ const UserPanelSidebar = () => {
                     }
                     to="/virtual-office"
                   >
-                    <FontAwesomeIcon
-                      icon={faBriefcase}
-                      size="lg"
-                     
-                    />
+                    <FontAwesomeIcon icon={faBriefcase} size="lg" />
                     <span className="ms-2">Virtual Office</span>
                   </NavLink>
                 </li>

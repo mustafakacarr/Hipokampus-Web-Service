@@ -23,7 +23,7 @@ const UserPanelLayout = ({ children }) => {
         <div className="col-sm-8 col-md-9 col-xl-10 offset-sm-4 offset-md-3 offset-xl-2 user-panel-main">
           <UserPanelHeader />
           {(width < 576) ? <div style={{ marginTop: "85px" }}></div> : <br />}
-          <div className="user-panel-content mx-auto min-vh-100">
+          <div className="user-panel-content container-fluid mx-auto min-vh-100">
             {children}
           </div>
           <div className="container-fluid">

@@ -5,6 +5,7 @@ import SignIn from "../pages/SignIn"
 import SignUp from "../pages/SignUp"
 import PasswordRecovery from "../pages/PasswordRecovery"
 import Payment from "../pages/Payment"
+import Dashboard from "../pages/Dashboard"
 
 const UserPanelRoute = [
     {
@@ -14,6 +15,10 @@ const UserPanelRoute = [
     {
         path: "/sign-up",
         component: <SignUp />
+    },
+    {
+        path: "/dashboard",
+        component: <Dashboard />
     },
     {
         path: "/password-recovery",
