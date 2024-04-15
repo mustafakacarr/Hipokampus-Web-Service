@@ -13,7 +13,8 @@ import {
     faCaretDown,
     faBriefcase,
     faUserGroup,
-    faHandshake
+    faHandshake,
+    faHome
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faLinkedin, faThreads, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons"
 import { NavLink } from "react-router-dom";
@@ -26,7 +27,7 @@ const UserPanelOffcanvas = () => {
 
     return (
         <div className="offcanvas offcanvas-start border" data-bs-scroll="true"
-            data-bs-backdrop="false" tabIndex="-1" id="userPanelOffcanvas" aria-labelledby="userPanelOffcanvas">
+            data-bs-backdrop="true" tabIndex="-1" id="userPanelOffcanvas" aria-labelledby="userPanelOffcanvas">
             <div className="offcanvas-header">
                 <a
                     href="/"
@@ -41,6 +42,14 @@ const UserPanelOffcanvas = () => {
             </div>
             <div className="offcanvas-body border-top mt-2">
                 <ul className="nav nav-pills flex-column mb-auto gap-4 mt-2">
+                    <li>
+                        <NavLink
+                            className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                            to="/dashboard">
+                            <FontAwesomeIcon icon={faHome} size="lg" />
+                            <span className="ms-2">Dashboard</span>
+                        </NavLink>
+                    </li>
                     <li>
                         <NavLink
                             className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}

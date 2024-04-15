@@ -6,6 +6,10 @@ import SignUp from "../pages/SignUp"
 import PasswordRecovery from "../pages/PasswordRecovery"
 import Payment from "../pages/Payment"
 import Dashboard from "../pages/Dashboard"
+import Events from "../pages/Events"
+import Announcements from "../pages/Announcements"
+import Benefits from "../pages/Benefits"
+import Profile from "../pages/Profile"
 
 const UserPanelRoute = [
     {
@@ -39,6 +43,22 @@ const UserPanelRoute = [
     {
         path: "/payment",
         component: <Payment />
+    },
+    {
+        path: "/events",
+        component: <Events />
+    },
+    {
+        path: "/profile",
+        component: <Profile />
+    },
+    {
+        path: "/announcements",
+        component: <Announcements />
+    },
+    {
+        path: "/benefits",
+        component: <Benefits />
     }
 ]
 
