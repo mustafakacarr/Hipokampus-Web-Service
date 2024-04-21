@@ -11,7 +11,7 @@ const UserPanelLayout = ({ children }) => {
   return (
     <div className="user-panel-wrapper mx-auto">
       <div className="row g-0">
-        <div className="col-sm-4 col-md-3 col-xl-2 h-100"
+        <div className="col-sm-4 col-md-3 col-xl-2 h-100 scrollbar-hidden"
           style={(width > 576) ?
             { position: "fixed", overflowY: "scroll", borderRight: "1px solid rgb(5, 5, 5, 0.1)", maxWidth: "320px" }
             :

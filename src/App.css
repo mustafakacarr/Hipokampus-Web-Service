@@ -10,6 +10,15 @@
   max-width: 1366px;
 }
 
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
 .brand-logo {
   z-index: 50;
 }
