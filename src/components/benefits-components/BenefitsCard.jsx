@@ -11,7 +11,7 @@ const BenefitsCard = ({ data, index }) => {
                     <h4 className="card-title mt-2 text-primary fw-bold text-center">
                         {data.title}
                     </h4>
-                    <p className="card-text mt-4 fw-bold benefits-card-description text-secondary">{data.description}</p>
+                    <p className="card-text mt-4 benefits-card-description text-muted">{data.description}</p>
                 </div>
             </div>
         </div>
