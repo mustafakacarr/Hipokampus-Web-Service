@@ -2,7 +2,7 @@ import { faAnglesRight, faArrowRight, faShoppingCart } from "@fortawesome/free-s
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
-const PackageCard = ({ data, index , descriptionless=false}) => {
+const PackageCard = ({ data, index }) => {
   const [selectedPeriodId, setSelectedPeriodId] = useState(2);
 
   const findPriceByPeriodId = () => {
@@ -13,6 +13,7 @@ const PackageCard = ({ data, index , descriptionless=false}) => {
   };
 
   const price = findPriceByPeriodId();
+  
   return (
     <div
       key={index}
