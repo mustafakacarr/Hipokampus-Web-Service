@@ -257,5 +257,32 @@
 
 .benefits-card-description {
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 500;
+}
+
+.events-card {
+  border: 2px solid var(--bs-primary);
+  border-radius: 0.375rem;
+  min-height: 450px;
+}
+
+.events-card-description {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.events-card-overlay {
+  padding: 0px;
+}
+
+.events-card-header {
+  padding: 20px;
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+.events-card-footer {
+  padding: 20px;
+  background-color: #eaeaea;
+  display: block;
 }
