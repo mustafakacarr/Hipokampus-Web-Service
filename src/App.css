@@ -253,11 +253,11 @@
 
 .benefits-card-image {
   border-radius: 20px;
-  margin-top: auto;
-  margin-bottom: auto;
-  filter: grayscale(1);
+  height: 100%;
+  filter: grayscale(0.5);
   scale: 1.2;
   opacity: 0.7;
+  max-height: 450px;
 }
 
 .benefits-card-overlay {
@@ -321,4 +321,8 @@
 .campaigns-card-description {
   font-size: 16px;
   font-weight: 500;
+}
+
+.announcement-card-title {
+  font-size: 18px;
 }
