@@ -200,6 +200,7 @@
   color: var(--bs-primary);
   text-decoration: none;
   vertical-align: sub;
+  font-weight: 750;
 }
 
 .user-panel-sidebar-not-active {
@@ -209,8 +210,17 @@
   vertical-align: sub;
 }
 
+.user-panel-sidebar-not-active:hover {
+  color: var(--bs-primary);
+  font-weight: 750;
+}
+
 .sidebar-icon {
   color: var(--bs-primary) !important;
+}
+
+.subscribed-services-text {
+  font-weight: 500;
 }
 
 .offcanvas-link {

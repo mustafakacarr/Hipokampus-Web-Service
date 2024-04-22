@@ -10,6 +10,7 @@ import Events from "../pages/Events"
 import Announcements from "../pages/Announcements"
 import Benefits from "../pages/Benefits"
 import Profile from "../pages/Profile"
+import Campaigns from "../pages/Campaigns"
 
 const UserPanelRoute = [
     {
@@ -59,6 +60,10 @@ const UserPanelRoute = [
     {
         path: "/benefits",
         component: <Benefits />
+    },
+    {
+        path: "/campaigns",
+        component: <Campaigns />
     }
 ]
 

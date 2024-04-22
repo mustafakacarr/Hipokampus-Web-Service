@@ -14,7 +14,8 @@ import {
     faBriefcase,
     faUserGroup,
     faHandshake,
-    faHome
+    faHome,
+    faTag
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faLinkedin, faThreads, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons"
 import { NavLink } from "react-router-dom";
@@ -100,6 +101,19 @@ const UserPanelOffcanvas = () => {
                     </li>
                     <li>
                         <NavLink
+                            className={(navOption) =>
+                                navOption.isActive
+                                    ? "user-panel-sidebar-active"
+                                    : "user-panel-sidebar-not-active"
+                            }
+                            to="/campaigns"
+                        >
+                            <FontAwesomeIcon icon={faTag} size="lg" />
+                            <span className="ms-2">Campaigns</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
                             className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
                             to="/benefits">
                             <FontAwesomeIcon icon={faFaceSmile} size="lg" />
@@ -129,10 +143,10 @@ const UserPanelOffcanvas = () => {
                             onClick={handleCaretRotate} aria-expanded="false">
                             <FontAwesomeIcon icon={faCaretDown} size="lg" rotation={270}
                                 style={{ transform: rotate, transition: "all 0.35s linear" }} />
-                            <span className="ms-2">Subscribed Services</span>
+                            <span className="ms-2 subscribed-services-text">Subscribed Services</span>
                         </a>
                         <div className="collapse" id="subscribed-services-collapse">
-                            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 my-2 ms-4 gap-2 d-flex row">
+                            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 my-2 ms-4 gap-3 mt-3 d-flex row">
                                 <li>
                                     <NavLink
                                         className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
