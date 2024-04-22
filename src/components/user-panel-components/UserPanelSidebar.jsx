@@ -29,7 +29,7 @@ const UserPanelSidebar = () => {
 
     return width < 576 ? null : (
       <div
-        className="d-flex flex-column flex-shrink-0 px-3 pb-3 bg-light h-100"
+        className="d-flex flex-column flex-shrink-0 px-3 pb-3 h-100"
         style={{ minHeight: "600px", paddingTop: "16px" }}
       >
         <a
