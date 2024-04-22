@@ -19,7 +19,7 @@ const EventsCard = ({ data, index }) => {
                         <span className="col"><FontAwesomeIcon icon={faMoneyBill} className="me-1" />{data.price}₺</span>
                         <span className="col"><FontAwesomeIcon icon={faCalendar} className="me-1" />{data.start_date}</span>
                     </div>
-                    <button className="btn btn-secondary text-center mt-3"><FontAwesomeIcon icon={faTicket} className="me-2" />Buy Ticket</button>
+                    <button className="btn btn-success text-center mt-3"><FontAwesomeIcon icon={faTicket} className="me-2" />Buy Ticket</button>
                 </div>
             </div>
         </div>

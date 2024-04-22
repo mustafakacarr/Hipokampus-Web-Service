@@ -1,7 +1,7 @@
 import React from "react";
-import UserPanelHeader from "../components/user-panel-components/UserPanelHeader";
-import UserPanelFooter from "../components/user-panel-components/UserPanelFooter";
-import UserPanelSidebar from "../components/user-panel-components/UserPanelSidebar";
+import UserPanelHeader from "../components/layout-components/UserPanelHeader";
+import UserPanelFooter from "../components/layout-components/UserPanelFooter";
+import UserPanelSidebar from "../components/layout-components/UserPanelSidebar";
 import useWindowSize from "../hooks/useWindowSize";
 
 const UserPanelLayout = ({ children }) => {
@@ -11,18 +11,27 @@ const UserPanelLayout = ({ children }) => {
   return (
     <div className="user-panel-wrapper mx-auto">
       <div className="row g-0">
-        <div className="col-sm-4 col-md-3 col-xl-2 h-100 scrollbar-hidden bg-light"
-          style={(width >= 576) ?
-            { position: "fixed", overflowY: "scroll", borderRight: "1px solid rgb(5, 5, 5, 0.1)", maxWidth: "320px" }
-            :
-            {}
+        <div
+          className="col-sm-4 col-md-3 col-xl-2 h-100 scrollbar-hidden bg-secondary"
+          style={
+            width >= 576
+              ? {
+                  position: "fixed",
+                  overflowY: "scroll",
+                  borderRight: "1px solid rgb(5, 5, 5, 0.1)",
+                  maxWidth: "270px",
+                }
+              : {}
           }
         >
           <UserPanelSidebar />
         </div>
-        <div className="col-sm-8 col-md-9 col-xl-10 offset-sm-4 offset-md-3 offset-xl-2 user-panel-main">
+        <div
+          className="col-sm-8 col-md-9 col-xl-10 offset-sm-4 offset-md-3 offset-xl-2 user-panel-main"
+         
+        >
           <UserPanelHeader />
-          {(width < 576) ? <div style={{ marginTop: "85px" }}></div> : <br />}
+          {width < 576 ? <div style={{ marginTop: "85px" }}></div> : <br />}
           <div className="user-panel-content container-fluid mx-auto min-vh-100">
             {children}
           </div>

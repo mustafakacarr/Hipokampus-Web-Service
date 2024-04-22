@@ -45,7 +45,7 @@ const UserPanelOffcanvas = () => {
                 <ul className="nav nav-pills flex-column mb-auto gap-4 mt-2">
                     <li>
                         <NavLink
-                            className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                            className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                             to="/dashboard">
                             <FontAwesomeIcon icon={faHome} size="lg" />
                             <span className="ms-2">Dashboard</span>
@@ -53,7 +53,7 @@ const UserPanelOffcanvas = () => {
                     </li>
                     <li>
                         <NavLink
-                            className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                            className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                             to="/profile">
                             <FontAwesomeIcon icon={faUser} size="lg" />
                             <span className="ms-2">Profile</span>
@@ -61,7 +61,7 @@ const UserPanelOffcanvas = () => {
                     </li>
                     <li>
                         <NavLink
-                            className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                            className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                             to="/packages">
                             <FontAwesomeIcon icon={faCubes} size="lg" />
                             <span className="ms-2">Packages</span>
@@ -69,7 +69,7 @@ const UserPanelOffcanvas = () => {
                     </li>
                     <li>
                         <NavLink
-                            className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                            className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                             to="/cafe">
                             <FontAwesomeIcon icon={faMugSaucer} size="lg" />
                             <span className="ms-2">Cafe</span>
@@ -77,7 +77,7 @@ const UserPanelOffcanvas = () => {
                     </li>
                     <li>
                         <NavLink
-                            className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                            className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                             to="/catering">
                             <FontAwesomeIcon icon={faUtensils} size="lg" />
                             <span className="ms-2">Catering</span>
@@ -85,7 +85,7 @@ const UserPanelOffcanvas = () => {
                     </li>
                     <li>
                         <NavLink
-                            className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                            className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                             to="/events">
                             <FontAwesomeIcon icon={faCalendarDays} size="lg" />
                             <span className="ms-2">Events</span>
@@ -93,7 +93,7 @@ const UserPanelOffcanvas = () => {
                     </li>
                     <li>
                         <NavLink
-                            className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                            className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                             to="/announcements">
                             <FontAwesomeIcon icon={faBullhorn} size="lg" />
                             <span className="ms-2">Announcements</span>
@@ -103,8 +103,8 @@ const UserPanelOffcanvas = () => {
                         <NavLink
                             className={(navOption) =>
                                 navOption.isActive
-                                    ? "user-panel-sidebar-active"
-                                    : "user-panel-sidebar-not-active"
+                                    ? "user-panel-offcanvas-active"
+                                    : "user-panel-offcanvas-not-active"
                             }
                             to="/campaigns"
                         >
@@ -114,7 +114,7 @@ const UserPanelOffcanvas = () => {
                     </li>
                     <li>
                         <NavLink
-                            className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                            className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                             to="/benefits">
                             <FontAwesomeIcon icon={faFaceSmile} size="lg" />
                             <span className="ms-2">Benefits</span>
@@ -122,7 +122,7 @@ const UserPanelOffcanvas = () => {
                     </li>
                     <li>
                         <NavLink
-                            className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                            className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                             to="/messages">
                             <FontAwesomeIcon icon={faMessage} size="lg" />
                             <span className="ms-2">Messages</span>
@@ -130,7 +130,7 @@ const UserPanelOffcanvas = () => {
                     </li>
                     <li>
                         <NavLink
-                            className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                            className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                             to="/payment">
                             <FontAwesomeIcon icon={faWallet} size="lg" />
                             <span className="ms-2">Payment</span>
@@ -149,7 +149,7 @@ const UserPanelOffcanvas = () => {
                             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 my-2 ms-4 gap-3 mt-3 d-flex row">
                                 <li>
                                     <NavLink
-                                        className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                                        className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                                         to="/virtual-office">
                                         <FontAwesomeIcon icon={faBriefcase} size="lg" />
                                         <span className="ms-2">Virtual Office</span>
@@ -157,7 +157,7 @@ const UserPanelOffcanvas = () => {
                                 </li>
                                 <li>
                                     <NavLink
-                                        className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                                        className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                                         to="/coworking-space">
                                         <FontAwesomeIcon icon={faUserGroup} size="lg" />
                                         <span className="ms-2">Coworking Space</span>
@@ -165,7 +165,7 @@ const UserPanelOffcanvas = () => {
                                 </li>
                                 <li>
                                     <NavLink
-                                        className={(navOption) => (navOption.isActive ? 'user-panel-sidebar-active' : "user-panel-sidebar-not-active")}
+                                        className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                                         to="/meeting-room">
                                         <FontAwesomeIcon icon={faHandshake} size="lg" />
                                         <span className="ms-2">Meeting Room</span>

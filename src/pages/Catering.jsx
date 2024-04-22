@@ -298,7 +298,7 @@ const Catering = () => {
                                 </select>
                             </div>
                             <hr className="my-2" />
-                            <a href="#" className="btn btn-primary">
+                            <a href="#" className="btn btn-success">
                                 Create Order
                             </a>
                         </div>

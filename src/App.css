@@ -7,7 +7,7 @@
 }
 
 .user-panel-content {
-  max-width: 1366px;
+  max-width: 1500px;
 }
 
 .scrollbar-hidden {
@@ -204,13 +204,31 @@
 }
 
 .user-panel-sidebar-not-active {
-  color: var(--bs-secondary);
+  color: var(--bs-light);
   font-weight: 450;
   text-decoration: none;
   vertical-align: sub;
 }
 
 .user-panel-sidebar-not-active:hover {
+  color: var(--bs-primary);
+  font-weight: 750;
+}
+.user-panel-offcanvas-active {
+  color: var(--bs-primary);
+  text-decoration: none;
+  vertical-align: sub;
+  font-weight: 750;
+}
+
+.user-panel-offcanvas-not-active {
+  color: var(--bs-secondary);
+  font-weight: 450;
+  text-decoration: none;
+  vertical-align: sub;
+}
+
+.user-panel-offcanvas-not-active:hover {
   color: var(--bs-primary);
   font-weight: 750;
 }

@@ -38,7 +38,7 @@ const CafeProductCard = ({ item, index }) => {
                             </a>
                         </div>
                         <div className="col-auto">
-                            <a className="btn btn-primary ms-0 px-4">
+                            <a className="btn btn-success ms-0 px-4">
                                 <FontAwesomeIcon icon={faCartShopping} />
                             </a>
                         </div>
