@@ -40,10 +40,10 @@ const UserPanelNavbar = () => {
                         <strong>User</strong>
                     </a>
                     <ul className="dropdown-menu dropdown-menu-end text-small shadow">
-                        <li><a className="dropdown-item" href="#">Profile</a></li>
-                        <li><a className="dropdown-item" href="#">Campaigns</a></li>
+                        <li><a className="dropdown-item" href="/profile">Profile</a></li>
+                        <li><a className="dropdown-item" href="/campaigns">Campaigns</a></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><a className="dropdown-item" href="#">Sign out</a></li>
+                        <li><a className="dropdown-item" href="/">Sign out</a></li>
                     </ul>
                 </div>
             </div>
