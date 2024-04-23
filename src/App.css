@@ -1,5 +1,6 @@
 .user-panel-wrapper {
   max-width: 1920px;
+  background-color: #fefefe;
 }
 
 .user-panel-main {
@@ -7,7 +8,8 @@
 }
 
 .user-panel-content {
-  max-width: 1500px;
+  max-width: 1510px;
+  margin-right: 70px !important;
 }
 
 .scrollbar-hidden {
@@ -196,8 +198,13 @@
   color: var(--bs-primary);
 }
 
+.sidebar-welcome {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .user-panel-sidebar-active {
-  color: var(--bs-primary);
+  color: #ED6109;
   text-decoration: none;
   vertical-align: sub;
   font-weight: 750;
@@ -211,7 +218,7 @@
 }
 
 .user-panel-sidebar-not-active:hover {
-  color: var(--bs-primary);
+  color: #ED6109;
   font-weight: 750;
 }
 .user-panel-offcanvas-active {
@@ -233,8 +240,9 @@
   font-weight: 750;
 }
 
-.sidebar-icon {
-  color: var(--bs-primary) !important;
+.user-panel-footer {
+  padding-left: 40px;
+  padding-right: 70px;
 }
 
 .subscribed-services-text {

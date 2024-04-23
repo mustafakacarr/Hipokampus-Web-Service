@@ -11,16 +11,19 @@ const UserPanelLayout = ({ children }) => {
   return (
     <div className="user-panel-wrapper mx-auto">
       <div className="row g-0">
+        <UserPanelHeader />
         <div
-          className="col-sm-4 col-md-3 col-xl-2 h-100 scrollbar-hidden bg-secondary"
+          className="col-sm-4 col-md-3 col-xl-2 h-100 scrollbar-hidden"
           style={
             width >= 576
               ? {
-                  position: "fixed",
-                  overflowY: "scroll",
-                  borderRight: "1px solid rgb(5, 5, 5, 0.1)",
-                  maxWidth: "270px",
-                }
+                position: "fixed",
+                overflowY: "scroll",
+                borderRight: "1px solid rgb(5, 5, 5, 0.1)",
+                maxWidth: "270px",
+                backgroundColor: "#212631",
+                zIndex: 100
+              }
               : {}
           }
         >
@@ -28,14 +31,13 @@ const UserPanelLayout = ({ children }) => {
         </div>
         <div
           className="col-sm-8 col-md-9 col-xl-10 offset-sm-4 offset-md-3 offset-xl-2 user-panel-main"
-         
+
         >
-          <UserPanelHeader />
           {width < 576 ? <div style={{ marginTop: "85px" }}></div> : <br />}
           <div className="user-panel-content container-fluid mx-auto min-vh-100">
             {children}
           </div>
-          <div className="container-fluid">
+          <div className="container-fluid user-panel-footer">
             <hr />
             <UserPanelFooter />
           </div>
