@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import TicketOrderKeyValuePairs from "./right-card-contents/TicketOrderKeyValuePairs";
+import MeetingRoomOrderKeyValuePairs from "./right-card-contents/MeetingRoomOrderKeyValuePairs";
+import { MEETING_ROOM_ORDER, TICKET_ORDER } from "../../constants/OrderType";
 function RightCartSummary() {
+  const [orderType, setOrderType] = useState(MEETING_ROOM_ORDER);
 
+  const findPairsContent = () => {
+    let pairComponent = null;
+    switch (orderType) {
+      case TICKET_ORDER:
+        pairComponent = <TicketOrderKeyValuePairs />;
+        break;
+      case MEETING_ROOM_ORDER:
+        pairComponent = <MeetingRoomOrderKeyValuePairs />;
+
+        break;
+      default:
+        break;
+    }
+    return pairComponent;
+  };
   return (
     <div className="card">
       <div className="card-body">
         <h5 className="card-title text-center">Cart Summary</h5>
         <div className="d-flex flex-column">
           <div className="d-flex justify-content-between py-2">
-            <span>
-              <strong>Key:</strong>
-            </span>
-            <span>Value</span>
+            {findPairsContent()}
           </div>
         </div>
         <hr />
@@ -23,7 +39,6 @@ function RightCartSummary() {
       </div>
     </div>
   );
- 
 }
 
 export default RightCartSummary;
