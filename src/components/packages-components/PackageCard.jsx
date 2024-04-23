@@ -48,7 +48,7 @@ const PackageCard = ({ data, index }) => {
           </ul>
         </div>
         <div className="card-footer packages-card-footer">
-          <button className="btn btn-secondary btn-lg my-3 d-flex mx-auto">
+          <button className="btn btn-success btn-lg my-3 d-flex mx-auto">
             Buy It
             <FontAwesomeIcon
               className="my-auto ms-2"

@@ -31,13 +31,20 @@ const UserPanelLayout = ({ children }) => {
         </div>
         <div
           className="col-sm-8 col-md-9 col-xl-10 offset-sm-4 offset-md-3 offset-xl-2 user-panel-main"
-
         >
-          {width < 576 ? <div style={{ marginTop: "85px" }}></div> : <br />}
+          {width < 576 ? <div style={{ marginTop: "95px" }}></div> : <br />}
           <div className="user-panel-content container-fluid mx-auto min-vh-100">
             {children}
           </div>
-          <div className="container-fluid user-panel-footer">
+          <div
+            className="container-fluid"
+            style={
+              width >= 576
+                ? {
+                  paddingLeft: "40px",
+                  paddingRight: "70px"
+                }
+                : {} }>
             <hr />
             <UserPanelFooter />
           </div>
