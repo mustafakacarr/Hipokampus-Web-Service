@@ -186,10 +186,10 @@ const UserPanelSidebar = () => {
                                 ? "user-panel-sidebar-active"
                                 : "user-panel-sidebar-not-active"
                         }
-                        to="/payment"
+                        to="/order"
                     >
                         <FontAwesomeIcon icon={faWallet} size="lg" />
-                        <span className="ms-2">Payment</span>
+                        <span className="ms-2">Order</span>
                     </NavLink>
                 </li>
                 <hr />

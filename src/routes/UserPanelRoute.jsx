@@ -1,18 +1,19 @@
-import Cafe from "../pages/Cafe"
-import Packages from "../pages/Packages"
-import Catering from "../pages/Catering"
-import SignIn from "../pages/SignIn"
-import SignUp from "../pages/SignUp"
-import PasswordRecovery from "../pages/PasswordRecovery"
-import Payment from "../pages/Payment"
-import Dashboard from "../pages/Dashboard"
-import Events from "../pages/Events"
-import Announcements from "../pages/Announcements"
-import Benefits from "../pages/Benefits"
-import Profile from "../pages/Profile"
-import Campaigns from "../pages/Campaigns"
-import OrderHistory from "../pages/OrderHistory"
-import MyTickets from "../pages/MyTickets"
+import Cafe from "../pages/Cafe";
+import Packages from "../pages/Packages";
+import Catering from "../pages/Catering";
+import SignIn from "../pages/SignIn";
+import SignUp from "../pages/SignUp";
+import PasswordRecovery from "../pages/PasswordRecovery";
+import Payment from "../pages/Order";
+import Dashboard from "../pages/Dashboard";
+import Events from "../pages/Events";
+import Announcements from "../pages/Announcements";
+import Benefits from "../pages/Benefits";
+import Profile from "../pages/Profile";
+import Campaigns from "../pages/Campaigns";
+import OrderHistory from "../pages/OrderHistory";
+import MyTickets from "../pages/MyTickets";
+import Order from "../pages/Order";
 
 const UserPanelRoute = [
   {
@@ -43,10 +44,7 @@ const UserPanelRoute = [
     path: "/catering",
     component: <Catering />,
   },
-  {
-    path: "/payment",
-    component: <Payment />,
-  },
+
   {
     path: "/events",
     component: <Events />,
@@ -74,7 +72,11 @@ const UserPanelRoute = [
   {
     path: "/order-history",
     component: <OrderHistory />,
-  }
+  },
+  {
+    path: "/order",
+    component: <Order />,
+  },
 ];
 
-export default UserPanelRoute
+export default UserPanelRoute;
