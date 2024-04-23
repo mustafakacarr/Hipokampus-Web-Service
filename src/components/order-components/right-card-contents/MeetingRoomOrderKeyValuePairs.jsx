@@ -2,10 +2,10 @@ import React from "react";
 
 const MeetingRoomOrderKeyValuePairs = () => {
   const pairs = [
-    { "Office Name: ": "GARDEN B1" },
-    { "Office Quota: ": "100 Person" },
-    { "Package: ": "Package Package" },
-    { "Period: ": "DAILY" },
+    { "Office Name ": "GARDEN B1" },
+    { "Office Quota ": "100 Person" },
+    { "Package ": "Package Package" },
+    { "Period ": "DAILY" },
   ];
   return (
     <div>
@@ -16,7 +16,7 @@ const MeetingRoomOrderKeyValuePairs = () => {
               <span>
                 <strong>{key}</strong>:
               </span>
-              <span>{value}</span>
+              <span> {value}</span>
             </div>
           ))}
         </div>

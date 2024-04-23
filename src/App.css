@@ -62,7 +62,7 @@
   transform: translateY(-8px);
 }
 
-.catering-input:checked+.card-input {
+.catering-input:checked + .card-input {
   box-shadow: 0 0 3px 3px var(--bs-primary);
   color: black;
   opacity: 1;
@@ -204,7 +204,7 @@
 }
 
 .user-panel-sidebar-active {
-  color: #ED6109;
+  color: #ed6109;
   text-decoration: none;
   vertical-align: sub;
   font-weight: 750;
@@ -218,7 +218,7 @@
 }
 
 .user-panel-sidebar-not-active:hover {
-  color: #ED6109;
+  color: #ed6109;
   font-weight: 750;
 }
 .user-panel-offcanvas-active {
@@ -282,8 +282,16 @@
 }
 
 .benefits-card-overlay {
-  background: linear-gradient(-5deg, rgba(216, 216, 216, 0.3)0%, rgb(201, 201, 201) 100%),
-    linear-gradient(175deg, rgba(216, 216, 216, 0.3) 85%, rgb(158, 158, 158) 100%);
+  background: linear-gradient(
+      -5deg,
+      rgba(216, 216, 216, 0.3) 0%,
+      rgb(201, 201, 201) 100%
+    ),
+    linear-gradient(
+      175deg,
+      rgba(216, 216, 216, 0.3) 85%,
+      rgb(158, 158, 158) 100%
+    );
 }
 
 .benefits-card-description {
@@ -335,8 +343,16 @@
 }
 
 .campaigns-card-overlay {
-  background: linear-gradient(-5deg, rgba(216, 216, 216, 0.3) 0%, rgb(201, 201, 201) 100%),
-    linear-gradient(175deg, rgba(216, 216, 216, 0.3) 85%, rgb(158, 158, 158) 100%);
+  background: linear-gradient(
+      -5deg,
+      rgba(216, 216, 216, 0.3) 0%,
+      rgb(201, 201, 201) 100%
+    ),
+    linear-gradient(
+      175deg,
+      rgba(216, 216, 216, 0.3) 85%,
+      rgb(158, 158, 158) 100%
+    );
 }
 
 .campaigns-card-description {
@@ -355,4 +371,32 @@
 
 .announcement-card-title {
   font-size: 18px;
+}
+
+.order-tab.active {
+  background-color: var(--bs-secondary) !important;
+  color: white !important;
+}
+.order-tab {
+  color: var(--bs-secondary);
+}
+.order-status-success-i {
+  font-size: 55px;
+  color: var(--bs-success);
+}
+.order-status-success {
+  padding: 10px;
+  text-align: center;
+  margin: 10px auto;
+  border-bottom: solid 4px var(--bs-success);
+}
+.order-status-failed {
+  border-bottom: solid 4px var(--bs-danger) !important;
+  padding: 10px;
+  text-align: center;
+  margin: 10px auto;
+}
+.order-status-failed-i {
+  font-size: 55px;
+  color: var(--bs-danger);
 }
