@@ -81,26 +81,26 @@ const Cafe = () => {
             </div>
           )}
         </div>
-        <div className="col-sm-12 col-md-4 col-xl-3 mt-3 mt-md-0 px-2 px-md-3 px-lg-3 mt-4 mb-3 mt-md-0 mb-3-0">
+        <div className="col-sm-12 col-md-4 col-xl-3 cart-layout px-2 px-md-3 px-lg-3 mb-3 mb-3-0">
           <div className="card text-center cart-card mx-auto">
             <h4 className="card-header">
               <FontAwesomeIcon icon={faCartShopping} />
               <span className="ms-2">Cart</span>
             </h4>
-            <div className="card-body">
+            <div className="card-body cart-card-body">
               {basket.length > 0 ? (
-                <div className="card">
+                <div className="card cafe-basket">
                   <div className="card-body">
                     {basket.map((item, index) => (
-                      <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-row align-items-center">
+                      <div class="d-flex justify-content-between border rounded p-2 my-2 row">
+                        <div class="d-flex col align-items-center">
                      
                             <strong style={{ textOverflow: "ellipsis" }}>
                               {item.name}
                             </strong>
               
                         </div>
-                        <div class="d-flex flex-row align-items-center">
+                        <div class="d-flex col align-items-center">
                           <div
                             class="btn text-primary px-2"
                             onClick={() =>
@@ -123,17 +123,17 @@ const Cafe = () => {
                             <FontAwesomeIcon icon={faPlus} />
                           </div>
                           <div
-                            class="btn text-secondary pl-2  removeProduct"
+                            class="btn text-secondary pl-2 removeProduct"
                             onClick={() =>
                               removeFromCartHandler(item.productId)
                             }
                           >
-                            <FontAwesomeIcon icon={faTrashAlt} />
+                            <FontAwesomeIcon className="cafe-basket-trash" icon={faTrashAlt} />
                           </div>
                         </div>
                       </div>
                     ))}
-                  </div>{" "}
+                  </div>
                 </div>
               ) : (
                 <div>There is no product in your basket</div>

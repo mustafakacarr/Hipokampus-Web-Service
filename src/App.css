@@ -72,9 +72,26 @@
   max-width: 450px;
 }
 
+.cart-layout {
+  margin-top: 60px;
+}
+
+.cart-card-body {
+  align-content: center;
+}
+
 .cart-card {
   max-width: 350px;
   min-width: 125px;
+  min-height: 200px;
+}
+
+.cafe-basket {
+  border: none;
+}
+
+.cafe-basket-trash:hover {
+  color: var(--bs-danger);
 }
 
 .catering-order-card {
