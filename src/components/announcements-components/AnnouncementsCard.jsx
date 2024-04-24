@@ -6,12 +6,15 @@ const BenefitsCard = ({ data, index }) => {
 
     return (
         <div key={index} className="px-1 px-lg-2 px-lg-3 col-12 col-md-6 col-xl-4 mb-4 mb-md-3">
-            <div className="card announcement-card text-dark bg-light mb-3 h-100">
-                <div className="card-header announcement-card-header fw-bold announcement-card-title text-center">
-                    <FontAwesomeIcon icon={faBell} className="me-2" />{data.title}
-                </div>
-                <div className="card-body">
-                    <p className="card-text text-muted">{data.description}</p>
+            <div className="card announcement-card text-dark mb-3 h-100" style={{backgroundColor: "#f9f9f9"}}>
+                <div className="card-body h-100 announcement-card-title">
+                    <div className="announcement-card-title fw-bold">
+                        <FontAwesomeIcon icon={faBell} className="me-2 text-primary" />
+                        {data.title}
+                    </div>
+                    <div className="text-muted fs-6 mt-3">
+                        {data.description}
+                    </div>
                 </div>
             </div>
         </div>

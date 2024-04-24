@@ -377,15 +377,6 @@
   font-weight: 500;
 }
 
-.announcement-card {
-  border: 2px solid var(--bs-primary);
-}
-
-.announcement-card-header {
-  background-color: var(--bs-primary);
-  color: white;
-}
-
 .announcement-card-title {
   font-size: 18px;
 }
