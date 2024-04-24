@@ -31,7 +31,6 @@ function OrderLayout(props) {
   }, [location.pathname, steps]);
 
   const handleOnClick = () => {
-      console.log("🚀 ~ handleOnClick ~ currentStep:", currentStep);
     if (currentStep < steps.length - 1) {
     
       const nextStepPath = steps[currentStep + 1].path;

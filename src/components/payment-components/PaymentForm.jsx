@@ -115,7 +115,8 @@ function PaymentForm() {
                       CVV <i className="fa fa-question-circle d-inline"></i>
                     </h6>
                   </label>
-                  <input type="text" required className="form-control" />
+                  
+                  <input type="text" required className="form-control" maxLength={4}/>
                 </div>
               </div>
             </div>
