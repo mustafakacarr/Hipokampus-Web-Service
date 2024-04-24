@@ -1,32 +1,42 @@
 [
     {
+        "id": 1,
         "name": "Pasta",
         "price": 100,
         "photo": "https://hipokampus.com.tr/images/cafe/en/pasta.webp",
-        "category": "pasta"
+        "category": "pasta",
+        "categoryId": 1
     },
     {
+        "id": 2,
         "name": "Toast",
         "price": 70,
         "photo": "https://hipokampus.com.tr/images/cafe/en/toast.webp",
-        "category": "snack"
+        "category": "snack",
+        "categoryId": 3
     },
     {
+        "id": 3,
         "name": "Soda",
         "price": 20,
         "photo": "https://hipokampus.com.tr/images/cafe/en/plain-soda.jpg",
-        "category": "cold_drink"
+        "category": "cold_drink",
+        "categoryId": 4
     },
     {
+        "id": 4,
         "name": "Nespresso",
         "price": 60,
         "photo": "https://hipokampus.com.tr/images/cafe/en/nespresso.jpg",
-        "category": "hot_drink"
+        "category": "hot_drink",
+        "categoryId": 5
     },
     {
+        "id": 5,
         "name": "Turkish Tea",
         "price": 0,
         "photo": "https://hipokampus.com.tr/images/cafe/en/tea.webp",
-        "category": "treat"
+        "category": "treat",
+        "categoryId": 6
     }
 ]
