@@ -4,6 +4,7 @@ import cafeDummyData from "../dummy-data/cafeDummyData.json";
 import cafeCategoriesDummyData from "../dummy-data/cafeCategoriesDummyData.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBell,
   faCartShopping,
   faCircleInfo,
   faMinus,
@@ -46,7 +47,7 @@ const Cafe = () => {
     setBasket(decreaseQuantity(productId, basket));
   };
   const removeFromCartHandler = (productId) => {
-      setBasket(removeFromCart(productId,basket))
+    setBasket(removeFromCart(productId, basket))
   }
 
   return (
@@ -92,17 +93,17 @@ const Cafe = () => {
                 <div className="card cafe-basket">
                   <div className="card-body">
                     {basket.map((item, index) => (
-                      <div class="d-flex justify-content-between border rounded p-2 my-2 row">
-                        <div class="d-flex col align-items-center">
-                     
-                            <strong style={{ textOverflow: "ellipsis" }}>
-                              {item.name}
-                            </strong>
-              
+                      <div className="d-flex justify-content-between border rounded p-2 my-2 row">
+                        <div className="d-flex col align-items-center">
+
+                          <strong style={{ textOverflow: "ellipsis" }}>
+                            {item.name}
+                          </strong>
+
                         </div>
-                        <div class="d-flex col align-items-center">
+                        <div className="d-flex col align-items-center">
                           <div
-                            class="btn text-primary px-2"
+                            className="btn text-primary px-2"
                             onClick={() =>
                               decreaseQuantityHandler(item.productId)
                             }
@@ -110,12 +111,12 @@ const Cafe = () => {
                             <FontAwesomeIcon icon={faMinus} />
                           </div>
                           <div>
-                            <h5 class="fw-normal mb-0 quantityProduct">
+                            <h5 className="fw-normal mb-0 quantityProduct">
                               {item.quantity}
                             </h5>
                           </div>
                           <div
-                            class="btn text-primary px-2"
+                            className="btn text-primary px-2"
                             onClick={() =>
                               increaseQuantityHandler(item.productId)
                             }
@@ -123,7 +124,7 @@ const Cafe = () => {
                             <FontAwesomeIcon icon={faPlus} />
                           </div>
                           <div
-                            class="btn text-secondary pl-2 removeProduct"
+                            className="btn text-secondary pl-2 removeProduct"
                             onClick={() =>
                               removeFromCartHandler(item.productId)
                             }
@@ -138,11 +139,24 @@ const Cafe = () => {
               ) : (
                 <div>There is no product in your basket</div>
               )}
-
               <a href="#" className="btn btn-success mt-3">
                 Go To Checkout
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="cafeQuantityToast" className="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div className="toast-header fw-bold fs-5 text-dark">
+            <strong className="me-auto">
+              <FontAwesomeIcon icon={faBell} className="me-2 text-primary" />
+              Cafe
+            </strong>
+            <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div className="toast-body">
+            You can buy no more than <span className="fw-bold text-primary">9</span>
           </div>
         </div>
       </div>
