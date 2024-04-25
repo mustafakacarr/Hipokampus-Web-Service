@@ -14,6 +14,7 @@ import Campaigns from "../pages/Campaigns";
 import OrderHistory from "../pages/OrderHistory";
 import MyTickets from "../pages/MyTickets";
 import Order from "../pages/Order";
+import Messages from "../pages/Messages";
 
 const UserPanelRoute = [
   {
@@ -77,6 +78,10 @@ const UserPanelRoute = [
     path: "/order",
     component: <Order />,
   },
+  {
+    path: "/messages",
+    component: <Messages />
+  }
 ];
 
 export default UserPanelRoute;

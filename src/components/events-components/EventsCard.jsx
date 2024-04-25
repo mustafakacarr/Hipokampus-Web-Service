@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendar,
-  faTicket,
+  faChevronRight,
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -35,7 +35,7 @@ const EventsCard = ({ data, index }) => {
             <span className="fw-bold fs-4">{data.price}₺</span>
           </div>
           <button className="btn btn-success">
-            <FontAwesomeIcon icon={faTicket} className="me-2" />
+            <FontAwesomeIcon icon={faChevronRight} className="me-2" />
             Buy Ticket
           </button>
         </div>
