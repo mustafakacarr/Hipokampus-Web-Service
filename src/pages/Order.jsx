@@ -1,19 +1,21 @@
-import React from "react"
+import React, { useEffect } from "react";
 import UserPanelLayout from "../layouts/UserPanelLayout";
 import OrderLayout from "../layouts/OrderLayout";
+import { useLocation, useNavigate } from "react-router-dom";
+import OrderSteps from "../components/order-components/OrderSteps";
 
 const Order = () => {
-    return (
-        <UserPanelLayout>
-            <div className="mx-0 px-md-2 px-3 mb-5 mt-2 row gx-0">
-                <div className="col-sm-12 col-md-7 col-lg-8 col-xl-9 p-2">
-                  <OrderLayout></OrderLayout>
-                </div>
-                <div className="col-sm-12 col-md-5 col-lg-4 col-xl-3 p-2">
-                </div>
-            </div>
-        </UserPanelLayout>
-    );
+  const history = useNavigate();
+  const location = useLocation();
+  const steps = OrderSteps;
+  useEffect(() => {
+    if (location.pathname === "/order") {
+      history(steps[0].path);
+    } else {
+    }
+  }, [location.pathname, steps]);
+
+  return <UserPanelLayout></UserPanelLayout>;
 };
 
 export default Order;

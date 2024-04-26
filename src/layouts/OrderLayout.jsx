@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import PaymentForm from "../components/payment-components/PaymentForm";
-import Steps from "../components/order-components/OrderSteps";
 import CheckoutSteps from "../components/checkout-stepper-components/CheckoutSteps";
 import UserPanelLayout from "./UserPanelLayout";
 import RightCartSummary from "../components/order-components/RightCartSummary";
+import OrderSteps from "../components/order-components/OrderSteps";
 
 function OrderLayout(props) {
   const history = useNavigate();
   const location = useLocation();
   const [currentStep, setCurrentStep] = useState(0);
-  const steps = Steps;
+  const steps = OrderSteps;
 
   useEffect(() => {
     if (!props.children) {
