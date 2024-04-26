@@ -5,7 +5,7 @@
             "packageName": "Virtual Office BCX Package",
             "packageDescription": "string string string string string string string ",
             "packageType": "STANDARD",
-            "serviceType": "MEETING_ROOM",
+            "serviceType": "VIRTUAL_OFFICE",
             "prices": [
                 {
                     "periodId": 2,
@@ -30,7 +30,7 @@
             "packageName": "Virtual Office ASD Package",
             "packageDescription": "string",
             "packageType": "STANDARD",
-            "serviceType": "MEETING_ROOM",
+            "serviceType": "VIRTUAL_OFFICE",
             "prices": [
                 {
                     "periodId": 2,
@@ -55,7 +55,7 @@
             "packageName": "Virtual Office EHE Package",
             "packageDescription": "string",
             "packageType": "STANDARD",
-            "serviceType": "MEETING_ROOM",
+            "serviceType": "VIRTUAL_OFFICE",
             "prices": [
                 {
                     "periodId": 6,
@@ -82,7 +82,7 @@
             "packageName": "Coworking Space BCX Package",
             "packageDescription": "string string string string string string string ",
             "packageType": "STANDARD",
-            "serviceType": "MEETING_ROOM",
+            "serviceType": "COWORKING_SPACE",
             "prices": [
                 {
                     "periodId": 2,
@@ -107,7 +107,7 @@
             "packageName": "Coworking Space ASD Package",
             "packageDescription": "string",
             "packageType": "STANDARD",
-            "serviceType": "MEETING_ROOM",
+            "serviceType": "COWORKING_SPACE",
             "prices": [
                 {
                     "periodId": 2,
@@ -132,7 +132,7 @@
             "packageName": "Coworking Space EHE Package",
             "packageDescription": "string",
             "packageType": "STANDARD",
-            "serviceType": "MEETING_ROOM",
+            "serviceType": "COWORKING_SPACE",
             "prices": [
                 {
                     "periodId": 6,
@@ -157,7 +157,7 @@
             "packageName": "Coworking Space BCX Ticket",
             "packageDescription": "string string string string string string string ",
             "packageType": "TICKETBOX",
-            "serviceType": "MEETING_ROOM",
+            "serviceType": "COWORKING_SPACE",
             "prices": [
                 {
                     "periodId": 2,
@@ -182,7 +182,7 @@
             "packageName": "Coworking Space ASD Ticket",
             "packageDescription": "string",
             "packageType": "TICKETBOX",
-            "serviceType": "MEETING_ROOM",
+            "serviceType": "COWORKING_SPACE",
             "prices": [
                 {
                     "periodId": 2,
@@ -207,7 +207,7 @@
             "packageName": "Coworking Space EHE Ticket",
             "packageDescription": "string",
             "packageType": "TICKETBOX",
-            "serviceType": "MEETING_ROOM",
+            "serviceType": "COWORKING_SPACE",
             "prices": [
                 {
                     "periodId": 6,
