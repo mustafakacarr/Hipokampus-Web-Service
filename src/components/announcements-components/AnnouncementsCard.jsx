@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 
-const BenefitsCard = ({ data, index }) => {
+const AnnouncementsCard = ({ data, index }) => {
 
     return (
       <div
@@ -25,4 +25,4 @@ const BenefitsCard = ({ data, index }) => {
     );
 }
 
-export default BenefitsCard;
+export default AnnouncementsCard;

@@ -1,5 +1,16 @@
 import { Exception } from "sass";
 
+function showCafeQuantityNotification() {
+  const cafeQuantityToast = document.getElementById('cafeQuantityToast')
+  const quantityErrorToast = bootstrap.Toast.getOrCreateInstance(cafeQuantityToast)
+  quantityErrorToast.show()
+}
+
+function doQuantityErrorActions() {
+  showCafeQuantityNotification();
+  return item;
+}
+
 export const addToCart = (product, cartItems) => {
   const existingItem = cartItems.find(
     (item) => item.productId === product.productId
@@ -13,9 +24,7 @@ export const addToCart = (product, cartItems) => {
     );
 
     if (updatedCartItems.some((item) => item.quantity > 9)) {
-      const cafeQuantityToast = document.getElementById('cafeQuantityToast')
-      const quantityErrorToast = bootstrap.Toast.getOrCreateInstance(cafeQuantityToast)
-      quantityErrorToast.show()
+      showCafeQuantityNotification();
       throw new Error("Quantity cannot be more than 9");
     }
 
@@ -33,9 +42,9 @@ export const removeFromCart = (productId, cartItems) => {
 
 export const increaseQuantity = (productId, cartItems) => {
   const updatedCartItems = cartItems.map((item) =>
-    item.productId === productId
+    item.productId === productId && item.quantity < 9
       ? { ...item, quantity: item.quantity + 1 }
-      : item
+      : doQuantityErrorActions()
   );
   return updatedCartItems;
 };
