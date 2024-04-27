@@ -1,5 +1,6 @@
 import React from "react";
 import UserPanelLayout from "../layouts/UserPanelLayout";
+import PhoneInput from "../components/phone-input-component/PhoneInput"
 
 const Profile = () => {
   return (
@@ -39,8 +40,7 @@ const Profile = () => {
                     </div>
                     <div className="col-12">
                       <div className="mb-3">
-                        <label className="form-label">Phone</label>
-                        <input type="text" className="form-control" />
+                        <PhoneInput />
                       </div>
                     </div>
                     <div className="col-12 btn btn-success">Save</div>

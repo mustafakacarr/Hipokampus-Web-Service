@@ -1,4 +1,5 @@
 import React from "react"
+import PhoneInput from "../components/phone-input-component/PhoneInput";
 
 const SignUp = () => {
     return (
@@ -16,17 +17,16 @@ const SignUp = () => {
                             <input type="email" className="form-control" id="signUpEmail" placeholder="Email" required/>
                             <label for="signUpEmail">Email</label>
                         </div>
-                        <div className="form-floating mb-2">
+                        <div className="form-floating mb-2 mt-3">
                             <input type="password" className="form-control sign-up-password" id="signUpUsername" placeholder="Choose password" required/>
                             <label for="signUpUsername">Choose password</label>
                         </div>
-                        <div className="form-floating mb-2">
+                        <div className="form-floating mb-3">
                             <input type="password" className="form-control sign-up-password-check" id="signUpPasswordCheck" placeholder="Confirm password" required/>
                             <label for="signUpPasswordCheck">Confirm password</label>
                         </div>
-                        <div className="form-floating mb-2">
-                            <input type="tel" className="form-control" id="signUpPhoneNumber" placeholder="Phone number" required/>
-                            <label for="signUpPhoneNumber">Phone number</label>
+                        <div className="mb-2">
+                            <PhoneInput />
                         </div>
                         <div className="form-check text-start my-4">
                             <input className="form-check-input" type="checkbox" value="remember-me" id="rememberMe" required/>
