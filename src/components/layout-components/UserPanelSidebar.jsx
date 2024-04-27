@@ -31,7 +31,7 @@ const UserPanelSidebar = () => {
 
     return width < 576 ? null : (
         <div
-            className="d-flex flex-column flex-shrink-0 px-3 pb-3 h-100"
+            className="d-flex flex-column flex-shrink-0 px-3 pb-3 h-100 my-2"
             style={{ minHeight: "600px", paddingTop: "16px" }}
         >
             <a
@@ -43,8 +43,7 @@ const UserPanelSidebar = () => {
                     style={{ width: "95%", maxWidth: "220px" }}
                 />
             </a>
-            <hr />
-            <label className="text-white fs-5 fw-bold sidebar-welcome py-3">
+            <label className="text-white fs-5 fw-bold sidebar-welcome py-3 mt-4">
                 <FontAwesomeIcon icon={faClover} size="lg" className="me-2" />Welcome, User!
             </label>
             <ul className="nav nav-pills flex-column mb-auto gap-4 mt-4">
@@ -192,8 +191,7 @@ const UserPanelSidebar = () => {
                         <span className="ms-2">Order</span>
                     </NavLink>
                 </li>
-                <hr />
-                <li>
+                <li className="mt-3 mb-4">
                     <a
                         className="align-items-center rounded collapsed ps-0 text-decoration-none text-dark dropdown-button"
                         data-bs-toggle="collapse"
@@ -203,7 +201,7 @@ const UserPanelSidebar = () => {
                     >
                         <FontAwesomeIcon
                             icon={faCaretDown}
-                            size="lg"
+                            size="xl"
                             rotation={270}
                             style={{ transform: rotate, transition: "all 0.35s linear" }}
                             color="white"
@@ -213,7 +211,7 @@ const UserPanelSidebar = () => {
                         </span>
                     </a>
                     <div className="collapse" id="subscribed-services-collapse">
-                        <ul className="btn-toggle-nav list-unstyled fw-normal mt-3 pb-1 my-2 ms-4 gap-3 d-flex row">
+                        <ul className="btn-toggle-nav list-unstyled sidebar-subscribed-services mt-3 pb-1 my-2 ms-4 gap-3 d-flex row">
                             <li>
                                 <NavLink
                                     className={(navOption) =>

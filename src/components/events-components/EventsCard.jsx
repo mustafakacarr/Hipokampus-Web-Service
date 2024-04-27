@@ -8,7 +8,7 @@ import {
 
 const EventsCard = ({ data, index }) => {
   return (
-    <div className="px-4 col-12 col-md-6 col-xl-4 my-3">
+    <div className="col-12 col-md-6 col-xl-4 my-3 px-md-4 px-0">
       <div className="card">
         <img
           src="https://hipokampus.com.tr/images/hizmetler/tr/hipokampus-kultur-sanat-sosyal-girisimcilik-etkinlikleri.webp"

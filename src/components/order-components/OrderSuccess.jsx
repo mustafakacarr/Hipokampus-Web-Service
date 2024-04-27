@@ -15,9 +15,8 @@ const OrderSuccess = () => {
             />
             <h2> Your payment was successful </h2>
             <p>
-              {" "}
               Thank you for your payment. we will be in contact with more
-              details shortly{" "}
+              details shortly
             </p>
           </div>
         </div>

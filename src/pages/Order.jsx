@@ -15,7 +15,7 @@ const Order = () => {
     }
   }, [location.pathname, steps]);
 
-  return <UserPanelLayout></UserPanelLayout>;
+  return <UserPanelLayout />;
 };
 
 export default Order;

@@ -11,7 +11,7 @@ function CheckoutSteps({ currentStep,steps }) {
             <div className="stepwizard-step" key={steps.indexOf(step)}>
               <a
                 href={steps.indexOf(step) <= currentStep ? step.path : "#"}
-                type="button"
+                type="button" style={{fontWeight: 900, fontSize: "15px", paddingTop: "4px"}}
                 className={`btn ${
                   steps.indexOf(step) < currentStep
                     ? "btn-success"
