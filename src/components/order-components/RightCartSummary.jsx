@@ -23,14 +23,14 @@ function RightCartSummary() {
   return (
     <div className="card">
       <div className="card-body">
-        <h5 className="card-title text-center">Cart Summary</h5>
+        <h5 className="card-title text-center fw-bold text-primary pt-1" style={{ fontSize: "22px" }}>Cart Summary</h5>
         <div className="d-flex flex-column">
-          <div className="d-flex justify-content-between py-2">
+          <div className="d-flex pt-3 pb-1">
             {findPairsContent()}
           </div>
         </div>
         <hr />
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between pb-1">
           <span>
             <strong>TOPLAM:</strong>
           </span>

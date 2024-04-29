@@ -10,7 +10,6 @@ const VirtualOfficeOrderForm = () => {
 
   return (
     <OrderLayout>
-      {" "}
       <div className="radio-group row justify-content-center p-5 text-center ">
         <div
           className="col-md-6 col-lg-6 col-sm-6"
@@ -18,7 +17,7 @@ const VirtualOfficeOrderForm = () => {
         >
           <div
             className={
-              "card " + (!showExistedOfficeForm && "border border-primary")
+              "card" + (!showExistedOfficeForm && "border border-primary")
             }
           >
             <div className="card-body">
@@ -34,7 +33,6 @@ const VirtualOfficeOrderForm = () => {
             </div>
           </div>
         </div>
-
         <div
           className="col-md-6 col-lg-6 col-sm-6"
           onClick={() => setShowExistedOfficeForm(true)}
@@ -52,13 +50,11 @@ const VirtualOfficeOrderForm = () => {
               />
               <br />
               <label className="mt-3 fw-bold">
-                {" "}
                 Mevcut Şirketin Hipokampüse Taşınması
               </label>
             </div>
           </div>
         </div>
-
         <div
           className=" input-group mt-4"
           style={{ display: showExistedOfficeForm ? "block" : "none" }}
@@ -95,7 +91,7 @@ const VirtualOfficeOrderForm = () => {
               <div className="form-group position-relative">
                 <label className="py-2">Vergi Numarası</label>
                 <input
-                
+
                   type="text"
                   className="form-control"
                   name="vergino"
@@ -112,7 +108,7 @@ const VirtualOfficeOrderForm = () => {
                 />
               </div>
             </div>
-          </div>{" "}
+          </div>
         </div>
       </div>
     </OrderLayout>

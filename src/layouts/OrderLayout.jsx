@@ -56,7 +56,7 @@ function OrderLayout(props) {
             </div>
           </div>
           <div className="col-md-12 col-lg-4 col-sm-12 justify-content-end">
-            <RightCartSummary></RightCartSummary>{" "}
+            <RightCartSummary />
             {currentStep !== steps.length - 1 && (
               <button
                 className="btn btn-success col-md-12 mt-2"
