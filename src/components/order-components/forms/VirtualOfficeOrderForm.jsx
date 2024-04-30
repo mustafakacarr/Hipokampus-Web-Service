@@ -4,9 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBuilding, faKey } from "@fortawesome/free-solid-svg-icons";
 
 const VirtualOfficeOrderForm = () => {
+
   const [showExistedOfficeForm, setShowExistedOfficeForm] = useState(false);
-
-
 
   return (
     <OrderLayout>
@@ -91,7 +90,6 @@ const VirtualOfficeOrderForm = () => {
               <div className="form-group position-relative">
                 <label className="py-2">Vergi Numarası</label>
                 <input
-
                   type="text"
                   className="form-control"
                   name="vergino"
@@ -114,4 +112,5 @@ const VirtualOfficeOrderForm = () => {
     </OrderLayout>
   );
 };
+
 export default VirtualOfficeOrderForm;

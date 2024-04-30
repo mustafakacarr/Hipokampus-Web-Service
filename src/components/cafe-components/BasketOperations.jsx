@@ -6,7 +6,7 @@ function showCafeQuantityNotification() {
   quantityErrorToast.show()
 }
 
-function doQuantityErrorActions() {
+function doQuantityErrorActions(item) {
   showCafeQuantityNotification();
   return item;
 }
@@ -44,7 +44,7 @@ export const increaseQuantity = (productId, cartItems) => {
   const updatedCartItems = cartItems.map((item) =>
     item.productId === productId && item.quantity < 9
       ? { ...item, quantity: item.quantity + 1 }
-      : doQuantityErrorActions()
+      : doQuantityErrorActions(item)
   );
   return updatedCartItems;
 };
