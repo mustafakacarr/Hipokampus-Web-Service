@@ -1,12 +1,15 @@
 import { Exception } from "sass";
 
 function showCafeQuantityNotification() {
-  const cafeQuantityToast = document.getElementById('cafeQuantityToast')
-  const quantityErrorToast = bootstrap.Toast.getOrCreateInstance(cafeQuantityToast)
-  quantityErrorToast.show()
+  const cafeQuantityToast = document.getElementById("cafeQuantityToast");
+  const quantityErrorToast =
+    bootstrap.Toast.getOrCreateInstance(cafeQuantityToast);
+  quantityErrorToast.show();
 }
 
 function doQuantityErrorActions(item) {
+  console.log("🚀 ~ doQuantityErrorActions ~ item:", item);
+
   showCafeQuantityNotification();
   return item;
 }
@@ -36,16 +39,23 @@ export const addToCart = (product, cartItems) => {
 };
 
 export const removeFromCart = (productId, cartItems) => {
-  const updatedCartItems = cartItems.filter((item) => item.productId !== productId);
+  const updatedCartItems = cartItems.filter(
+    (item) => item.productId !== productId
+  );
   return updatedCartItems;
 };
 
 export const increaseQuantity = (productId, cartItems) => {
+   console.log("🚀 ~ increaseQuantity ~ cartItems:", cartItems)
   const updatedCartItems = cartItems.map((item) =>
-    item.productId === productId && item.quantity < 9
-      ? { ...item, quantity: item.quantity + 1 }
-      : doQuantityErrorActions(item)
+    item.productId === productId
+      ? item.quantity < 9
+        ? { ...item, quantity: item.quantity + 1 }
+        : doQuantityErrorActions(item)
+      : { ...item }
   );
+  console.log("🚀 ~ increaseQuantity ~ updatedCartItems:", updatedCartItems)
+
   return updatedCartItems;
 };
 
