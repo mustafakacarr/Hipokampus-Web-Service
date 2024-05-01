@@ -13,7 +13,7 @@ const OrderSuccess = () => {
               icon={faCheckCircle}
               className="order-status-success-i"
             />
-            <h2> Your payment was successful </h2>
+            <h2> Your payment is successful </h2>
             <p>
               Thank you for your payment. we will be in contact with more
               details shortly

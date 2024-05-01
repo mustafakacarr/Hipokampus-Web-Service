@@ -151,6 +151,14 @@
   resize: none;
 }
 
+.invoice-form-textarea {
+  border: 1px solid #dee2e6;
+  padding: 5px;
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
 .packages-card-footer {
   background-color: white;
 }
@@ -381,9 +389,16 @@
   margin-bottom: 10px;
 }
 
-.catering-form-wrapper{
+.catering-form-wrapper {
   padding: 10px;
   text-align: center;
+  margin: 10px auto;
+}
+
+.invoice-form-wrapper {
+  padding: 10px;
+  padding-top: 0px;
+  text-align: start;
   margin: 10px auto;
 }
 
@@ -398,4 +413,7 @@
   font-size: 55px;
   color: var(--bs-danger);
 }
-.iti { width: 100%; }
+
+.iti {
+  width: 100%;
+}

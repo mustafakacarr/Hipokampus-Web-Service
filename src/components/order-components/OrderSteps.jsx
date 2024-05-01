@@ -9,13 +9,13 @@ import { MEETING_ROOM_ORDER, VIRTUAL_OFFICE_ORDER, CATERING_ORDER } from "../../
 import VirtualOfficeOrderSteps from "./services-order-steps/VirtualOfficeOrderSteps";
 import CateringForm from "./forms/CateringForm";
 import CateringOrderSteps from "./services-order-steps/CateringOrderSteps"
-import PersonalInfoForm from "./forms/PersonalInfoForm";
+import InvoiceInformationForm from "./forms/InvoiceInformationForm";
 
 const firstSteps = [
   {
     label: "Personal Info",
     path: "/order/personal-info",
-    component: <PersonalInfoForm />,
+    component: <InvoiceInformationForm />,
   },
 ];
 
