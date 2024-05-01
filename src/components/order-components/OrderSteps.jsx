@@ -5,10 +5,10 @@ import OrderFailed from "./OrderFailed";
 import OrderSuccess from "./OrderSuccess";
 import MeetingRoomOrderSteps from "./services-order-steps/MeetingRoomOrderSteps";
 import Done from "./forms/Done";
-import { MEETING_ROOM_ORDER, VIRTUAL_OFFICE_ORDER, CAFE_ORDER } from "../../constants/OrderType";
+import { MEETING_ROOM_ORDER, VIRTUAL_OFFICE_ORDER, CATERING_ORDER } from "../../constants/OrderType";
 import VirtualOfficeOrderSteps from "./services-order-steps/VirtualOfficeOrderSteps";
-import CafeForm from "./forms/CafeForm";
-import CafeOrderSteps from "./services-order-steps/CafeOrderSteps"
+import CateringForm from "./forms/CateringForm";
+import CateringOrderSteps from "./services-order-steps/CateringOrderSteps"
 import PersonalInfoForm from "./forms/PersonalInfoForm";
 
 const firstSteps = [
@@ -28,8 +28,8 @@ const getCustomStep = (orderType) => {
     case VIRTUAL_OFFICE_ORDER:
       orderCustomSteps = VirtualOfficeOrderSteps;
       break;
-    case CAFE_ORDER:
-      orderCustomSteps = CafeOrderSteps;
+    case CATERING_ORDER:
+      orderCustomSteps = CateringOrderSteps;
       break;
     default:
       break;
@@ -37,7 +37,7 @@ const getCustomStep = (orderType) => {
   return orderCustomSteps;
 };
 
-const customSteps = getCustomStep(CAFE_ORDER);
+const customSteps = getCustomStep(CATERING_ORDER);
 
 const lastSteps = [
   {

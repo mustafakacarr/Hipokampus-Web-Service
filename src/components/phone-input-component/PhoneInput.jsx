@@ -31,7 +31,7 @@ const PhoneInput = () => {
           preferredCountries: ["tr", "ru", "ua", "us"],
         }}
         inputProps={{
-            className: "form-control w-100",
+          className: "form-control w-100",
         }}
       />
 

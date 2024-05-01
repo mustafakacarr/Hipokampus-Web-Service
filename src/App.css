@@ -375,6 +375,18 @@
   border-bottom: solid 4px var(--bs-success);
 }
 
+.catering-form-icon {
+  font-size: 65px;
+  color: var(--bs-secondary);
+  margin-bottom: 10px;
+}
+
+.catering-form-wrapper{
+  padding: 10px;
+  text-align: center;
+  margin: 10px auto;
+}
+
 .order-status-failed {
   border-bottom: solid 4px var(--bs-danger) !important;
   padding: 10px;

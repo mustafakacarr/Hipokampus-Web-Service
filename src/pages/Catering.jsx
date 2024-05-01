@@ -199,24 +199,11 @@ const Catering = () => {
             id="cateringOrderCard"
             className="card text-center mx-auto catering-order-card"
           >
-            <h4 className="card-header">
+            <h4 className="card-header mb-2">
               <FontAwesomeIcon icon={faReceipt} />
               <span className="ms-2">Quick Meal Order</span>
             </h4>
             <div className="card-body row gx-0 gap-2">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Name Surname"
-                aria-label="Name Surname"
-              />
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Table Number"
-                aria-label="Table Number"
-              />
-              <hr className="my-2" />
               <div className="input-group mb-1">
                 <label
                   className="input-group-text fw-bold"
