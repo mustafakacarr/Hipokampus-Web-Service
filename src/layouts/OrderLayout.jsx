@@ -45,10 +45,10 @@ function OrderLayout(props) {
   return (
     <UserPanelLayout>
       <div className="container">
-        <CheckoutSteps currentStep={currentStep} steps={steps}></CheckoutSteps>
+        <CheckoutSteps currentStep={currentStep} steps={steps} />
         <h3 className="text-center mt-3">{props.pageName}</h3>
-        <div className="row mt-5">
-          <div className="col-md-12 col-lg-8 col-sm-12">
+        <div className="row mt-3">
+          <div className="col-md-12 col-lg-8 col-sm-12 mb-4 mb-lg-0">
             <div className="card">
               <div className="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
                 {props.children}
@@ -59,7 +59,7 @@ function OrderLayout(props) {
             <RightCartSummary />
             {currentStep !== steps.length - 1 && (
               <button
-                className="btn btn-success col-md-12 mt-2"
+                className="btn btn-success mb-5 mb-lg-0 col-12 mt-2"
                 onClick={handleOnClick}
                 disabled={props.buttonDisabled}
               >
