@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import TicketOrderKeyValuePairs from "./right-card-contents/TicketOrderKeyValuePairs";
 import MeetingRoomOrderKeyValuePairs from "./right-card-contents/MeetingRoomOrderKeyValuePairs";
-import CateringOrderKeyValuePairs from "./right-card-contents/CateringOrderKeyValuePairs"
-import { CATERING_ORDER, MEETING_ROOM_ORDER, TICKET_ORDER } from "../../constants/OrderType";
+import CateringOrderKeyValuePairs from "./right-card-contents/CateringOrderKeyValuePairs";
+import CafeOrderKeyValuePairs from "./right-card-contents/CafeOrderKeyValuePairs"
+import { CATERING_ORDER, MEETING_ROOM_ORDER, TICKET_ORDER, CAFE_ORDER } from "../../constants/OrderType";
 
 function RightCartSummary() {
 
@@ -19,6 +20,8 @@ function RightCartSummary() {
         break;
       case CATERING_ORDER:
         pairComponent = <CateringOrderKeyValuePairs />;
+      case CAFE_ORDER:
+        pairComponent = <CafeOrderKeyValuePairs />;
       default:
         break;
     }
