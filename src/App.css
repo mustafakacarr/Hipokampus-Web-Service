@@ -380,7 +380,6 @@
   padding: 10px;
   text-align: center;
   margin: 10px auto;
-  border-bottom: solid 4px var(--bs-success);
 }
 
 .catering-form-icon {
@@ -414,8 +413,14 @@
   margin: 10px auto;
 }
 
+.meeting-room-form-wrapper {
+  padding: 10px;
+  padding-top: 0px;
+  text-align: start;
+  margin: 10px auto;
+}
+
 .order-status-failed {
-  border-bottom: solid 4px var(--bs-danger) !important;
   padding: 10px;
   text-align: center;
   margin: 10px auto;

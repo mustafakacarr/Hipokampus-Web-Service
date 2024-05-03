@@ -11,9 +11,9 @@ const OrderSuccess = () => {
           <div class="message-box order-status-success ">
             <FontAwesomeIcon
               icon={faCheckCircle}
-              className="order-status-success-i"
+              className="order-status-success-i mb-2"
             />
-            <h2> Your payment is successful </h2>
+            <h2 className="mb-3"> Your payment is successful </h2>
             <p>
               Thank you for your payment. we will be in contact with more
               details shortly

@@ -7,7 +7,7 @@ import { CATERING_ORDER, MEETING_ROOM_ORDER, TICKET_ORDER, CAFE_ORDER } from "..
 
 function RightCartSummary() {
 
-  const [orderType, setOrderType] = useState(CATERING_ORDER);
+  const [orderType, setOrderType] = useState(MEETING_ROOM_ORDER);
 
   const findPairsContent = () => {
     let pairComponent = null;

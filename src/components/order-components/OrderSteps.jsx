@@ -1,5 +1,3 @@
-import PersonalInformationForm from "./forms/PersonalInformationForm";
-import MeetingRoomReservationForm from "./forms/MeetingRoomReservationForm";
 import PaymentForm from "../payment-components/PaymentForm";
 import OrderFailed from "./OrderFailed";
 import OrderSuccess from "./OrderSuccess";
@@ -49,7 +47,7 @@ const getCustomStep = (orderType) => {
   return orderCustomSteps;
 };
 
-const customSteps = getCustomStep(CAFE_ORDER);
+const customSteps = getCustomStep(MEETING_ROOM_ORDER);
 
 const lastSteps = [
   {
