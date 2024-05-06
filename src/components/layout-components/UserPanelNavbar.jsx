@@ -1,7 +1,7 @@
 import React from "react";
 import useWindowSize from "../../hooks/useWindowSize";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faDoorClosed, faDoorOpen, faPowerOff, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import UserPanelOffcanvas from "./UserPanelOffcanvas";
 
 const UserPanelNavbar = () => {
@@ -29,8 +29,7 @@ const UserPanelNavbar = () => {
                 >
                   <FontAwesomeIcon icon={faBars} size="xl" />
                 </a>
-                <a
-                  href="/"
+                <span
                   className="align-items-center me-md-auto text-decoration-none brand-logo ms-3"
                 >
                   <img
@@ -38,7 +37,7 @@ const UserPanelNavbar = () => {
                     width={30}
                     className="align-middle"
                   />
-                </a>
+                </span>
               </div>
             ) : null}
           </span>

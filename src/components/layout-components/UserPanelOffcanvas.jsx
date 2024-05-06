@@ -131,9 +131,9 @@ const UserPanelOffcanvas = () => {
                     <li>
                         <NavLink
                             className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
-                            to="/payment">
+                            to="/order">
                             <FontAwesomeIcon icon={faWallet} size="lg" />
-                            <span className="ms-2">Payment</span>
+                            <span className="ms-2">Order</span>
                         </NavLink>
                     </li>
                     <hr />

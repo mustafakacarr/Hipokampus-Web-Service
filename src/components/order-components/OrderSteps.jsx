@@ -12,14 +12,16 @@ import CafeOrderSteps from "./services-order-steps/CafeOrderSteps";
 
 const firstSteps = [
   {
-    label: "Personal Info",
+    label: "Invoice Info",
     path: "/order/invoice-information",
     component: <InvoiceInformationForm />,
   }
 ];
 
 const getCustomStep = (orderType) => {
-  let orderCustomSteps = null;
+
+  let orderCustomSteps;
+
   switch (orderType) {
     case MEETING_ROOM_ORDER:
       orderCustomSteps = MeetingRoomOrderSteps;
@@ -42,8 +44,11 @@ const getCustomStep = (orderType) => {
       orderCustomSteps = false;
       break;
     default:
+      {/* Bypass extra step(s) for default */}
+      orderCustomSteps = false;
       break;
   }
+
   return orderCustomSteps;
 };
 

@@ -89,16 +89,19 @@ const Packages = () => {
         <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title fs-3 fw-bold text-primary" id="packagesModal">Get Offer</h1>
+              <h1 className="modal-title fs-3 fw-bold text-primary" id="packagesModal">
+                <FontAwesomeIcon icon={faComments} className="me-2" />
+                Get Offer
+              </h1>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
               <select
                 className="form-select my-3"
-                defaultValue={0}
+                defaultValue={1}
               >
                 <option value={0} disabled>
-                  Please Select A Location To Make An Offer
+                  Please Select A Office To Make An Offer
                 </option>
                 {packagesNames.map((item, index) => (
                   <option key={index} value={index}>
@@ -112,7 +115,7 @@ const Packages = () => {
             </div>
             <div className="modal-footer text-center justify-content-center">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary">Get Offer</button>
+              <button type="button" className="btn btn-primary fw-bold">Get Offer</button>
             </div>
           </div>
         </div>
