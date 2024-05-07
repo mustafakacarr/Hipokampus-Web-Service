@@ -54,7 +54,7 @@ const Cafe = () => {
   return (
     <UserPanelLayout>
       <div onChange={handleCafeItems} className="row gx-0">
-        <div className="col-sm-12 col-md-8 col-xl-9">
+        <div className="col-12 col-xl-9">
           <div className="d-flex flex-wrap justify-content-center gap-2">
             {cafeCategories.map((item, index) => (
               <button
@@ -83,7 +83,7 @@ const Cafe = () => {
             </div>
           )}
         </div>
-        <div className="col-sm-12 col-md-4 col-xl-3 cart-layout px-2 px-md-3 px-lg-3 mb-3 mb-3-0">
+        <div className="col-12 col-xl-3 cart-layout px-2 px-md-3 px-lg-3 mb-3 mb-3-0 mx-auto">
           <div className="card text-center cart-card mx-auto">
             <h4 className="card-header">
               <FontAwesomeIcon icon={faCartShopping} />

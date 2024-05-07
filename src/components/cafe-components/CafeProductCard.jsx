@@ -23,12 +23,12 @@ const CafeProductCard = ({ item, index, addToCartOnClick }) => {
   }
 
   return (
-    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 px-5 px-md-2 px-lg-1 px-xxl-2 mt-4 cafe-card">
+    <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12 px-4 px-md-2 mt-4">
       <div key={index} className="card">
         <img
           src={item.photo}
           className="card-img-top cafe-card-image"
-          alt="..."
+          alt="Cafe Card Image"
         />
         <div className="card-body text-center mt-2">
           <h5 className="card-title text-primary">{item.name}</h5>
