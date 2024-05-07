@@ -7,7 +7,7 @@ import AnnouncementsCard from "../components/announcements-components/Announceme
 const Announcements = () => {
     return (
         <UserPanelLayout>
-            <div className="row gx-0 px-5 px-md-3 py-3 d-flex justify-content-start">
+            <div className="row gx-0 px-3 px-md-3 py-3 d-flex justify-content-start">
                 {
                     announcementsDummyData.map((item, index) => (
                         <AnnouncementsCard key={index} data={item} index={index} />

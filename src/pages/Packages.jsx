@@ -64,11 +64,11 @@ const Packages = () => {
             MEETING ROOM
           </button>
         </div>
-        <div className="row gx-0 px-5 px-md-3 py-3 d-flex justify-content-center">
+        <div className="row gx-0 p-3 packages-wrapper d-flex justify-content-center">
           {filteredPackagesData.map((item, index) => (
             <PackageCard key={index} data={item} index={index}></PackageCard>
           ))}
-          <div className="px-1 px-lg-2 px-lg-3 mb-3">
+          <div className="px-1 px-sm-2 mb-3">
             <div className="offer-card my-2 p-4 package-offer d-flex justify-content-between row gx-0">
               <span className="fw-bold fs-3 pe-md-2 align-bottom package-offer-text col-12 col-md-9">
                 GET AN OFFER FOR CUSTOMIZED SOLUTIONS
@@ -81,7 +81,7 @@ const Packages = () => {
             </div>
           </div>
           {filteredTicketBoxData.map((item, index) => (
-            <TicketBoxCard key={index} data={item} index={index}></TicketBoxCard>
+            <TicketBoxCard key={index} data={item} index={index} />
           ))}
         </div>
       </div>

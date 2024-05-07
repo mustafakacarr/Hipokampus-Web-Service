@@ -17,7 +17,7 @@ const PackageCard = ({ data, index }) => {
   return (
     <div
       key={index}
-      className="px-1 px-lg-2 px-lg-3 col-12 col-md-6 col-xl-4 mb-4 mb-md-3"
+      className="px-0 px-sm-2 col-12 col-md-6 col-xl-4 mb-4 mb-md-3"
     >
       <div className="card package-card h-100">
         <div className="card-body p-0">

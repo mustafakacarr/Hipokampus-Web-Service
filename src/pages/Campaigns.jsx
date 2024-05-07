@@ -6,7 +6,7 @@ import CampaignsCard from "../components/campaigns-components/CampaignsCard";
 const Campaigns = () => {
     return (
         <UserPanelLayout>
-            <div className="row gx-0 px-5 px-md-3 py-3 d-flex justify-content-start">
+            <div className="row gx-0 px-3 px-md-3 py-3 d-flex justify-content-start">
                 {
                     campaignsDummyData.map((item, index) => (
                         <CampaignsCard key={index} data={item} index={index} />

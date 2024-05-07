@@ -8,7 +8,7 @@ import {
 
 const EventsCard = ({ data, index }) => {
   return (
-    <div className="col-12 col-md-6 col-xl-4 my-3 px-md-4 px-0">
+    <div className="px-1 px-md-2 col-12 col-md-6 col-xl-4 mb-4 mb-md-3">
       <div className="card">
         <img
           src="https://hipokampus.com.tr/images/hizmetler/tr/hipokampus-kultur-sanat-sosyal-girisimcilik-etkinlikleri.webp"
@@ -30,7 +30,7 @@ const EventsCard = ({ data, index }) => {
           <p className="card-text text-muted">{data.description}</p>
         </div>
         <div className="card-footer d-flex justify-content-between align-items-center">
-          <div>
+          <div className="me-2">
             <span>Ticket Price: </span>
             <span className="fw-bold fs-4">{data.price}₺</span>
           </div>
