@@ -88,6 +88,21 @@
   min-height: 200px;
 }
 
+.cafe-card-wrapper {
+  @media (max-width: 576px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.cafe-card {
+  @media (max-width: 576px) {
+    min-width: 250px !important;
+    max-width: 325px !important;
+    width: 100%;
+  }
+}
+
 .cafe-basket {
   border: none;
 }
@@ -102,7 +117,11 @@
 
 .catering-card {
   padding: 10px;
-  max-width: 350px;
+
+  @media (max-width: 576px) {
+    min-width: 400px !important;
+    max-width: 500px !important;
+  }
 }
 
 .catering-card-image {

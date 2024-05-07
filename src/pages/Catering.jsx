@@ -86,7 +86,7 @@ const Catering = () => {
       </h5>
       <hr className="mx-5 mb-3" />
       <div className="row gx-0">
-        <div className="col-sm-12 col-md-6 col-xl-7 col-xxl-8">
+        <div className="col-12 col-xl-8">
           <div className="pb-4 px-1 px-xxl-2">
             <div className="row gx-0 gap-3">
               <div className="row gx-0 pb-4 justify-content-center justify-content-md-start">
@@ -97,7 +97,7 @@ const Catering = () => {
                   <label
                     key={index}
                     onClick={() => handleGroupOne(item.mealId, true)}
-                    className="col-sm-12 col-md-6 col-xl-4 col-xxl-3 px-5 px-md-2 catering-card d-flex"
+                    className="col-sm-12 col-md-6 col-lg-4 col-xl-3 px-5 px-md-2 catering-card d-flex"
                   >
                     <input
                       type="radio"
@@ -106,7 +106,7 @@ const Catering = () => {
                       checked={item.mealId == groupOne}
                       readOnly
                     />
-                    <div className="card d-flex card-input w-100">
+                    <div className="card mx-4 mx-sm-0 d-flex card-input w-100">
                       <img
                         src={item.image}
                         className="card-img-top catering-card-image"
@@ -132,7 +132,7 @@ const Catering = () => {
                   <label
                     key={index}
                     onClick={() => handleGroupTwo(item.mealId, true)}
-                    className="col-sm-12 col-md-6 col-xl-4 col-xxl-3 px-5 px-md-2 catering-card d-flex"
+                    className="col-sm-12 col-md-6 col-lg-4 col-xl-3 px-5 px-md-2 catering-card d-flex"
                   >
                     <input
                       type="radio"
@@ -141,7 +141,7 @@ const Catering = () => {
                       checked={item.mealId == groupTwo}
                       readOnly
                     />
-                    <div className="card d-flex card-input w-100">
+                    <div className="card mx-4 mx-sm-0 d-flex card-input w-100">
                       <img
                         src={item.image}
                         className="card-img-top catering-card-image"
@@ -167,7 +167,7 @@ const Catering = () => {
                   <label
                     key={index}
                     onClick={() => handleGroupThree(item.mealId, true)}
-                    className="col-sm-12 col-md-6 col-xl-4 col-xxl-3 px-5 px-md-2 catering-card d-flex"
+                    className="col-sm-12 col-md-6 col-lg-4 col-xl-3 px-5 px-md-2 catering-card d-flex"
                   >
                     <input
                       type="radio"
@@ -176,7 +176,7 @@ const Catering = () => {
                       checked={item.mealId == groupThree}
                       readOnly
                     />
-                    <div className="card d-flex card-input w-100">
+                    <div className="card mx-4 mx-sm-0 d-flex card-input w-100">
                       <img
                         src={item.image}
                         className="card-img-top catering-card-image"
@@ -194,7 +194,7 @@ const Catering = () => {
             </div>
           </div>
         </div>
-        <div className="col-sm-12 col-md-6 col-xl-5 col-xxl-4 px-5 px-sm-1 px-md-2 px-lg-4">
+        <div className="col-12 col-xl-4 px-3">
           <div
             id="cateringOrderCard"
             className="card text-center mx-auto catering-order-card"
