@@ -15,6 +15,9 @@ import OrderHistory from "../pages/OrderHistory";
 import MyTickets from "../pages/MyTickets";
 import Order from "../pages/Order";
 import Messages from "../pages/Messages";
+import VirtualOffice from "../pages/VirtualOffice";
+import CoworkingSpace from "../pages/CoworkingSpace";
+import MeetingRoom from "../pages/MeetingRoom";
 
 const UserPanelRoute = [
   {
@@ -81,6 +84,18 @@ const UserPanelRoute = [
   {
     path: "/messages",
     component: <Messages />
+  },
+  {
+    path: "/virtual-office",
+    component: <VirtualOffice />,
+  },
+  {
+    path: "/coworking-space",
+    component: <CoworkingSpace />,
+  },
+  {
+    path: "/meeting-room",
+    component: <MeetingRoom />,
   }
 ];
 

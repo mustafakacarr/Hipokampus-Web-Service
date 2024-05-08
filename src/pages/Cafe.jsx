@@ -60,6 +60,7 @@ const Cafe = () => {
               <button
                 className={getButtonClassName(item.id)}
                 onClick={() => handleCafeItems(item.id)}
+                key={index}
               >
                 {item.label}
               </button>

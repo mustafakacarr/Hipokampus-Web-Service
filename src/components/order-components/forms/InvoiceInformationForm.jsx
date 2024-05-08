@@ -5,9 +5,9 @@ import PhoneInput from '../../phone-input-component/PhoneInput';
 const InvoiceInformationForm = () => {
   return (
     <OrderLayout>
-      <div class="row justify-content-center mb-2">
-        <div class="col-11 col-md-10">
-          <div class="invoice-form-wrapper">
+      <div className="row justify-content-center mb-2">
+        <div className="col-11 col-md-10">
+          <div className="invoice-form-wrapper">
             <div className="row gx-2 mt-4 mb-3">
               <div className="col-12 mb-4 text-center">
                 <h4>Please fill in the fields below for invoice information</h4>
