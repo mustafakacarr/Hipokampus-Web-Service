@@ -4,7 +4,6 @@ import Catering from "../pages/Catering";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 import PasswordRecovery from "../pages/PasswordRecovery";
-import Payment from "../pages/Order";
 import Dashboard from "../pages/Dashboard";
 import Events from "../pages/Events";
 import Announcements from "../pages/Announcements";
@@ -19,84 +18,103 @@ import VirtualOffice from "../pages/VirtualOffice";
 import CoworkingSpace from "../pages/CoworkingSpace";
 import MeetingRoom from "../pages/MeetingRoom";
 
-const UserPanelRoute = [
-  {
-    path: "/",
-    component: <SignIn />,
-  },
-  {
-    path: "/sign-up",
-    component: <SignUp />,
-  },
-  {
-    path: "/dashboard",
-    component: <Dashboard />,
-  },
-  {
-    path: "/password-recovery",
-    component: <PasswordRecovery />,
-  },
-  {
-    path: "/cafe",
-    component: <Cafe />,
-  },
-  {
-    path: "/packages",
-    component: <Packages />,
-  },
-  {
-    path: "/catering",
-    component: <Catering />,
-  },
+let isSignedIn = sessionStorage.getItem("isSignedIn")
 
-  {
-    path: "/events",
-    component: <Events />,
-  },
-  {
-    path: "/profile",
-    component: <Profile />,
-  },
-  {
-    path: "/announcements",
-    component: <Announcements />,
-  },
-  {
-    path: "/benefits",
-    component: <Benefits />,
-  },
-  {
-    path: "/campaigns",
-    component: <Campaigns />,
-  },
-  {
-    path: "/my-tickets",
-    component: <MyTickets />,
-  },
-  {
-    path: "/order-history",
-    component: <OrderHistory />,
-  },
-  {
-    path: "/order",
-    component: <Order />,
-  },
-  {
-    path: "/messages",
-    component: <Messages />
-  },
-  {
-    path: "/virtual-office",
-    component: <VirtualOffice />,
-  },
-  {
-    path: "/coworking-space",
-    component: <CoworkingSpace />,
-  },
-  {
-    path: "/meeting-room",
-    component: <MeetingRoom />,
-  }
-];
+if (isSignedIn) {
+  var UserPanelRoute = [
+    {
+      path: "/",
+      component: <SignIn />,
+    },
+    {
+      path: "/sign-up",
+      component: <SignUp />,
+    },
+    {
+      path: "/dashboard",
+      component: <Dashboard />,
+    },
+    {
+      path: "/password-recovery",
+      component: <PasswordRecovery />,
+    },
+    {
+      path: "/cafe",
+      component: <Cafe />,
+    },
+    {
+      path: "/packages",
+      component: <Packages />,
+    },
+    {
+      path: "/catering",
+      component: <Catering />,
+    },
+
+    {
+      path: "/events",
+      component: <Events />,
+    },
+    {
+      path: "/profile",
+      component: <Profile />,
+    },
+    {
+      path: "/announcements",
+      component: <Announcements />,
+    },
+    {
+      path: "/benefits",
+      component: <Benefits />,
+    },
+    {
+      path: "/campaigns",
+      component: <Campaigns />,
+    },
+    {
+      path: "/my-tickets",
+      component: <MyTickets />,
+    },
+    {
+      path: "/order-history",
+      component: <OrderHistory />,
+    },
+    {
+      path: "/order",
+      component: <Order />,
+    },
+    {
+      path: "/messages",
+      component: <Messages />
+    },
+    {
+      path: "/virtual-office",
+      component: <VirtualOffice />,
+    },
+    {
+      path: "/coworking-space",
+      component: <CoworkingSpace />,
+    },
+    {
+      path: "/meeting-room",
+      component: <MeetingRoom />,
+    }
+  ];
+} else {
+  var UserPanelRoute = [
+    {
+      path: "/",
+      component: <SignIn />,
+    },
+    {
+      path: "/sign-up",
+      component: <SignUp />,
+    },
+    {
+      path: "/password-recovery",
+      component: <PasswordRecovery />,
+    }
+  ]
+}
 
 export default UserPanelRoute;

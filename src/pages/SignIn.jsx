@@ -1,6 +1,11 @@
 import React from "react"
+import { useDispatch } from "react-redux";
+import { signUserIn } from "../features/user/userSlice"
 
 const SignIn = () => {
+
+    const dispatch = useDispatch();
+
     return (
         <div className="d-flex align-items-center min-vh-100 bg-tertiary">
             <div className="m-auto py-5">
@@ -10,11 +15,11 @@ const SignIn = () => {
                         <p className="h3 mb-4 fw-normal text-center">Sign in</p>
                         <div className="form-floating">
                             <input type="text" className="form-control sign-in-username" id="signInUsername" placeholder="Username" />
-                            <label for="signInUsername">Username</label>
+                            <label htmlFor="signInUsername">Username</label>
                         </div>
                         <div className="form-floating">
                             <input type="password" className="form-control sign-in-password" id="signInPassword" placeholder="Password" />
-                            <label for="signInPassword">Password</label>
+                            <label htmlFor="signInPassword">Password</label>
                         </div>
                         <div className="form-check text-start my-4">
                             <input className="form-check-input" type="checkbox" value="remember-me" id="rememberMe" />
@@ -23,7 +28,7 @@ const SignIn = () => {
                             </label>
                         </div>
                         <a href="/cafe">
-                            <button className="btn btn-primary w-100 py-2 my-2" type="submit">
+                            <button onClick={() => dispatch(signUserIn())} className="btn btn-primary w-100 py-2 my-2" type="submit">
                                 Sign in
                             </button>
                         </a>

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import UserPanelRoute from './routes/UserPanelRoute'
 import OrderRoutes from './routes/OrderRoutes'
 import { Provider } from 'react-redux'
-import { store } from './redux/store'
+import { store } from "./app/store"
 
 function App() {
   return (
