@@ -1,19 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    isSignedIn : false
+    userInfo : null
 }
 
 export const userSlice = createSlice({
     name: "user",
     initialState,
     reducers : {
-        signUserIn : (state) => {
-            state.isSignedIn = true
-            sessionStorage.setItem("isSignedIn", true)
+        signUserIn : (state, action) => {
+            state.userInfo = action.payload
+            sessionStorage.setItem("userName", state.userInfo.name)
         },
         signUserOut : (state) => {
-            state.isSignedIn = false
+            state.userInfo = null
             sessionStorage.clear()
         }
     }

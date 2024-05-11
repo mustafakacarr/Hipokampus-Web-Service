@@ -18,25 +18,13 @@ import VirtualOffice from "../pages/VirtualOffice";
 import CoworkingSpace from "../pages/CoworkingSpace";
 import MeetingRoom from "../pages/MeetingRoom";
 
-let isSignedIn = sessionStorage.getItem("isSignedIn")
+let userName = sessionStorage.getItem("userName")
 
-if (isSignedIn) {
+if (userName) {
   var UserPanelRoute = [
-    {
-      path: "/",
-      component: <SignIn />,
-    },
-    {
-      path: "/sign-up",
-      component: <SignUp />,
-    },
     {
       path: "/dashboard",
       component: <Dashboard />,
-    },
-    {
-      path: "/password-recovery",
-      component: <PasswordRecovery />,
     },
     {
       path: "/cafe",

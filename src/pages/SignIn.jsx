@@ -6,6 +6,16 @@ const SignIn = () => {
 
     const dispatch = useDispatch();
 
+    const handleSignIn = () => {
+
+        const signInDummyData = {
+            name: "John",
+            token: crypto.randomUUID()
+        }
+
+        dispatch(signUserIn(signInDummyData))
+    }
+
     return (
         <div className="d-flex align-items-center min-vh-100 bg-tertiary">
             <div className="m-auto py-5">
@@ -27,8 +37,8 @@ const SignIn = () => {
                                 Remember me
                             </label>
                         </div>
-                        <a href="/cafe">
-                            <button onClick={() => dispatch(signUserIn())} className="btn btn-primary w-100 py-2 my-2" type="submit">
+                        <a href="/dashboard">
+                            <button onClick={handleSignIn} className="btn btn-primary w-100 py-2 my-2" type="submit">
                                 Sign in
                             </button>
                         </a>
