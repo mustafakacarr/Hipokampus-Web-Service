@@ -6,9 +6,6 @@ import { Provider } from 'react-redux'
 import { store } from "./app/store"
 
 function App() {
-
-  let userName = sessionStorage.getItem("userName")
-
   return (
     <>
       <Provider store={store}>
@@ -28,7 +25,7 @@ function App() {
                 element={route.component}
               />
             ))}
-            <Route path='*' element={<Navigate to={(userName) ? "/dashboard":"/"} />} />
+            <Route path='*' element={<Navigate to={"*"} />} />
           </Routes>
         </BrowserRouter>
       </Provider>

@@ -17,6 +17,7 @@ import Messages from "../pages/Messages";
 import VirtualOffice from "../pages/VirtualOffice";
 import CoworkingSpace from "../pages/CoworkingSpace";
 import MeetingRoom from "../pages/MeetingRoom";
+import PageNotFound from "../pages/PageNotFound";
 
 let userName = sessionStorage.getItem("userName")
 
@@ -86,6 +87,10 @@ if (userName) {
     {
       path: "/meeting-room",
       component: <MeetingRoom />,
+    },
+    {
+      path: "*",
+      component: <PageNotFound />
     }
   ];
 } else {
@@ -101,6 +106,10 @@ if (userName) {
     {
       path: "/password-recovery",
       component: <PasswordRecovery />,
+    },
+    {
+      path: "*",
+      component: <PageNotFound />
     }
   ]
 }
