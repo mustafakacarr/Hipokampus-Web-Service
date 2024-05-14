@@ -6,7 +6,7 @@ const InvoiceInformationForm = () => {
   return (
     <OrderLayout>
       <div className="row justify-content-center mb-2">
-        <div className="col-11 col-md-10">
+        <div className="col-11">
           <div className="invoice-form-wrapper">
             <div className="row gx-2 mt-4 mb-3">
               <div className="col-12 mb-4 text-center">

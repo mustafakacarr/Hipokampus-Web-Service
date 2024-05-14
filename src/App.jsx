@@ -5,6 +5,8 @@ import OrderRoutes from './routes/OrderRoutes'
 import { Provider } from 'react-redux'
 import { store } from "./app/store"
 
+let userName = sessionStorage.getItem("userName")
+
 function App() {
   return (
     <>
@@ -26,6 +28,7 @@ function App() {
               />
             ))}
             <Route path='*' element={<Navigate to={"*"} />} />
+            {(userName) ? <Route path='/' element={<Navigate to={"/dashboard"} />} /> : ""}
           </Routes>
         </BrowserRouter>
       </Provider>

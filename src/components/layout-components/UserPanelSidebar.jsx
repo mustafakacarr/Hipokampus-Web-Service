@@ -29,6 +29,8 @@ const UserPanelSidebar = () => {
 
     const { width } = useWindowSize()
 
+    let userName = sessionStorage.getItem("userName")
+
     return width < 576 ? null : (
         <div
             className="d-flex flex-column flex-shrink-0 px-3 pb-3 h-100 my-2"
@@ -44,7 +46,7 @@ const UserPanelSidebar = () => {
                 />
             </a>
             <label className="text-white fs-5 fw-bold sidebar-welcome py-3 mt-4">
-                <FontAwesomeIcon icon={faClover} size="lg" className="me-2" />Welcome, User!
+                <FontAwesomeIcon icon={faClover} size="lg" className="me-2" />Welcome, {userName}!
             </label>
             <ul className="nav nav-pills flex-column mb-auto gap-4 mt-4">
                 <li>
