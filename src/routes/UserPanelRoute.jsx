@@ -18,6 +18,7 @@ import VirtualOffice from "../pages/VirtualOffice";
 import CoworkingSpace from "../pages/CoworkingSpace";
 import MeetingRoom from "../pages/MeetingRoom";
 import PageNotFound from "../pages/PageNotFound";
+import ControlPanel from "../pages/admin-pages/ControlPanel";
 
 let userName = sessionStorage.getItem("userName")
 
@@ -89,8 +90,12 @@ if (userName) {
       component: <MeetingRoom />,
     },
     {
+      path: "/control-panel",
+      component: <ControlPanel />,
+    },
+    {
       path: "*",
-      component: <PageNotFound />
+      component: <PageNotFound />,
     }
   ];
 } else {

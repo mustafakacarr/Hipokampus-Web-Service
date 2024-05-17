@@ -1,13 +1,13 @@
-.user-panel-wrapper {
+.site-wrapper {
   max-width: 1920px;
   background-color: #fefefe;
 }
 
-.user-panel-main {
-  background-color: #fefefe;
+.admin-content-wrapper {
+  max-width: 1366px;
 }
 
-.user-panel-content {
+.user-content-wrapper {
   max-width: 1510px;
   margin-right: 70px !important;
 }

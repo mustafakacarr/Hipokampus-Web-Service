@@ -9,7 +9,7 @@ const UserPanelLayout = ({ children }) => {
   const { width } = useWindowSize()
 
   return (
-    <div className="user-panel-wrapper mx-auto">
+    <div className="site-wrapper mx-auto">
       <div className="row g-0">
         <UserPanelHeader />
         <div
@@ -30,10 +30,10 @@ const UserPanelLayout = ({ children }) => {
           <UserPanelSidebar />
         </div>
         <div
-          className="col-sm-8 col-md-9 col-xl-10 offset-sm-4 offset-md-3 offset-xl-2 user-panel-main"
+          className="col-sm-8 col-md-9 col-xl-10 offset-sm-4 offset-md-3 offset-xl-2"
         >
           {width < 576 ? <div style={{ marginTop: "95px" }}></div> : <br />}
-          <div className="user-panel-content container-fluid mx-auto min-vh-100">
+          <div className="user-content-wrapper container-fluid mx-auto min-vh-100">
             {children}
           </div>
           <div

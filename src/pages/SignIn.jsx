@@ -37,7 +37,7 @@ const SignIn = () => {
                                 Remember me
                             </label>
                         </div>
-                        <a href="/dashboard">
+                        <a href="/control-panel">
                             <button onClick={handleSignIn} className="btn btn-primary w-100 py-2 my-2" type="submit">
                                 Sign in
                             </button>
