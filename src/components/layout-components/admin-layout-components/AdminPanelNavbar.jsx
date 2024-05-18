@@ -11,8 +11,8 @@ const AdminPanelNavbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="adminNavbarDropdown">
                     <ul className="navbar-nav w-100">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <li className="nav-item">
+                            <a className="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Users</a>
