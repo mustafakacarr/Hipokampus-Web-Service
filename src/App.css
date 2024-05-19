@@ -3,10 +3,6 @@
   background-color: #fefefe;
 }
 
-.admin-content-wrapper {
-  max-width: 1366px;
-}
-
 .user-content-wrapper {
   max-width: 1510px;
   margin-right: 70px !important;
