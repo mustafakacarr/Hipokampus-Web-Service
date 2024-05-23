@@ -8,10 +8,10 @@ const PhoneInput = () => {
   const [isValid, setIsValid] = useState(false);
   const [errorCode, setErrorCode] = useState("");
 
-  const handleNumberChange = (status, value, countryData) => {
+  const handleNumberChange = (status, value) => {
     setPhoneNumberValue(value);
     setIsValid(status);
-    setErrorCode(countryData.errorCode);
+    setErrorCode(errorCode);
   };
 
   return (
@@ -22,7 +22,9 @@ const PhoneInput = () => {
         onChangeValidity={setIsValid}
         onChangeErrorCode={setErrorCode}
         containerClassName="form-control"
+
         // any initialisation options from the readme will work here
+        
         initOptions={{
           initialCountry: "tr",
           countrySearch: false,
@@ -36,14 +38,15 @@ const PhoneInput = () => {
       />
 
       {/* 
-            To check the validity of the number
+        To check the validity of the number
 
-            {isValid ? (
-                <p>Valid phone number: {phoneNumber}</p>
-            ) : (
-                <p style={{ color: 'red' }}>Invalid phone number ({errorCode})</p>
-            )}
-             */}
+        {isValid ? (
+            <p>Valid phone number: {phoneNumber}</p>
+        ) : (
+            <p style={{ color: 'red' }}>Invalid phone number ({errorCode})</p>
+        )}
+      */}
+
     </div>
   );
 };
