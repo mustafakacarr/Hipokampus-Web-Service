@@ -265,7 +265,7 @@
   color: #ed6109;
   text-decoration: none;
   vertical-align: sub;
-  font-weight: 750;
+  font-weight: 450;
 }
 
 .user-panel-sidebar-not-active {
@@ -277,7 +277,7 @@
 
 .user-panel-sidebar-not-active:hover {
   color: #ed6109;
-  font-weight: 750;
+  font-weight: 450;
 }
 
 .subscribed-services-text {
@@ -294,7 +294,7 @@
   color: var(--bs-primary);
   text-decoration: none;
   vertical-align: sub;
-  font-weight: 750;
+  font-weight: 450;
 }
 
 .user-panel-offcanvas-not-active {
@@ -306,7 +306,7 @@
 
 .user-panel-offcanvas-not-active:hover {
   color: var(--bs-primary);
-  font-weight: 750;
+  font-weight: 450;
 }
 
 .offcanvas-link {
