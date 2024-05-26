@@ -18,7 +18,7 @@ const SignIn = () => {
 
     return (
         <div className="d-flex align-items-center min-vh-100 bg-tertiary">
-            <div className="m-auto py-5">
+            <div className="m-auto px-3 px-sm-0 py-5">
                 <div className="w-100 sign-in-form border border-primary rounded">
                     <div className="d-flex justify-content-center row gx-0">
                         <img className="mb-4 sign-in-image" src="https://hipokampus.com.tr/images/logo-228x48.webp" />
