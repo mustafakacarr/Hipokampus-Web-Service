@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { json } from "react-router-dom";
 
+const userInSession = sessionStorage.getItem("user")
 const initialState = {
-    userInfo : null
-}
+  userInfo: userInSession ? JSON.parse(userInSession) : null,
+};
 
 export const userSlice = createSlice({
     name: "user",
@@ -10,7 +12,7 @@ export const userSlice = createSlice({
     reducers : {
         signUserIn : (state, action) => {
             state.userInfo = action.payload
-            sessionStorage.setItem("userName", state.userInfo.name)
+            sessionStorage.setItem("user", JSON.stringify(state.userInfo));
         },
         signUserOut : (state) => {
             state.userInfo = null

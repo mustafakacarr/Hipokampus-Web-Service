@@ -19,98 +19,76 @@ import CoworkingSpace from "../pages/CoworkingSpace";
 import MeetingRoom from "../pages/MeetingRoom";
 import PageNotFound from "../pages/PageNotFound";
 
-let userName = sessionStorage.getItem("userName")
+var UserPanelRoute = [
+  {
+    path: "/dashboard",
+    component: <Dashboard />,
+  },
+  {
+    path: "/cafe",
+    component: <Cafe />,
+  },
+  {
+    path: "/packages",
+    component: <Packages />,
+  },
+  {
+    path: "/catering",
+    component: <Catering />,
+  },
+  {
+    path: "/events",
+    component: <Events />,
+  },
+  {
+    path: "/profile",
+    component: <Profile />,
+  },
+  {
+    path: "/announcements",
+    component: <Announcements />,
+  },
+  {
+    path: "/benefits",
+    component: <Benefits />,
+  },
+  {
+    path: "/campaigns",
+    component: <Campaigns />,
+  },
+  {
+    path: "/my-tickets",
+    component: <MyTickets />,
+  },
+  {
+    path: "/order-history",
+    component: <OrderHistory />,
+  },
+  {
+    path: "/order",
+    component: <Order />,
+  },
+  {
+    path: "/messages",
+    component: <Messages />,
+  },
+  {
+    path: "/virtual-office",
+    component: <VirtualOffice />,
+  },
+  {
+    path: "/coworking-space",
+    component: <CoworkingSpace />,
+  },
+  {
+    path: "/meeting-room",
+    component: <MeetingRoom />,
+  },
+  {
+    path: "*",
+    component: <PageNotFound />,
+  },
+];
 
-if (userName) {
-  var UserPanelRoute = [
-    {
-      path: "/dashboard",
-      component: <Dashboard />,
-    },
-    {
-      path: "/cafe",
-      component: <Cafe />,
-    },
-    {
-      path: "/packages",
-      component: <Packages />,
-    },
-    {
-      path: "/catering",
-      component: <Catering />,
-    },
-    {
-      path: "/events",
-      component: <Events />,
-    },
-    {
-      path: "/profile",
-      component: <Profile />,
-    },
-    {
-      path: "/announcements",
-      component: <Announcements />,
-    },
-    {
-      path: "/benefits",
-      component: <Benefits />,
-    },
-    {
-      path: "/campaigns",
-      component: <Campaigns />,
-    },
-    {
-      path: "/my-tickets",
-      component: <MyTickets />,
-    },
-    {
-      path: "/order-history",
-      component: <OrderHistory />,
-    },
-    {
-      path: "/order",
-      component: <Order />,
-    },
-    {
-      path: "/messages",
-      component: <Messages />
-    },
-    {
-      path: "/virtual-office",
-      component: <VirtualOffice />,
-    },
-    {
-      path: "/coworking-space",
-      component: <CoworkingSpace />,
-    },
-    {
-      path: "/meeting-room",
-      component: <MeetingRoom />,
-    },
-    {
-      path: "*",
-      component: <PageNotFound />,
-    }
-  ];
-} else {
-  var UserPanelRoute = [
-    {
-      path: "/",
-      component: <SignIn />,
-    },
-    {
-      path: "/sign-up",
-      component: <SignUp />,
-    },
-    {
-      path: "/password-recovery",
-      component: <PasswordRecovery />,
-    },
-    {
-      path: "*",
-      component: <PageNotFound />
-    }
-  ]
-}
 
 export default UserPanelRoute;
