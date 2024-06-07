@@ -20,6 +20,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import useWindowSize from "../../hooks/useWindowSize";
+import { useSelector } from "react-redux";
 
 const UserPanelSidebar = () => {
 
@@ -29,7 +30,7 @@ const UserPanelSidebar = () => {
 
     const { width } = useWindowSize()
 
-    let userName = sessionStorage.getItem("userName")
+    let user=useSelector((state)=>state.user.userInfo)
 
     return width < 576 ? null : (
         <div
@@ -46,7 +47,7 @@ const UserPanelSidebar = () => {
                 />
             </a>
             <label className="text-white fs-5 fw-bold sidebar-welcome py-3 mt-4">
-                <FontAwesomeIcon icon={faClover} size="lg" className="me-2" />Welcome, {userName}!
+                <FontAwesomeIcon icon={faClover} size="lg" className="me-2" />Welcome, {user.username}!
             </label>
             <ul className="nav nav-pills flex-column mb-auto gap-4 mt-4">
                 <li>

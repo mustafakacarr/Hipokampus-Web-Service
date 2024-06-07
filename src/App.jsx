@@ -4,8 +4,6 @@ import UserPanelRoute from './routes/UserPanelRoute'
 import OrderRoutes from './routes/OrderRoutes'
 import { Provider, useSelector } from 'react-redux'
 import DefaultRoutes from './routes/DefaultRoutes'
-
-
 function App() {
   const user = useSelector((state) => state.user.userInfo);
 

@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signUserIn } from "../features/user/userSlice";
+import axios from "axios";
+import { postWithoutAuth } from "../api/apiCalls";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   const dispatch = useDispatch();
-
-  const handleSignIn = () => {
-    const signInDummyData = {
-      name: "John",
-      token: crypto.randomUUID(),
-    };
-
-    dispatch(signUserIn(signInDummyData));
+  const history=useNavigate();
+  const handleSignIn = async () => {
+    try {
+      const body = { username, password };
+      const response = await axios.post("/api/v1.0/auth/login", body);
+      const { message,roles, ...rest } = response.data;
+      dispatch(signUserIn({ ...rest }));
+      history("/dashboard");
+    } catch (error) {
+      console.log("🚀 ~ handleSignIn ~ error:", error.message);
+      console.error(error);
+    }
   };
 
   return (
@@ -28,7 +38,8 @@ const SignIn = () => {
               <input
                 type="text"
                 className="form-control sign-in-username"
-                id="signInUsername"
+                onChange={(e) => setUsername(e.target.value)}
+                value={username}
                 placeholder="Username"
               />
               <label htmlFor="signInUsername">Username</label>
@@ -37,7 +48,8 @@ const SignIn = () => {
               <input
                 type="password"
                 className="form-control sign-in-password"
-                id="signInPassword"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
                 placeholder="Password"
               />
               <label htmlFor="signInPassword">Password</label>
@@ -53,15 +65,14 @@ const SignIn = () => {
                 Remember me
               </label>
             </div>
-            <a href="/dashboard">
-              <button
-                onClick={handleSignIn}
-                className="btn btn-primary w-100 py-2 my-2"
-                type="submit"
-              >
-                Sign in
-              </button>
-            </a>
+
+            <button
+              onClick={handleSignIn}
+              className="btn btn-primary w-100 py-2 my-2"
+            >
+              Sign in
+            </button>
+
             <a
               href="/password-recovery"
               className="text-center my-1 row gx-0 text-decoration-none"
