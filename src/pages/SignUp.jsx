@@ -1,8 +1,50 @@
 import React, { useState } from "react"
 import PhoneInput from "../components/phone-input-component/PhoneInputComponent";
+import { postWithoutAuth } from "../api/apiCalls";
+import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 
 const SignUp = () => {
+
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
+
+    const [username, setUsername] = useState("");
+    const [firstName, setfirstName] = useState("");
+    const [lastName, setlastName] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("")
+    const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("+90");
+    const [isPdpaChecked, setPdpaCheckbox] = useState(false)
+
+    const handleSignUp = async () => {
+        if (username === "" || password === "" || firstName === "" || lastName === "" || email === "" || phone === "") {
+            setError("All fields must be filled");
+            setSuccess("");
+            return;
+        }
+        if (password !== confirmPassword) {
+            setError("Your passwords must be the same")
+            setSuccess("")
+            return;
+        }
+        if (!isPdpaChecked) {
+            setError("You need to accept the PDPA to register")
+            setSuccess("")
+            return;
+        }
+        try {
+            const body = { username, password, firstName, lastName, email, phone }
+            const response = await postWithoutAuth("/api/v1.0/auth/register", body)
+            const { message, roles, ...rest } = response.data;
+            setSuccess(message);
+            setError("");
+        } catch (error) {
+            setError(error.message);
+            setSuccess("");
+            console.error(error);
+        }
+    }
     return (
         <div className="d-flex align-items-center min-vh-100 bg-tertiary">
             <div className="m-auto px-3 px-sm-0 py-5">
@@ -10,35 +52,105 @@ const SignUp = () => {
                     <div className="d-flex justify-content-center row gx-0">
                         <img className="mb-2 sign-up-image" src="https://hipokampus.com.tr/images/logo-228x48.webp" />
                         <p className="h3 mb-2 fw-normal text-center">Sign up</p>
+                        {success != "" ? (
+                            <ClassicalBSAlert
+                                message={success}
+                                variant="success"
+                                icon={faCheckCircle}
+                            />
+                        ) : (
+                            error != "" && (
+                                <ClassicalBSAlert
+                                    message={error}
+                                    variant="danger"
+                                    icon={faExclamationCircle}
+                                />
+                            )
+                        )}
                         <div className="form-floating my-2">
-                            <input type="text" className="form-control" id="signUpUsername" placeholder="Username" required />
+                            <input
+                                onChange={(e) => setUsername(e.target.value)}
+                                value={username}
+                                type="text"
+                                className="form-control"
+                                id="signUpUsername"
+                                placeholder="Username"
+                                required
+                            />
                             <label for="signUpUsername">Username</label>
                         </div>
                         <div className="form-floating my-2">
-                            <input type="text" className="form-control sign-up-first-name" id="signUpFirstName" placeholder="Enter First Name" required />
+                            <input
+                                onChange={(e) => setfirstName(e.target.value)}
+                                value={firstName}
+                                type="text"
+                                className="form-control"
+                                id="signUpFirstName"
+                                placeholder="First Name"
+                                required
+                            />
                             <label for="signUpFirstName">First name</label>
                         </div>
                         <div className="form-floating mb-2">
-                            <input type="text" className="form-control sign-up-last-name" id="signUpLastName" placeholder="Enter Last Name" required />
+                            <input
+                                onChange={(e) => setlastName(e.target.value)}
+                                value={lastName}
+                                type="text"
+                                className="form-control"
+                                id="signUpLastName"
+                                placeholder="Last Name"
+                                required
+                            />
                             <label for="signUpLastName">Last Name</label>
                         </div>
                         <div className="form-floating mb-2">
-                            <input type="email" className="form-control" id="signUpEmail" placeholder="Email" required />
+                            <input
+                                onChange={(e) => setEmail(e.target.value)}
+                                value={email}
+                                type="email"
+                                className="form-control"
+                                id="signUpEmail"
+                                placeholder="Email"
+                                required
+                            />
                             <label for="signUpEmail">Email</label>
                         </div>
                         <div className="form-floating my-2">
-                            <input type="password" className="form-control sign-up-password" id="signUpPassword" placeholder="Choose password" required />
+                            <input
+                                onChange={(e) => setPassword(e.target.value)}
+                                value={password}
+                                type="password"
+                                className="form-control"
+                                id="signUpPassword"
+                                placeholder="Password"
+                                required
+                            />
                             <label for="signUpPassword">Choose password</label>
                         </div>
                         <div className="form-floating mb-2">
-                            <input type="password" className="form-control sign-up-password-check" id="signUpPasswordCheck" placeholder="Confirm password" required />
-                            <label for="signUpPasswordCheck">Confirm password</label>
+                            <input
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                value={confirmPassword}
+                                type="password"
+                                className="form-control"
+                                id="signUpConfirmPassword"
+                                placeholder="Confirm password"
+                                required
+                            />
+                            <label for="signUpConfirmPassword">Confirm password</label>
                         </div>
                         <div className="mb-2 w-100">
                             <PhoneInput onChangePhoneNumber={setPhone} />
                         </div>
                         <div className="form-check text-start my-3">
-                            <input className="form-check-input" type="checkbox" value="remember-me" id="rememberMe" required />
+                            <input
+                                className="form-check-input"
+                                type="checkbox"
+                                id="pdpaCheckbox"
+                                onChange={(e) => setPdpaCheckbox(e.target.checked)}
+                                value={isPdpaChecked}
+                                required
+                            />
                             <label type="button" className="form-check-label sign-up-pdpa" data-bs-toggle="modal" data-bs-target="#signUpModal">
                                 I have read and accept the PDPA
                             </label>
@@ -111,7 +223,10 @@ const SignUp = () => {
                             </div>
                         </div>
                         <a href="/">
-                            <button className="btn btn-primary w-100 py-2 my-2" type="submit">
+                            <button className="btn btn-primary w-100 py-2 my-2"
+                                type="submit"
+                                onClick={handleSignUp}
+                            >
                                 Sign up
                             </button>
                         </a>
