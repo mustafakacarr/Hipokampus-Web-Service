@@ -1,6 +1,6 @@
 import React from 'react';
 import OrderLayout from '../../../layouts/OrderLayout';
-import PhoneInput from '../../phone-input-component/PhoneInput';
+import PhoneInput from '../../phone-input-component/PhoneInputComponent';
 
 const InvoiceInformationForm = () => {
   return (

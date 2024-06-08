@@ -1,5 +1,5 @@
 import React from "react"
-import PhoneInput from "../components/phone-input-component/PhoneInput";
+import PhoneInput from "../components/phone-input-component/PhoneInputComponent";
 
 const SignUp = () => {
     return (

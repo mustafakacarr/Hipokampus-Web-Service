@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import PhoneInput from "../phone-input-component/PhoneInput";
+import PhoneInput from "../phone-input-component/PhoneInputComponent";
 import { useSelector } from "react-redux";
 import { getWithAuth } from "../../api/apiCalls";
-import IntlTelInput from "intl-tel-input/react";
-import "intl-tel-input/build/js/utils.js";
-import "intl-tel-input/build/css/intlTelInput.css";
+
 const ProfilePersonalInformation = () => {
   const user = useSelector((state) => state.user.userInfo);
   const [username, setUsername] = useState("");
@@ -78,9 +76,7 @@ const ProfilePersonalInformation = () => {
       </div>
       <div className="col-12 col-md-6 py-1">
         <label className="form-label">Phone Number</label>
-   <PhoneInput phoneDefault={phoneNumber} />
-
-      
+        <PhoneInput phoneDefault={phoneNumber} />
       </div>
       <div className="mt-4 col-12 col-md-4 col-lg-3 col-xl-2 mx-auto text-center">
         <button className="btn btn-primary w-100">Update</button>
