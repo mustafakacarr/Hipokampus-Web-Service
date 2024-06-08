@@ -12,35 +12,30 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          {user ? (
-            <>
-              {UserPanelRoute.map((route) => (
-                <Route
-                  key={route.path}
-                  path={route.path}
-                  element={route.component}
-                />
-              ))}
-              {OrderRoutes.map((route) => (
-                <Route
-                  key={route.path}
-                  path={route.path}
-                  element={route.component}
-                />
-              ))}
-              <Route path="/" element={<Navigate to="/dashboard" />} />
-            </>
-          ) : (
-            <>
-              {DefaultRoutes.map((route) => (
-                <Route
-                  key={route.path}
-                  path={route.path}
-                  element={route.component}
-                />
-              ))}
-            </>
-          )}
+          {UserPanelRoute.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={route.component}
+            />
+          ))}
+          {OrderRoutes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={route.component}
+            />
+          ))}
+          <Route path="/" element={<Navigate to="/dashboard" />} />
+
+          {DefaultRoutes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={route.component}
+            />
+          ))}
+
           <Route path="*" element={<Navigate to="*" />} />
         </Routes>
       </BrowserRouter>

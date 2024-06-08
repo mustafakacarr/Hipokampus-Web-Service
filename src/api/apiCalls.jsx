@@ -1,14 +1,13 @@
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { store } from "../app/store";
 
-const localUser = JSON.parse(sessionStorage.getItem("user"));
-let token;
-if (localUser) {
-  token = localUser.accessToken;
-}
+export const getTokenFromRedux = () => {
+  const user = store.getState().user.userInfo;
+  return user.accessToken;
+};
 
 export const postWithAuth = async (url, body) => {
-  console.log("🚀 ~ file: apiCalls.js:4 ~ token:", token);
+  const token = getTokenFromRedux();
 
   return await axios.post(url, body, {
     headers: {
@@ -17,11 +16,17 @@ export const postWithAuth = async (url, body) => {
     },
   });
 };
-export const postWithoutAuth = async (url, body) => {
-  return await axios.post(url, body);
-};
 
+export const postWithoutAuth = async (url, body) => {
+  return await axios.post(url, body, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+}
 export const putWithAuth = async (url, body) => {
+  const token = getTokenFromRedux();
+
   return await axios.put(url, body, {
     headers: {
       "Content-Type": "application/json",
@@ -29,7 +34,10 @@ export const putWithAuth = async (url, body) => {
     },
   });
 };
+
 export const getWithAuth = async (url, params = {}) => {
+  const token = getTokenFromRedux();
+
   return await axios.get(url, {
     params,
     headers: {
@@ -38,10 +46,13 @@ export const getWithAuth = async (url, params = {}) => {
     },
   });
 };
+
 export const getWithoutAuth = async (url, params = {}) => {
   return await axios.get(url, params);
 };
 export const deleteWithAuth = async (url) => {
+  const token = getTokenFromRedux();
+
   return await axios.delete(url, {
     headers: {
       "Content-Type": "application/json",
@@ -49,19 +60,3 @@ export const deleteWithAuth = async (url) => {
     },
   });
 };
-
-/*export const RefreshToken = async (user) => {
-  const user = JSON.parse(localStorage.getItem("currentUser"));
-  return await axios.post(
-    "api/v1.0/auth/refresh",
-    {
-      userId: user.id,
-      refreshToken: user.refreshToken,
-    },
-    {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
-};*/

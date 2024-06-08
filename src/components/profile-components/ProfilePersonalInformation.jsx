@@ -5,6 +5,7 @@ import { getWithAuth, putWithAuth } from "../../api/apiCalls";
 import ClassicalBSAlert from "../alert-component/ClassicalBSAlert";
 import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 
+
 const ProfilePersonalInformation = () => {
   const user = useSelector((state) => state.user.userInfo);
   const [username, setUsername] = useState("");
@@ -17,7 +18,7 @@ const ProfilePersonalInformation = () => {
 
   const fetchUserDetails = async () => {
     try {
-      const response = await getWithAuth("/api/v1.0/users/profile");
+      const response = await getWithAuth("/api/v1.0/users/profile",);
       const { username, email, phone, firstName, lastName } = response.data;
       setUsername(username);
       setEmail(email);
