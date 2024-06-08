@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import PhoneInput from "../phone-input-component/PhoneInputComponent";
 import { useSelector } from "react-redux";
-import { getWithAuth } from "../../api/apiCalls";
+import { getWithAuth, putWithAuth } from "../../api/apiCalls";
+import ClassicalBSAlert from "../alert-component/ClassicalBSAlert";
+import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 
 const ProfilePersonalInformation = () => {
   const user = useSelector((state) => state.user.userInfo);
@@ -10,12 +12,13 @@ const ProfilePersonalInformation = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const fetchUserDetails = async () => {
     try {
       const response = await getWithAuth(`/api/v1.0/users/${user.userId}`);
-      const { username, email, phone, firstName, lastName } =
-        response.data;
+      const { username, email, phone, firstName, lastName } = response.data;
       setUsername(username);
       setEmail(email);
       setPhoneNumber(phone);
@@ -30,13 +33,42 @@ const ProfilePersonalInformation = () => {
     fetchUserDetails();
   }, []);
 
+  const handleUpdate = async () => {
+    try {
+      const body = { email, phone: phoneNumber, firstName, lastName };
+      const response = await putWithAuth("/api/v1.0/users", body);
 
+      fetchUserDetails();
+      setIsSuccess(true);
+      setIsError(false);
+    } catch (error) {
+      setIsError(true);
+      setIsSuccess(false);
+      console.log("🚀 ~ fetchUserDetails ~ error", error);
+    }
+  };
 
   return (
     <div className="row gx-2 mt-4 mb-5">
       <div className="col-12 py-1 mb-2">
-        <h3 className="fw-bold">Update Profile</h3>
+        <h3 className="fw-bold text-center">Update Profile</h3>
       </div>
+      {isSuccess ? (
+        <ClassicalBSAlert
+          message="Your profile details updated successfully"
+          variant="success"
+          icon={faCheckCircle}
+        />
+      ) : (
+        isError && (
+          <ClassicalBSAlert
+            message="There is an error while updating your profile"
+            variant="danger"
+            icon={faExclamationCircle}
+          />
+        )
+      )}
+
       <div className="col-12 py-1">
         <label className="form-label">Username</label>
         <input
@@ -76,10 +108,15 @@ const ProfilePersonalInformation = () => {
       </div>
       <div className="col-12 col-md-6 py-1">
         <label className="form-label">Phone Number</label>
-        <PhoneInput phoneDefault={phoneNumber} />
+        <PhoneInput
+          phoneDefault={phoneNumber}
+          onChangePhoneNumber={setPhoneNumber}
+        />
       </div>
       <div className="mt-4 col-12 col-md-4 col-lg-3 col-xl-2 mx-auto text-center">
-        <button className="btn btn-primary w-100">Update</button>
+        <button className="btn btn-primary w-100" onClick={handleUpdate}>
+          Update
+        </button>
       </div>
     </div>
   );
