@@ -16,6 +16,7 @@ const PhoneInputComponent = ({ phoneDefault="+90" ,onChangePhoneNumber}) => {
         onChange={(phone) => onChangePhoneNumber(phone)}
         preferredCountries={["tr", "ua", "ru", "us"]}
         disableDialCodeAndPrefix={true}
+        inputClassName={"w-100"}
       />
     </div>
   );

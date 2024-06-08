@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import OrderLayout from '../../../layouts/OrderLayout';
 import PhoneInput from '../../phone-input-component/PhoneInputComponent';
 
 const InvoiceInformationForm = () => {
+  const [phone, setPhone] = useState("+90");
   return (
     <OrderLayout>
       <div className="row justify-content-center mb-2">
@@ -26,7 +27,7 @@ const InvoiceInformationForm = () => {
               </div>
               <div className="col-12 col-md-6 py-1">
                 <label className="form-label">Phone Number</label>
-                <PhoneInput />
+                <PhoneInput  onChangePhoneNumber={setPhone}/>
               </div>
               <div className='col-12 py-1'>
                 <label className='form-label'>Adress</label>

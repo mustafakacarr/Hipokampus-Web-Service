@@ -4,22 +4,34 @@ import { signUserIn } from "../features/user/userSlice";
 import axios from "axios";
 import { postWithoutAuth } from "../api/apiCalls";
 import { useNavigate } from "react-router-dom";
+import ClassicalBSAlert from "../components/alert-component/ClassicalBSAlert";
+import { faCheckCircle, faExclamationCircle, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 const SignIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const dispatch = useDispatch();
-  const history=useNavigate();
+  const history = useNavigate();
   const handleSignIn = async () => {
+    if (username === "" || password === "") {
+      setError("Username and password cannot be empty");
+      setSuccess("");
+      return;
+    }
     try {
       const body = { username, password };
-      const response = await axios.post("/api/v1.0/auth/login", body);
-      const { message,roles, ...rest } = response.data;
+      const response = await postWithoutAuth("/api/v1.0/auth/login", body);
+      const { message, roles, ...rest } = response.data;
       dispatch(signUserIn({ ...rest }));
-      history("/dashboard");
+      setSuccess(message);
+      setError("");
+     
     } catch (error) {
-      console.log("🚀 ~ handleSignIn ~ error:", error.message);
+      setError(error.message);
+      setSuccess("");
       console.error(error);
     }
   };
@@ -34,6 +46,21 @@ const SignIn = () => {
               src="https://hipokampus.com.tr/images/logo-228x48.webp"
             />
             <p className="h3 mb-4 fw-normal text-center">Sign in</p>
+            {success != "" ? (
+              <ClassicalBSAlert
+                message={success}
+                variant="success"
+                icon={faCheckCircle}
+              />
+            ) : (
+              error != "" && (
+                <ClassicalBSAlert
+                  message={error}
+                  variant="danger"
+                  icon={faExclamationCircle}
+                />
+              )
+            )}
             <div className="form-floating">
               <input
                 type="text"
@@ -54,17 +81,7 @@ const SignIn = () => {
               />
               <label htmlFor="signInPassword">Password</label>
             </div>
-            <div className="form-check text-start my-4">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value="remember-me"
-                id="rememberMe"
-              />
-              <label className="form-check-label" htmlFor="rememberMe">
-                Remember me
-              </label>
-            </div>
+       
 
             <button
               onClick={handleSignIn}
