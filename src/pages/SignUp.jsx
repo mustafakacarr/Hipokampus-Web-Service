@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import PhoneInput from "../components/phone-input-component/PhoneInputComponent";
 
 const SignUp = () => {
+    const [phone, setPhone] = useState("+90");
     return (
         <div className="d-flex align-items-center min-vh-100 bg-tertiary">
             <div className="m-auto px-3 px-sm-0 py-5">
@@ -26,7 +27,7 @@ const SignUp = () => {
                             <label for="signUpPasswordCheck">Confirm password</label>
                         </div>
                         <div className="mb-2">
-                            <PhoneInput />
+                            <PhoneInput onChangePhoneNumber={setPhone} />
                         </div>
                         <div className="form-check text-start my-4">
                             <input className="form-check-input" type="checkbox" value="remember-me" id="rememberMe" required/>

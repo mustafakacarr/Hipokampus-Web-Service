@@ -17,7 +17,7 @@ const ProfilePersonalInformation = () => {
 
   const fetchUserDetails = async () => {
     try {
-      const response = await getWithAuth(`/api/v1.0/users/${user.userId}`);
+      const response = await getWithAuth("/api/v1.0/users/profile");
       const { username, email, phone, firstName, lastName } = response.data;
       setUsername(username);
       setEmail(email);
