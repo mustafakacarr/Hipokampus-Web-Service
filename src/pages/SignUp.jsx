@@ -8,29 +8,37 @@ const SignUp = () => {
             <div className="m-auto px-3 px-sm-0 py-5">
                 <div className="w-100 sign-up-form border border-primary rounded">
                     <div className="d-flex justify-content-center row gx-0">
-                        <img className="mb-4 sign-up-image" src="https://hipokampus.com.tr/images/logo-228x48.webp" />
-                        <p className="h3 mb-3 fw-normal text-center">Sign up</p>
+                        <img className="mb-2 sign-up-image" src="https://hipokampus.com.tr/images/logo-228x48.webp" />
+                        <p className="h3 mb-2 fw-normal text-center">Sign up</p>
                         <div className="form-floating my-2">
-                            <input type="text" className="form-control" id="signUpNameSurname" placeholder="Name surname" required/>
-                            <label for="signUpNameSurname">Name surname</label>
+                            <input type="text" className="form-control" id="signUpUsername" placeholder="Username" required />
+                            <label for="signUpUsername">Username</label>
+                        </div>
+                        <div className="form-floating my-2">
+                            <input type="text" className="form-control sign-up-first-name" id="signUpFirstName" placeholder="Enter First Name" required />
+                            <label for="signUpFirstName">First name</label>
                         </div>
                         <div className="form-floating mb-2">
-                            <input type="email" className="form-control" id="signUpEmail" placeholder="Email" required/>
+                            <input type="text" className="form-control sign-up-last-name" id="signUpLastName" placeholder="Enter Last Name" required />
+                            <label for="signUpLastName">Last Name</label>
+                        </div>
+                        <div className="form-floating mb-2">
+                            <input type="email" className="form-control" id="signUpEmail" placeholder="Email" required />
                             <label for="signUpEmail">Email</label>
                         </div>
-                        <div className="form-floating mb-2 mt-3">
-                            <input type="password" className="form-control sign-up-password" id="signUpUsername" placeholder="Choose password" required/>
-                            <label for="signUpUsername">Choose password</label>
+                        <div className="form-floating my-2">
+                            <input type="password" className="form-control sign-up-password" id="signUpPassword" placeholder="Choose password" required />
+                            <label for="signUpPassword">Choose password</label>
                         </div>
-                        <div className="form-floating mb-3">
-                            <input type="password" className="form-control sign-up-password-check" id="signUpPasswordCheck" placeholder="Confirm password" required/>
+                        <div className="form-floating mb-2">
+                            <input type="password" className="form-control sign-up-password-check" id="signUpPasswordCheck" placeholder="Confirm password" required />
                             <label for="signUpPasswordCheck">Confirm password</label>
                         </div>
-                        <div className="mb-2">
+                        <div className="mb-2 w-100">
                             <PhoneInput onChangePhoneNumber={setPhone} />
                         </div>
-                        <div className="form-check text-start my-4">
-                            <input className="form-check-input" type="checkbox" value="remember-me" id="rememberMe" required/>
+                        <div className="form-check text-start my-3">
+                            <input className="form-check-input" type="checkbox" value="remember-me" id="rememberMe" required />
                             <label type="button" className="form-check-label sign-up-pdpa" data-bs-toggle="modal" data-bs-target="#signUpModal">
                                 I have read and accept the PDPA
                             </label>
@@ -107,6 +115,12 @@ const SignUp = () => {
                                 Sign up
                             </button>
                         </a>
+                        <div className="mt-3 mb-2">
+                            Already have an account?
+                            <a className="ms-2" href="/">
+                                Sign in
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <span className="d-flex justify-content-center my-4">
