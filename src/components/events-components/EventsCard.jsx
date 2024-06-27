@@ -9,7 +9,7 @@ import {
 const EventsCard = ({ data, index }) => {
   return (
     <div className="px-1 px-md-2 col-12 col-md-6 col-xl-4 mb-4 mb-md-3">
-      <div className="card">
+      <div className="card h-100">
         <img
           src={"data:image/jpg;base64," + data.image.file}
           className="card-img-top"
