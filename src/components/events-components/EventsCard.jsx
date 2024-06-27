@@ -11,28 +11,29 @@ const EventsCard = ({ data, index }) => {
     <div className="px-1 px-md-2 col-12 col-md-6 col-xl-4 mb-4 mb-md-3">
       <div className="card">
         <img
-          src="https://hipokampus.com.tr/images/hizmetler/tr/hipokampus-kultur-sanat-sosyal-girisimcilik-etkinlikleri.webp"
+          src={"data:image/jpg;base64," + data.image.file}
           className="card-img-top"
-          alt={data.title}
+          alt={data.name}
+          style={{height:"250px"}}
         />
         <div className="card-body">
           <div className="d-flex justify-content-between align-items-center mb-3">
             <div>
               <FontAwesomeIcon icon={faUserGroup} className="me-1" />
-              <span className="me-2">{data.capacity}</span>
+              <span className="me-2">{data.quota}</span>
             </div>
             <div>
               <FontAwesomeIcon icon={faCalendar} className="me-1" />
-              <span>{data.start_date}</span>
+              <span>{data.startDate}</span>
             </div>
           </div>
-          <h4 className="card-title text-center fw-bold">{data.title}</h4>
+          <h4 className="card-title text-center fw-bold">{data.name}</h4>
           <p className="card-text text-muted">{data.description}</p>
         </div>
         <div className="card-footer d-flex justify-content-between align-items-center">
           <div className="me-2">
             <span>Ticket Price: </span>
-            <span className="fw-bold fs-4">{data.price}₺</span>
+            <span className="fw-bold fs-4">{data.ticketPrice}₺</span>
           </div>
           <button className="btn btn-success">
             <FontAwesomeIcon icon={faChevronRight} className="me-2" />

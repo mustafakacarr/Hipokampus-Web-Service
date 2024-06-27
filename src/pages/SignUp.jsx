@@ -74,7 +74,7 @@ const SignUp = () => {
               className="mb-2 sign-up-image"
               src="https://hipokampus.com.tr/images/logo-228x48.webp"
             />
-            <p className="h3 mb-2 fw-normal text-center">Sign up</p>
+            <p className="h3 mb-2 fw-bold text-center">Sign up</p>
             {success != "" ? (
               <ClassicalBSAlert
                 message={success}
@@ -162,8 +162,9 @@ const SignUp = () => {
               />
               <label htmlFor="signUpConfirmPassword">Confirm password</label>
             </div>
-            <div className="mb-2 w-100">
-              <PhoneInput onChangePhoneNumber={setPhone} />
+            <div className="my-2">
+              <h6 className="fw-normal">Phone Number</h6>
+              <PhoneInput className="w-100" onChangePhoneNumber={setPhone} />
             </div>
             <div className="form-check text-start my-3">
               <input
@@ -176,7 +177,7 @@ const SignUp = () => {
               />
               <label
                 type="button"
-                className="form-check-label sign-up-pdpa"
+                className="form-check-label sign-up-pdpa fw-bold"
                 data-bs-toggle="modal"
                 data-bs-target="#signUpModal"
               >
@@ -214,7 +215,7 @@ const SignUp = () => {
             </div>
 
             <button
-              className="btn btn-primary w-100 py-2 my-2"
+              className="btn btn-primary w-100 py-2 my-2 fw-bold"
               onClick={handleSignUp}
             >
               Sign up
@@ -222,7 +223,7 @@ const SignUp = () => {
 
             <div className="mt-3 mb-2">
               Already have an account?
-              <a className="ms-2" href="/">
+              <a className="ms-2 fw-bold" href="/">
                 Sign in
               </a>
             </div>
