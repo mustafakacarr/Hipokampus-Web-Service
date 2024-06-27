@@ -3,13 +3,15 @@ import { useDispatch } from "react-redux";
 import { signUserIn } from "../features/user/userSlice";
 import axios from "axios";
 import { postWithoutAuth } from "../api/apiCalls";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import ClassicalBSAlert from "../components/alert-component/ClassicalBSAlert";
 import { faCheckCircle, faExclamationCircle, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 const SignIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const [isLoginSuccessful, setLoginSuccessful] = useState(false)
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -28,12 +30,15 @@ const SignIn = () => {
       dispatch(signUserIn({ ...rest }));
       setSuccess(message);
       setError("");
-     
+
     } catch (error) {
       setError(error.message);
       setSuccess("");
       console.error(error);
+      return
     }
+    
+    setLoginSuccessful(true)
   };
 
   return (
@@ -45,7 +50,7 @@ const SignIn = () => {
               className="mb-4 sign-in-image"
               src="https://hipokampus.com.tr/images/logo-228x48.webp"
             />
-            <p className="h3 mb-4 fw-normal text-center">Sign in</p>
+            <p className="h3 mb-4 fw-normal text-center fw-bold">Sign in</p>
             {success != "" ? (
               <ClassicalBSAlert
                 message={success}
@@ -81,11 +86,11 @@ const SignIn = () => {
               />
               <label htmlFor="signInPassword">Password</label>
             </div>
-       
+
 
             <button
               onClick={handleSignIn}
-              className="btn btn-primary w-100 py-2 my-2"
+              className="btn btn-primary w-100 py-2 my-2 fw-bold"
             >
               Sign in
             </button>
@@ -100,7 +105,7 @@ const SignIn = () => {
             </a>
             <div className="my-4">
               Don't have an account?
-              <a className="ms-2" href="/sign-up">
+              <a className="ms-2 fw-bold" href="/sign-up">
                 Sign up
               </a>
             </div>
@@ -110,6 +115,7 @@ const SignIn = () => {
           © 2024 Hipokampus Web Service
         </span>
       </div>
+      {isLoginSuccessful && <Navigate to="/dashboard" />}
     </div>
   );
 };

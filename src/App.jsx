@@ -26,7 +26,8 @@ function App() {
               element={route.component}
             />
           ))}
-          <Route path="/" element={<Navigate to="/dashboard" />} />
+          
+          {/* <Route path="/" element={<Navigate to="/dashboard" />} /> */}
 
           {DefaultRoutes.map((route) => (
             <Route
