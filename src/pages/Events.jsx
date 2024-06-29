@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import UserPanelLayout from "../layouts/UserPanelLayout";
 import { getWithoutAuth } from "../api/apiCalls";
 import EventsCard from "../components/events-components/EventsCard";
+import TripleSpinner from "../components/spinner-components/TripleSpinner";
 
 const Events = () => {
 
@@ -25,17 +26,7 @@ const Events = () => {
     return (
         <UserPanelLayout>
             {isLoading &&
-                <div className="row gap-1 justify-content-center align-items-center min-vh-100" style={{paddingBottom: "30%"}}>
-                    <div class="spinner-grow text-primary" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                    <div class="spinner-grow text-secondary" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                    <div class="spinner-grow text-tertiary" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                </div>
+                <TripleSpinner />
             }
             {!isLoading &&
                 <div className="row gx-0 px-3 py-3 d-flex justify-content-start">
