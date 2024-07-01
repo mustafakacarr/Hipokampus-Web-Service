@@ -3,11 +3,13 @@ import UserPanelLayout from "../layouts/UserPanelLayout";
 import { getWithoutAuth } from "../api/apiCalls";
 import EventsCard from "../components/events-components/EventsCard";
 import TripleSpinner from "../components/spinner-components/TripleSpinner";
+import ErrorWhileLoadingAlert from "../components/alert-component/ErrorWhileLoadingAlert";
 
 const Events = () => {
 
     const [eventsList, setEventsList] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
+    const [isAlert, setIsAlert] = useState(false)
 
     const fetchEvents = async () => {
         try {
@@ -15,7 +17,8 @@ const Events = () => {
             setEventsList(response.data)
             setIsLoading(false)
         } catch (error) {
-            console.log("Error: Cannot fetch events!")
+            setIsLoading(false)
+            setIsAlert(true)
         }
     };
 
@@ -25,10 +28,15 @@ const Events = () => {
 
     return (
         <UserPanelLayout>
-            {isLoading &&
+            {
+                isAlert &&
+                <ErrorWhileLoadingAlert />
+            }
+            {
+                isLoading &&
                 <TripleSpinner />
             }
-            {!isLoading &&
+            {!isLoading && !isAlert &&
                 <div className="row gx-0 px-3 py-3 d-flex justify-content-start">
                     {
                         eventsList.map((item, index) => (

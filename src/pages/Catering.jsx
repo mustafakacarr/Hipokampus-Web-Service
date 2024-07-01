@@ -9,6 +9,7 @@ import {
 import cateringDummyData from "../dummy-data/cateringDummyData.json";
 import TripleSpinner from "../components/spinner-components/TripleSpinner"
 import { getWithoutAuth } from "../api/apiCalls"
+import ErrorWhileLoadingAlert from "../components/alert-component/ErrorWhileLoadingAlert"
 
 function getDate() {
   var today = new Date();
@@ -36,6 +37,7 @@ const Catering = () => {
   const [foodsData, setFoodsData] = useState([])
 
   const [isLoading, setIsLoading] = useState(true)
+  const [isAlert, setIsAlert] = useState(false)
 
   const [currentDate, setCurrentDate] = useState(getDate);
 
@@ -46,7 +48,8 @@ const Catering = () => {
       setFoodsData(response.data.foods)
       setIsLoading(false)
     } catch (error) {
-      console.log("Error: Cannot fetch catering data!")
+      setIsLoading(false)
+      setIsAlert(true)
     }
   };
 
@@ -99,10 +102,16 @@ const Catering = () => {
 
   return (
     <UserPanelLayout>
-      {isLoading &&
+      {
+        isAlert &&
+        <ErrorWhileLoadingAlert />
+      }
+      {
+        isLoading &&
         <TripleSpinner />
       }
-      {!isLoading &&
+      {
+        !isLoading && !isAlert &&
         <>
           <div className="d-flex justify-content-center mt-2 mb-0 col col-md-9 mx-auto">
             <div className="alert alert-info w-100 mx-3 py-2" role="alert">

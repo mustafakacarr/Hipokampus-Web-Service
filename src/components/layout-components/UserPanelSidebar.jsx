@@ -30,7 +30,7 @@ const UserPanelSidebar = () => {
 
     const { width } = useWindowSize()
 
-    let user=useSelector((state)=>state.user.userInfo)
+    let user = useSelector((state) => state.user.userInfo)
 
     return width < 576 ? null : (
         <div
