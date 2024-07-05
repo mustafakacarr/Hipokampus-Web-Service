@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CafeProductCard = ({ item, index, addToCartOnClick }) => {
   const [quantity, setQuantity] = useState(1);
-  let product = { productId: item.id, name: item.name, quantity };
+  let product = { productId: item.productId, productName: item.productName, quantity };
 
   useEffect(() => {
     product.quantity = quantity;
@@ -26,12 +26,12 @@ const CafeProductCard = ({ item, index, addToCartOnClick }) => {
     <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12 px-4 px-md-2 mt-4 cafe-card-wrapper">
       <div key={index} className="card mx-5 cafe-card mx-sm-0">
         <img
-          src={item.photo}
+          src={"data:image/jpg;base64," + item.image.file}
           className="card-img-top cafe-card-image"
           alt="Cafe Card Image"
         />
         <div className="card-body text-center mt-2">
-          <h5 className="card-title text-primary">{item.name}</h5>
+          <h5 className="card-title text-primary">{item.productName}</h5>
           <p className="card-text mt-3">
             <b>{item.price} ₺</b>
           </p>
