@@ -6,7 +6,6 @@ import {
   faReceipt,
   faRectangleList,
 } from "@fortawesome/free-solid-svg-icons";
-import cateringDummyData from "../dummy-data/cateringDummyData.json";
 import TripleSpinner from "../components/spinner-components/TripleSpinner"
 import { getWithoutAuth } from "../api/apiCalls"
 import ErrorWhileLoadingAlert from "../components/alert-component/ErrorWhileLoadingAlert"
