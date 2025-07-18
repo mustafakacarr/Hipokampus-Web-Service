@@ -8,7 +8,6 @@ const VirtualOfficeOrderForm = () => {
   const [showExistedOfficeForm, setShowExistedOfficeForm] = useState(false);
 
   return (
-    <OrderLayout>
       <div className="radio-group row justify-content-center p-5 text-center ">
         <div
           className="col-md-6 col-lg-6 col-sm-6"
@@ -109,7 +108,6 @@ const VirtualOfficeOrderForm = () => {
           </div>
         </div>
       </div>
-    </OrderLayout>
   );
 };
 

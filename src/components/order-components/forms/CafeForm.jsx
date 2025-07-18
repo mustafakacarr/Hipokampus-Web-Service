@@ -5,7 +5,6 @@ import { faClipboardList } from "@fortawesome/free-solid-svg-icons";
 
 const CafeForm = () => {
   return (
-    <OrderLayout>
       <div class="row justify-content-center mb-3">
         <div class="col-md-6">
           <div class="message-box cafe-form-wrapper">
@@ -19,7 +18,6 @@ const CafeForm = () => {
           </div>
         </div>
       </div>
-    </OrderLayout>
   );
 };
 

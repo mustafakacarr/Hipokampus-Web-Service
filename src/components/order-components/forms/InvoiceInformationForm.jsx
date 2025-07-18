@@ -5,7 +5,6 @@ import PhoneInput from '../../phone-input-component/PhoneInputComponent';
 const InvoiceInformationForm = () => {
   const [phone, setPhone] = useState("+90");
   return (
-    <OrderLayout>
       <div className="row justify-content-center mb-2">
         <div className="col-11">
           <div className="invoice-form-wrapper">
@@ -39,7 +38,6 @@ const InvoiceInformationForm = () => {
           </div>
         </div>
       </div>
-    </OrderLayout>
   );
 };
 

@@ -4,7 +4,7 @@ import CateringForm from '../forms/CateringForm';
 const CateringOrderSteps = [
   {
     label: "Table Number",
-    path: "/order/catering/table-number-form",
+   // path: "/order/catering/table-number-form",
     component: <CateringForm />,
   },
 ];

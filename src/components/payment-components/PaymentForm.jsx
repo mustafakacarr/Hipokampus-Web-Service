@@ -4,7 +4,7 @@ import ReactInputMask from "react-input-mask";
 
 function PaymentForm() {
   return (
-    <OrderLayout>
+
       <div className="p-3">
         <ul className="nav nav-tabs mb-3 d-flex justify-content-center" id="fill-tab-example" role="tablist">
           <li className="nav-item" role="presentation">
@@ -183,7 +183,7 @@ function PaymentForm() {
           </div>
         </div>
       </div>
-    </OrderLayout>
+   
   );
 }
 

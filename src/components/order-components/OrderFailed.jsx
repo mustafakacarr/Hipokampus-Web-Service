@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const OrderFailed = () => {
   return (
-    <OrderLayout>
       <div class="row justify-content-center mb-5">
         <div class="col-md-6">
           <div class="message-box order-status-failed ">
@@ -18,7 +17,6 @@ const OrderFailed = () => {
           </div>
         </div>
       </div>
-    </OrderLayout>
   );
 };
 

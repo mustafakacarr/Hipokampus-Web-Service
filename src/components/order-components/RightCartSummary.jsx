@@ -5,9 +5,11 @@ import CateringOrderKeyValuePairs from "./right-card-contents/CateringOrderKeyVa
 import CafeOrderKeyValuePairs from "./right-card-contents/CafeOrderKeyValuePairs"
 import { CATERING_ORDER, MEETING_ROOM_ORDER, TICKET_ORDER, CAFE_ORDER } from "../../constants/OrderType";
 
-function RightCartSummary() {
+function RightCartSummary({order}) {
+console.log("🚀 ~ RightCartSummary ~ order:", order)
 
-  const [orderType, setOrderType] = useState(MEETING_ROOM_ORDER);
+
+  const [orderType, setOrderType] = useState(order.orderType);
 
   const findPairsContent = () => {
     let pairComponent = null;

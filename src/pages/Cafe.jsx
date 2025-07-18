@@ -49,6 +49,7 @@ const Cafe = () => {
       : "btn btn-outline-secondary";
   };
 
+
   function handleCafeItems(selectedFilter) {
     setSelectedCategoryId(selectedFilter);
   }

@@ -3,7 +3,8 @@ import PaymentForm from '../components/payment-components/PaymentForm';
 import OrderFailed from '../components/order-components/OrderFailed';
 import OrderSuccess from "../components/order-components/OrderSuccess";
 import OrderLayout from '../layouts/OrderLayout';
-import Steps from '../components/order-components/OrderSteps';
+import OrderSteps from '../components/order-components/OrderSteps';
+import { CAFE_ORDER } from '../constants/OrderType';
 
 const orderStatusPages = [
   {
@@ -17,7 +18,8 @@ const orderStatusPages = [
     component: <OrderFailed />,
   },
 ];
-const OrderRoutes = Steps.concat(orderStatusPages)
+const baseOrderSteps = OrderSteps(CAFE_ORDER); 
+const OrderRoutes = baseOrderSteps.concat(orderStatusPages);
 
 
 export default OrderRoutes;

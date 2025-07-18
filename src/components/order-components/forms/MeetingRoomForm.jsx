@@ -3,7 +3,6 @@ import OrderLayout from '../../../layouts/OrderLayout';
 
 const MeetingRoomForm = () => {
     return (
-        <OrderLayout>
             <div class="row justify-content-center mb-2">
                 <div class="col-11 col-md-10">
                     <div class="meeting-room-form-wrapper">
@@ -36,7 +35,6 @@ const MeetingRoomForm = () => {
                     </div>
                 </div>
             </div>
-        </OrderLayout>
     );
 };
 

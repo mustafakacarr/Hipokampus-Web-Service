@@ -5,7 +5,6 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const OrderSuccess = () => {
   return (
-    <OrderLayout>
       <div class="row justify-content-center mb-5">
         <div class="col-md-6">
           <div class="message-box order-status-success ">
@@ -21,7 +20,6 @@ const OrderSuccess = () => {
           </div>
         </div>
       </div>
-    </OrderLayout>
   );
 };
 

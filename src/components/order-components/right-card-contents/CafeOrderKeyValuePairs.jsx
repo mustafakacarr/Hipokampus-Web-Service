@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 const CafeOrderKeyValuePairs = () => {
+  const abc = {
+    name: "John Doe",
+    items: ["Tea", "Coffee"],
+    fourthItem: "Salad",
+  };
+
+  const [orderInfo, setOrderInfo] = useState(abc);
+
   const pairs = [
-    { "Name Surname": "John Doe" },
-    { "First Item": "Tea" },
-    { "Second Item": "Coffee" },
-    { "Third Item": "Toast" },
-    { "Fourth Item": "Salad" }
+    { "Name Surname": orderInfo.name },
+    { Items: orderInfo.items.join(", ") },
   ];
+  console.log("🚀 ~ CafeOrderKeyValuePairs ~ pairs:", pairs);
   return (
     <div className="w-100">
       {pairs.map((pair, index) => (
