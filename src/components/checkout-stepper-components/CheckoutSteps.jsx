@@ -1,7 +1,6 @@
 import React from "react";
 import "./CheckoutSteps.css"
 function CheckoutSteps({ currentStep, steps }) {
-
   return (
     <div>
       <div className="justify-content-center stepwizard col-md-offset-2">

@@ -18,7 +18,6 @@ import {
 } from "../../constants/OrderType";
 
 const OrderSteps = (orderType) => {
-  console.log("🚀 ~ OrderSteps ~ orderType:", orderType)
   const customSteps = getCustomStep(orderType);
   return customSteps
     ? firstSteps.concat(customSteps, lastSteps)
@@ -27,8 +26,6 @@ const OrderSteps = (orderType) => {
 const firstSteps = [
   {
     label: "Invoice Info",
-
-   // path: "/order/invoice-information",
     component: <InvoiceInformationForm />,
   },
 ];
@@ -53,12 +50,10 @@ const getCustomStep = (orderType) => {
 const lastSteps = [
   {
     label: "Payment",
- //   path: "/checkout/payment",
     component: <PaymentForm />,
   },
   {
     label: "Done",
-   // path: "/checkout/done",
     component: <Done />,
   },
 ];

@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import PaymentForm from "../components/payment-components/PaymentForm";
+import React, {  } from "react";
 import CheckoutSteps from "../components/checkout-stepper-components/CheckoutSteps";
-import UserPanelLayout from "./UserPanelLayout";
 import RightCartSummary from "../components/order-components/RightCartSummary";
-import OrderSteps from "../components/order-components/OrderSteps";
-import { CAFE_ORDER } from "../constants/OrderType";
 
 function OrderLayout(props) {
 
-
   return (
-
       <div className="container">
-        <CheckoutSteps currentStep={(props.children)} steps={props.steps} />
+        <CheckoutSteps currentStep={(props.currentStep)} steps={props.steps} />
         <h3 className="text-center mt-3">{props.pageName}</h3>
         <div className="row mt-3">
           <div className="col-md-12 col-lg-8 col-sm-12 mb-4 mb-lg-0">
