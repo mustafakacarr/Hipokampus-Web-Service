@@ -71,8 +71,8 @@ const SignUp = () => {
         <div className="w-100 sign-up-form border border-primary rounded">
           <div className="d-flex justify-content-center row gx-0">
             <img
-              className="mb-2 sign-up-image"
-              src="https://hipokampus.com.tr/images/logo-228x48.webp"
+              className="mb-4 mt-2 sign-up-image"
+              src="src/assets/images/InWorkLogoAndText.png"
             />
             <p className="h3 mb-2 fw-bold text-center">Sign up</p>
             {success != "" ? (
@@ -230,7 +230,7 @@ const SignUp = () => {
           </div>
         </div>
         <span className="d-flex justify-content-center my-4">
-          © 2024 Hipokampus Web Service
+          © 2025 InWork Coworking Space
         </span>
       </div>
     </div>

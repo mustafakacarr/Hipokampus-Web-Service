@@ -202,7 +202,8 @@ body {
 }
 
 .sign-in-image {
-  width: 250px;
+  width: 160px;
+  height: 40px;
 }
 
 .sign-in-username {
@@ -252,7 +253,8 @@ body {
 }
 
 .sign-up-image {
-  width: 250px;
+  width: 160px;
+  height: 40px;
 }
 
 .password-recovery-form {

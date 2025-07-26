@@ -48,7 +48,7 @@ const SignIn = () => {
           <div className="d-flex justify-content-center row gx-0">
             <img
               className="mb-4 sign-in-image"
-              src="https://hipokampus.com.tr/images/logo-228x48.webp"
+              src="src/assets/images/InWorkLogoAndText.png"
             />
             <p className="h3 mb-4 fw-normal text-center fw-bold">Sign in</p>
             {success != "" ? (
@@ -112,7 +112,7 @@ const SignIn = () => {
           </div>
         </div>
         <span className="d-flex justify-content-center my-4">
-          © 2024 Hipokampus Web Service
+          © 2025 InWork Coworking Space
         </span>
       </div>
       {isLoginSuccessful && <Navigate to="/dashboard" />}
