@@ -39,7 +39,7 @@ const UserPanelNavbar = () => {
               </a>
               <span className="align-items-center me-md-auto text-decoration-none brand-logo ms-3">
                 <img
-                  src="https://hipokampus.com.tr/images/favicon.ico"
+                  src="src/assets/images/InWorkLogo.png"
                   width={30}
                   className="align-middle"
                 />

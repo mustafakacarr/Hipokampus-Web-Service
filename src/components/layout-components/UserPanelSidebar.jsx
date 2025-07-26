@@ -42,11 +42,11 @@ const UserPanelSidebar = () => {
                 className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none brand-logo"
             >
                 <img
-                    src="https://hipokampus.com.tr/images/logo-228x48.webp"
-                    style={{ width: "95%", maxWidth: "220px" }}
+                    src="src/assets/images/InWorkLogoAndText.png"
+                    style={{ width: "75%", maxWidth: "220px", maxHeight: "50px" }}
                 />
             </a>
-            <label className="text-white fs-5 fw-bold sidebar-welcome py-3 mt-4">
+            <label className="fs-5 fw-bold sidebar-welcome py-3 mt-4">
                 <FontAwesomeIcon icon={faClover} size="lg" className="me-2" />Welcome, {user.username}!
             </label>
             <ul className="nav nav-pills flex-column mb-auto gap-4 mt-4">
@@ -207,9 +207,9 @@ const UserPanelSidebar = () => {
                             size="xl"
                             rotation={270}
                             style={{ transform: rotate, transition: "all 0.35s linear" }}
-                            color="white"
+                            color="#1e03a8"
                         />
-                        <span className="ms-2 subscribed-services-text text-light">
+                        <span className="ms-2 subscribed-services-text text-dark">
                             Subscribed Services
                         </span>
                     </a>

@@ -35,8 +35,9 @@ const UserPanelOffcanvas = () => {
                     className="d-flex align-items-center me-md-auto text-decoration-none brand-logo"
                 >
                     <img
-                        src="https://hipokampus.com.tr/images/logo-228x48.webp"
-                        width={220}
+                        src="src/assets/images/InWorkLogoAndText.png"
+                        width={160}
+                        height={40}
                     />
                 </a>
                 <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -177,36 +178,36 @@ const UserPanelOffcanvas = () => {
                 </ul>
                 <hr className="mb-3 mt-5" />
                 <div className="text-center py-4 mb-3">
-                    <p>© 2024 Hipokampus Web Service</p>
+                    <p>© 2025 InWork Coworking Space</p>
                     <ul className="list-unstyled d-flex justify-content-center">
                         <li>
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.facebook.com/hipokampuscoworking/">
-                                <FontAwesomeIcon icon={faFacebook} style={{ color: "#cf480a" }} size="xl" />
+                                <FontAwesomeIcon icon={faFacebook} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="http://www.twitter.com/hipokampusofis">
-                                <FontAwesomeIcon icon={faXTwitter} style={{ color: "#cf480a" }} size="xl" />
+                                <FontAwesomeIcon icon={faXTwitter} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.instagram.com/hipokampuscoworking/">
-                                <FontAwesomeIcon icon={faInstagram} style={{ color: "#cf480a" }} size="xl" />
+                                <FontAwesomeIcon icon={faInstagram} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.youtube.com/channel/UCPLSgfXdoz16lRQn3-Lrd6A">
-                                <FontAwesomeIcon icon={faYoutube} style={{ color: "#cf480a" }} size="xl" />
+                                <FontAwesomeIcon icon={faYoutube} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.linkedin.com/company/hipokampus-coworking-space">
-                                <FontAwesomeIcon icon={faLinkedin} style={{ color: "#cf480a" }} size="xl" />
+                                <FontAwesomeIcon icon={faLinkedin} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.threads.net/@hipokampuscoworking">
-                                <FontAwesomeIcon icon={faThreads} style={{ color: "#cf480a" }} size="xl" />
+                                <FontAwesomeIcon icon={faThreads} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>
                     </ul>

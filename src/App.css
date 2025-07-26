@@ -33,11 +33,11 @@ body {
 }
 
 #offcanvasButton:hover {
-  color: #a73b09;
+  color: #698efc;
 }
 
 #offcanvasButton:active {
-  color: #863008;
+  color: var(--bs-primary);
 }
 
 .catering-input {
@@ -280,21 +280,21 @@ body {
 }
 
 .user-panel-sidebar-active {
-  color: #ed6109;
+  color: #1e03a8;
   text-decoration: none;
   vertical-align: sub;
   font-weight: 450;
 }
 
 .user-panel-sidebar-not-active {
-  color: var(--bs-light);
+  color: var(--bs-dark);
   font-weight: 450;
   text-decoration: none;
   vertical-align: sub;
 }
 
 .user-panel-sidebar-not-active:hover {
-  color: #ed6109;
+  color: #3768fb;
   font-weight: 450;
 }
 
@@ -323,7 +323,7 @@ body {
 }
 
 .user-panel-offcanvas-not-active:hover {
-  color: var(--bs-primary);
+  color: #3768fb;
   font-weight: 450;
 }
 

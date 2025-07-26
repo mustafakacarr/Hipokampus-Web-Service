@@ -13,15 +13,14 @@ const UserPanelLayout = ({ children }) => {
       <div className="row g-0">
         <UserPanelHeader />
         <div
-          className="col-sm-4 col-md-3 col-xl-2 h-100 scrollbar-hidden"
+          className="col-sm-4 col-md-3 col-xl-2 h-100 bg-light scrollbar-hidden"
           style={
             width >= 576
               ? {
                 position: "fixed",
                 overflowY: "scroll",
-                borderRight: "1px solid rgb(5, 5, 5, 0.1)",
+                borderRight: "2px solid rgb(5, 5, 5, 0.1)",
                 maxWidth: "270px",
-                backgroundColor: "#212631",
                 zIndex: 100
               }
               : {}
