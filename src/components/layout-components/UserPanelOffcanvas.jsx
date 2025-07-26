@@ -181,32 +181,32 @@ const UserPanelOffcanvas = () => {
                     <p>© 2025 InWork Coworking Space</p>
                     <ul className="list-unstyled d-flex justify-content-center">
                         <li>
-                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.facebook.com/hipokampuscoworking/">
+                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.facebook.com">
                                 <FontAwesomeIcon icon={faFacebook} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
-                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="http://www.twitter.com/hipokampusofis">
+                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="http://www.twitter.com">
                                 <FontAwesomeIcon icon={faXTwitter} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
-                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.instagram.com/hipokampuscoworking/">
+                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.instagram.com">
                                 <FontAwesomeIcon icon={faInstagram} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
-                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.youtube.com/channel/UCPLSgfXdoz16lRQn3-Lrd6A">
+                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.youtube.com">
                                 <FontAwesomeIcon icon={faYoutube} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
-                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.linkedin.com/company/hipokampus-coworking-space">
+                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.linkedin.com">
                                 <FontAwesomeIcon icon={faLinkedin} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
-                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.threads.net/@hipokampuscoworking">
+                            <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.threads.net">
                                 <FontAwesomeIcon icon={faThreads} style={{ color: "#1e03a8" }} size="xl" />
                             </a>
                         </li>

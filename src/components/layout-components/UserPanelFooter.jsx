@@ -6,36 +6,36 @@ const UserPanelFooter = () => {
     return (
         <footer>
             <div className="d-flex flex-column flex-sm-row justify-content-between py-2 align-items-center">
-                <p>© 2024 Hipokampus Web Service</p>
+                <p>© 2025 InWork Coworking Space</p>
                 <ul className="list-unstyled d-flex">
                     <li className="ms-3">
-                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.facebook.com/hipokampuscoworking/">
-                            <FontAwesomeIcon icon={faFacebook} style={{ color: "#cf480a" }} size="xl" />
+                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.facebook.com">
+                            <FontAwesomeIcon icon={faFacebook} style={{ color: "#1e03a8" }} size="xl" />
                         </a>
                     </li>
                     <li className="ms-3">
-                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="http://www.twitter.com/hipokampusofis">
-                            <FontAwesomeIcon icon={faXTwitter} style={{ color: "#cf480a" }} size="xl" />
+                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="http://www.twitter.com">
+                            <FontAwesomeIcon icon={faXTwitter} style={{ color: "#1e03a8" }} size="xl" />
                         </a>
                     </li>
                     <li className="ms-3">
-                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.instagram.com/hipokampuscoworking/">
-                            <FontAwesomeIcon icon={faInstagram} style={{ color: "#cf480a" }} size="xl" />
+                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.instagram.com">
+                            <FontAwesomeIcon icon={faInstagram} style={{ color: "#1e03a8" }} size="xl" />
                         </a>
                     </li>
                     <li className="ms-3">
-                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.youtube.com/channel/UCPLSgfXdoz16lRQn3-Lrd6A">
-                            <FontAwesomeIcon icon={faYoutube} style={{ color: "#cf480a" }} size="xl" />
+                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.youtube.com">
+                            <FontAwesomeIcon icon={faYoutube} style={{ color: "#1e03a8" }} size="xl" />
                         </a>
                     </li>
                     <li className="ms-3">
-                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.linkedin.com/company/hipokampus-coworking-space">
-                            <FontAwesomeIcon icon={faLinkedin} style={{ color: "#cf480a" }} size="xl" />
+                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.linkedin.com">
+                            <FontAwesomeIcon icon={faLinkedin} style={{ color: "#1e03a8" }} size="xl" />
                         </a>
                     </li>
                     <li className="ms-3">
-                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.threads.net/@hipokampuscoworking">
-                            <FontAwesomeIcon icon={faThreads} style={{ color: "#cf480a" }} size="xl" />
+                        <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.threads.net">
+                            <FontAwesomeIcon icon={faThreads} style={{ color: "#1e03a8" }} size="xl" />
                         </a>
                     </li>
                 </ul>
