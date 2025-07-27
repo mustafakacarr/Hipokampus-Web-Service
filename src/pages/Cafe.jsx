@@ -201,7 +201,7 @@ const Cafe = () => {
                       </div>
                     </div>
                   ) : (
-                    <div>There is no product in your basket</div>
+                    <div>There are no products in your basket</div>
                   )}
                   <a href="#" className="btn btn-success mt-3" onClick={sendCafeItems}>
                     Go To Checkout
@@ -222,7 +222,7 @@ const Cafe = () => {
             <div id="noItemsToast" className="toast" role="alert" aria-live="assertive" aria-atomic="true">
               <div className="toast-body rounded fw-bold fs-6 p-4 danger-toast">
                 <FontAwesomeIcon icon={faTriangleExclamation} size="xl" className="me-2" />
-                There is no product in your basket
+                There are no products in your basket
               </div>
             </div>
           </div>
