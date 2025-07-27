@@ -12,5 +12,5 @@ export const cafeSlice = createSlice({
     }
 })
 
-export const { addItems } = userSlice.actions
+export const { addItems } = cafeSlice.actions
 export default cafeSlice.reducer
