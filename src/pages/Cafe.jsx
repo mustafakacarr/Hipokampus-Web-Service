@@ -49,9 +49,23 @@ const Cafe = () => {
       : "btn btn-outline-secondary";
   };
 
-
   function handleCafeItems(selectedFilter) {
     setSelectedCategoryId(selectedFilter);
+  }
+
+  function sendCafeItems() {
+    if (basket.length == 0) {
+      showNoItemsNotification()
+    } else {
+      console.log(basket)
+    }
+  }
+
+  function showNoItemsNotification() {
+    const noItemsToast = document.getElementById("noItemsToast");
+    const noItemsErrorToast =
+      bootstrap.Toast.getOrCreateInstance(noItemsToast);
+    noItemsErrorToast.show();
   }
 
   const filteredProducts = products.filter(
@@ -60,7 +74,6 @@ const Cafe = () => {
   );
 
   const addToCartHandler = (product) => {
-    console.log(product)
     setBasket(addToCart(product, basket));
   };
   const increaseQuantityHandler = (productId) => {
@@ -190,7 +203,7 @@ const Cafe = () => {
                   ) : (
                     <div>There is no product in your basket</div>
                   )}
-                  <a href="#" className="btn btn-success mt-3">
+                  <a href="#" className="btn btn-success mt-3" onClick={sendCafeItems}>
                     Go To Checkout
                   </a>
                 </div>
@@ -202,6 +215,14 @@ const Cafe = () => {
               <div className="toast-body rounded fw-bold fs-6 p-4 danger-toast">
                 <FontAwesomeIcon icon={faTriangleExclamation} size="xl" className="me-2" />
                 You can buy no more than 9
+              </div>
+            </div>
+          </div>
+          <div className="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="noItemsToast" className="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div className="toast-body rounded fw-bold fs-6 p-4 danger-toast">
+                <FontAwesomeIcon icon={faTriangleExclamation} size="xl" className="me-2" />
+                There is no product in your basket
               </div>
             </div>
           </div>
