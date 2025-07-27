@@ -13,7 +13,7 @@ const UserPanelLayout = ({ children }) => {
       <div className="row g-0">
         <UserPanelHeader />
         <div
-          className="col-sm-4 col-md-3 col-xl-2 h-100 bg-light scrollbar-hidden"
+          className="col-sm-4 col-md-3 col-xl-2 h-100 scrollbar-hidden"
           style={
             width >= 576
               ? {
@@ -21,6 +21,7 @@ const UserPanelLayout = ({ children }) => {
                 overflowY: "scroll",
                 borderRight: "2px solid rgb(5, 5, 5, 0.1)",
                 maxWidth: "270px",
+                backgroundColor: "#FFF9F7",
                 zIndex: 100
               }
               : {}

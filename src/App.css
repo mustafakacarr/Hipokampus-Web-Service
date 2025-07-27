@@ -283,19 +283,19 @@ body {
   color: #1e03a8;
   text-decoration: none;
   vertical-align: sub;
-  font-weight: 450;
+  font-weight: 500;
 }
 
 .user-panel-sidebar-not-active {
-  color: var(--bs-dark);
-  font-weight: 450;
+  color: var(--bs-secondary);
+  font-weight: 500;
   text-decoration: none;
   vertical-align: sub;
 }
 
 .user-panel-sidebar-not-active:hover {
   color: #3768fb;
-  font-weight: 450;
+  font-weight: 500;
 }
 
 .subscribed-services-text {
@@ -308,23 +308,27 @@ body {
   font-size: 16px;
 }
 
+.user-panel-offcanvas {
+  background-color: #FFF9F7;
+}
+
 .user-panel-offcanvas-active {
   color: var(--bs-primary);
   text-decoration: none;
   vertical-align: sub;
-  font-weight: 450;
+  font-weight: 500;
 }
 
 .user-panel-offcanvas-not-active {
   color: var(--bs-secondary);
-  font-weight: 450;
+  font-weight: 500;
   text-decoration: none;
   vertical-align: sub;
 }
 
 .user-panel-offcanvas-not-active:hover {
   color: #3768fb;
-  font-weight: 450;
+  font-weight: 500;
 }
 
 .offcanvas-link {

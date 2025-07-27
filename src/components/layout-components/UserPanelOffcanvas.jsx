@@ -27,7 +27,7 @@ const UserPanelOffcanvas = () => {
     const rotate = rotateCaret ? "rotate(-90deg)" : "rotate(0)"
 
     return (
-        <div className="offcanvas offcanvas-start border" data-bs-scroll="true"
+        <div className="user-panel-offcanvas offcanvas offcanvas-start border" data-bs-scroll="true"
             data-bs-backdrop="true" tabIndex="-1" id="userPanelOffcanvas" aria-labelledby="userPanelOffcanvas">
             <div className="offcanvas-header">
                 <a
