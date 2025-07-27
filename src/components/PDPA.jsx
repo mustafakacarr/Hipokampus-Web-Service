@@ -8,7 +8,7 @@ const PDPA = () => {
                       <br />
                       Dear user, this disclosure and explicit consent text has
                       been prepared and presented to your information by
-                      HIPOKAMPÜS Inc. ("Company") or a third-party company
+                      INWORK Inc. ("Company") or a third-party company
                       designated by our Company, in accordance with the Law No.
                       6698 on the Protection of Personal Data ("PDPL") and
                       related legislation, for the purpose of fulfilling our
@@ -198,8 +198,8 @@ const PDPA = () => {
                       located at Akarca Mah. Mustafa Kemal Bulv. No:173/B,
                       Fethiye, Muğla, either by hand with a wet signature or
                       send it to{" "}
-                      <a href="mailto:info@hipokampus.com.tr">
-                        info@hipokampus.com.tr
+                      <a href="mailto:">
+                        info@inwork.com
                       </a>{" "}
                       with a registered electronic mail (KEP), secure electronic
                       signature, or mobile signature.

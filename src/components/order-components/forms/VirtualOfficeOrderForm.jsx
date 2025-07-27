@@ -48,7 +48,7 @@ const VirtualOfficeOrderForm = () => {
               />
               <br />
               <label className="mt-3 fw-bold">
-                Mevcut Şirketin Hipokampüse Taşınması
+                Mevcut Şirketin InWork'e Taşınması
               </label>
             </div>
           </div>

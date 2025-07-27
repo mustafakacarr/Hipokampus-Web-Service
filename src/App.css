@@ -263,7 +263,7 @@ body {
 }
 
 .password-recovery-image {
-  width: 250px;
+  width: 160px;
 }
 
 .form-floating:focus-within {
@@ -474,4 +474,10 @@ body {
 
 .iti {
   width: 100%;
+}
+
+.page-not-found-img {
+  min-width: 160px !important;
+  width: 160px !important;
+  height: 40px !important;
 }

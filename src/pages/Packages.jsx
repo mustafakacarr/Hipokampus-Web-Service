@@ -70,7 +70,7 @@ const Packages = () => {
         <>
           <div>
             <div className="text-center">
-              <h1 className="fs-1">HIPOKAMPUS MEMBERSHIP</h1>
+              <h1 className="fs-1">INWORK MEMBERSHIP</h1>
               <small>(VAT NOT INCLUDED)</small>
             </div>
             <div className="d-flex flex-wrap justify-content-center gap-2 my-5">

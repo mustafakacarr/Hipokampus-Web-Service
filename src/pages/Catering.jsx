@@ -133,7 +133,7 @@ const Catering = () => {
           </div>
 
           <h5 className="text-center mx-5 mb-3">
-            HIPOKAMPUS {currentDate} DAILY CATERING LIST
+            INWORK {currentDate} DAILY CATERING LIST
           </h5>
           <hr className="mx-5 mb-3" />
           <div className="row gx-0">
