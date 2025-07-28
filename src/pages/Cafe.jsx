@@ -36,7 +36,6 @@ const Cafe = () => {
 
   const [selectedCategoryId, setSelectedCategoryId] = useState(0);
   const basket = useSelector((state) => state.cafe.items);
-  console.log("🚀 ~ Cafe ~ basket:", basket);
   const [isLoading, setIsLoading] = useState(true);
   const [isAlert, setIsAlert] = useState(false);
   const navigate = useNavigate();
@@ -84,11 +83,7 @@ const Cafe = () => {
       dispatch(fillOrder(order));
       navigate("/order");
     }
-    
-
-   
   }
-
 
   function showNoItemsNotification() {
     const noItemsToast = document.getElementById("noItemsToast");

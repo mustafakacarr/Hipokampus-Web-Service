@@ -13,6 +13,18 @@ const PackageCard = ({ data, index }) => {
   };
 
   const price = findPriceByPeriodId();
+
+  const fillPackageOrder = () => {
+
+    const packageOrder = {}
+
+    packageOrder.packageId = data.packageId
+    packageOrder.periodId = selectedPeriodId
+    packageOrder.packageName = data.packageName
+    packageOrder.packagePrice = price
+    packageOrder.packageType = data.packageType
+    packageOrder.serviceType = data.serviceType
+  }
   
   return (
     <div
@@ -48,7 +60,7 @@ const PackageCard = ({ data, index }) => {
           </ul>
         </div>
         <div className="card-footer packages-card-footer">
-          <button className="btn btn-success btn-lg my-3 d-flex mx-auto">
+          <button onClick={fillPackageOrder} className="btn btn-success btn-lg my-3 d-flex mx-auto">
             Buy It
             <FontAwesomeIcon
               className="my-auto ms-2"

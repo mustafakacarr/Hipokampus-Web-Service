@@ -13,6 +13,19 @@ const TicketBoxCard = ({ data, index , descriptionless=false}) => {
   };
 
   const price = findPriceByPeriodId();
+
+  const fillTicketBoxOrder = () => {
+
+    const ticketBoxOrder = {}
+
+    ticketBoxOrder.packageId = data.packageId
+    ticketBoxOrder.periodId = selectedPeriodId
+    ticketBoxOrder.packageName = data.packageName
+    ticketBoxOrder.packagePrice = price
+    ticketBoxOrder.packageType = data.packageType
+    ticketBoxOrder.serviceType = data.serviceType
+  }
+
   return (
     <div
       key={index}
@@ -44,7 +57,7 @@ const TicketBoxCard = ({ data, index , descriptionless=false}) => {
           </ul>
         </div>
         <div className="card-footer packages-ticket-card-footer">
-          <button className="btn btn-success btn-lg my-3 d-flex mx-auto">
+          <button onClick={fillTicketBoxOrder} className="btn btn-success btn-lg my-3 d-flex mx-auto">
             Buy It
             <FontAwesomeIcon
               className="my-auto ms-2"
