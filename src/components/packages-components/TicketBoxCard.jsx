@@ -1,6 +1,8 @@
 import { faAnglesRight, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { fillPackage } from "../../features/package/packageSlice";
 
 const TicketBoxCard = ({ data, index , descriptionless=false}) => {
   const [selectedPeriodId, setSelectedPeriodId] = useState(2);
@@ -13,6 +15,7 @@ const TicketBoxCard = ({ data, index , descriptionless=false}) => {
   };
 
   const price = findPriceByPeriodId();
+  const dispatch = useDispatch();
 
   const fillTicketBoxOrder = () => {
 
@@ -24,6 +27,8 @@ const TicketBoxCard = ({ data, index , descriptionless=false}) => {
     ticketBoxOrder.packagePrice = price
     ticketBoxOrder.packageType = data.packageType
     ticketBoxOrder.serviceType = data.serviceType
+
+    dispatch(fillPackage(ticketBoxOrder))
   }
 
   return (

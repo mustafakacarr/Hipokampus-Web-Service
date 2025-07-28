@@ -13,7 +13,7 @@ export const packageSlice = createSlice({
   name: "package",
   initialState,
   reducers: {
-    addPackage: (state, action) => {
+    fillPackage: (state, action) => {
         state.packageId = action.payload.packageId
         state.packageName = action.payload.packageName
         state.packagePrice = action.payload.packagePrice
@@ -24,5 +24,5 @@ export const packageSlice = createSlice({
   }
 });
 
-export const { addPackage } = packageSlice.actions;
+export const { fillPackage } = packageSlice.actions;
 export default packageSlice.reducer;

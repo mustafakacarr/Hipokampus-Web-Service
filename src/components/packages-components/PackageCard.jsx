@@ -1,6 +1,8 @@
 import { faAnglesRight, faArrowRight, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { fillPackage } from "../../features/package/packageSlice";
+import { useDispatch } from "react-redux";
 
 const PackageCard = ({ data, index }) => {
   const [selectedPeriodId, setSelectedPeriodId] = useState(2);
@@ -13,6 +15,7 @@ const PackageCard = ({ data, index }) => {
   };
 
   const price = findPriceByPeriodId();
+  const dispatch = useDispatch();
 
   const fillPackageOrder = () => {
 
@@ -24,6 +27,8 @@ const PackageCard = ({ data, index }) => {
     packageOrder.packagePrice = price
     packageOrder.packageType = data.packageType
     packageOrder.serviceType = data.serviceType
+
+    dispatch(fillPackage(packageOrder))
   }
   
   return (
