@@ -1,28 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { 
-    VIRTUAL_OFFICE_ORDER,
-    COWORKING_SPACE_ORDER,      
-    MEETING_ROOM_ORDER } 
-from "../../constants/OrderType";
 
 const initialState = {
-  packageId: null,
-  packagePeriod: null,
-  orderType: null 
+    packageId: null,
+    periodId: null,
+    packageName: null,
+    packagePrice: null,
+    packageType: null,
+    serviceType: null
 };
 
 export const packageSlice = createSlice({
   name: "package",
   initialState,
   reducers: {
-    addVirtualOfficePackage: (state, action) => {
-        state.orderType = VIRTUAL_OFFICE_ORDER
-    },
-    addCoworkingSpacePackage: (state, action) => {
-        state.orderType = COWORKING_SPACE_ORDER
-    },
-    addMeetingRoomPackage: (state, action) => {
-        state.orderType = MEETING_ROOM_ORDER
+    addPackage: (state, action) => {
+        state.packageId = action.payload.packageId
+        state.packageName = action.payload.packageName
+        state.packagePrice = action.payload.packagePrice
+        state.packageType = action.payload.packageType
+        state.periodId = action.payload.periodId
+        state.serviceType = action.payload.serviceType
     }
   }
 });
