@@ -10,37 +10,53 @@ import {
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import CafeProductCard from "../components/cafe-components/CafeProductCard";
-import { addToCart, decreaseQuantity, increaseQuantity, removeFromCart }
-  from "../components/cafe-components/BasketOperations";
+import {
+  addToCart,
+  decreaseQuantity,
+  increaseQuantity,
+  removeFromCart,
+} from "../components/cafe-components/BasketOperations";
 import ErrorWhileLoadingAlert from "../components/alert-component/ErrorWhileLoadingAlert";
 import TripleSpinner from "../components/spinner-components/TripleSpinner";
 import { getWithoutAuth } from "../api/apiCalls";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addItem,
+  deleteItem,
+  addQuantity,
+  reduceQuantity,
+} from "../features/cafe/cafeSlice";
+import { Link, useNavigate } from "react-router-dom";
+import { fillOrder } from "../features/order/orderSlice";
+import { CAFE_ORDER } from "../constants/OrderType";
 
 const Cafe = () => {
-  const [categories, setCategories] = useState([])
-  const [products, setProducts] = useState([])
+  const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const [selectedCategoryId, setSelectedCategoryId] = useState(0);
-  const [basket, setBasket] = useState([]);
+  const basket = useSelector((state) => state.cafe.items);
+  console.log("🚀 ~ Cafe ~ basket:", basket);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isAlert, setIsAlert] = useState(false);
+  const navigate = useNavigate();
 
-  const [isLoading, setIsLoading] = useState(true)
-  const [isAlert, setIsAlert] = useState(false)
-
+  const dispatch = useDispatch();
   const fetchCafeData = async () => {
     try {
-      const categories = await getWithoutAuth("/api/v1.0/cafe/categories")
-      const products = await getWithoutAuth("/api/v1.0/cafe/products")
-      setProducts(products.data)
-      setCategories(categories.data)
-      setIsLoading(false)
+      const categories = await getWithoutAuth("/api/v1.0/cafe/categories");
+      const products = await getWithoutAuth("/api/v1.0/cafe/products");
+      setProducts(products.data);
+      setCategories(categories.data);
+      setIsLoading(false);
     } catch (error) {
-      setIsLoading(false)
-      setIsAlert(true)
+      setIsLoading(false);
+      setIsAlert(true);
     }
   };
 
   useEffect(() => {
-    fetchCafeData()
+    fetchCafeData();
   }, []);
 
   const getButtonClassName = (id) => {
@@ -53,51 +69,55 @@ const Cafe = () => {
     setSelectedCategoryId(selectedFilter);
   }
 
-  function sendCafeItems() {
+  const fillOrderDetails = () => {
     if (basket.length == 0) {
-      showNoItemsNotification()
+      showNoItemsNotification();
     } else {
-      console.log(basket)
+      const order = {
+        basket: basket.map((item) => ({
+          id: item.productId,
+          quantity: item.quantity,
+          cafeProductName: item.productName,
+        })),
+        orderType: CAFE_ORDER,
+      };
+      dispatch(fillOrder(order));
+      navigate("/order");
     }
+    
+
+   
   }
+
 
   function showNoItemsNotification() {
     const noItemsToast = document.getElementById("noItemsToast");
-    const noItemsErrorToast =
-      bootstrap.Toast.getOrCreateInstance(noItemsToast);
+    const noItemsErrorToast = bootstrap.Toast.getOrCreateInstance(noItemsToast);
     noItemsErrorToast.show();
   }
 
   const filteredProducts = products.filter(
-    (item) =>
-      item.categoryId === selectedCategoryId
+    (item) => item.categoryId === selectedCategoryId
   );
 
   const addToCartHandler = (product) => {
-    setBasket(addToCart(product, basket));
+    dispatch(addItem(product));
   };
   const increaseQuantityHandler = (productId) => {
-    setBasket(increaseQuantity(productId, basket));
-  }
+    dispatch(addQuantity(productId));
+  };
   const decreaseQuantityHandler = (productId) => {
-    setBasket(decreaseQuantity(productId, basket));
+    dispatch(reduceQuantity(productId));
   };
   const removeFromCartHandler = (productId) => {
-    setBasket(removeFromCart(productId, basket))
-  }
+    dispatch(deleteItem(productId));
+  };
 
   return (
     <UserPanelLayout>
-      {
-        isAlert &&
-        <ErrorWhileLoadingAlert />
-      }
-      {
-        isLoading &&
-        <TripleSpinner />
-      }
-      {
-        !isLoading && !isAlert &&
+      {isAlert && <ErrorWhileLoadingAlert />}
+      {isLoading && <TripleSpinner />}
+      {!isLoading && !isAlert && (
         <>
           <div onChange={handleCafeItems} className="row gx-0">
             <div className="col-12 col-xl-9">
@@ -126,7 +146,9 @@ const Cafe = () => {
                         key={index}
                         item={item}
                         index={index}
-                        addToCartOnClick={(product) => addToCartHandler(product)}
+                        addToCartOnClick={(product) =>
+                          addToCartHandler(product)
+                        }
                       />
                     ))}
                   {selectedCategoryId !== 0 &&
@@ -135,7 +157,9 @@ const Cafe = () => {
                         key={index}
                         item={item}
                         index={index}
-                        addToCartOnClick={(product) => addToCartHandler(product)}
+                        addToCartOnClick={(product) =>
+                          addToCartHandler(product)
+                        }
                       />
                     ))}
                 </div>
@@ -159,11 +183,9 @@ const Cafe = () => {
                         {basket.map((item, index) => (
                           <div className="d-flex justify-content-between border rounded p-2 my-2 row">
                             <div className="d-flex col align-items-center">
-
                               <strong style={{ textOverflow: "ellipsis" }}>
                                 {item.productName}
                               </strong>
-
                             </div>
                             <div className="d-flex col align-items-center">
                               <div
@@ -193,7 +215,10 @@ const Cafe = () => {
                                   removeFromCartHandler(item.productId)
                                 }
                               >
-                                <FontAwesomeIcon className="cafe-basket-trash" icon={faTrashAlt} />
+                                <FontAwesomeIcon
+                                  className="cafe-basket-trash"
+                                  icon={faTrashAlt}
+                                />
                               </div>
                             </div>
                           </div>
@@ -203,33 +228,56 @@ const Cafe = () => {
                   ) : (
                     <div>There are no products in your basket</div>
                   )}
-                  <a href="#" className="btn btn-success mt-3" onClick={sendCafeItems}>
+                  <button
+                    className="btn btn-success mt-3"
+                    onClick={fillOrderDetails}
+                  >
                     Go To Checkout
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
           <div className="toast-container position-fixed bottom-0 end-0 p-3">
-            <div id="cafeQuantityToast" className="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div
+              id="cafeQuantityToast"
+              className="toast"
+              role="alert"
+              aria-live="assertive"
+              aria-atomic="true"
+            >
               <div className="toast-body rounded fw-bold fs-6 p-4 danger-toast">
-                <FontAwesomeIcon icon={faTriangleExclamation} size="xl" className="me-2" />
+                <FontAwesomeIcon
+                  icon={faTriangleExclamation}
+                  size="xl"
+                  className="me-2"
+                />
                 You can buy no more than 9
               </div>
             </div>
           </div>
           <div className="toast-container position-fixed bottom-0 end-0 p-3">
-            <div id="noItemsToast" className="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div
+              id="noItemsToast"
+              className="toast"
+              role="alert"
+              aria-live="assertive"
+              aria-atomic="true"
+            >
               <div className="toast-body rounded fw-bold fs-6 p-4 danger-toast">
-                <FontAwesomeIcon icon={faTriangleExclamation} size="xl" className="me-2" />
+                <FontAwesomeIcon
+                  icon={faTriangleExclamation}
+                  size="xl"
+                  className="me-2"
+                />
                 There are no products in your basket
               </div>
             </div>
           </div>
         </>
-      }
+      )}
     </UserPanelLayout>
   );
-};
+}
 
 export default Cafe;

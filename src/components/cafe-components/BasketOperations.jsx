@@ -44,6 +44,10 @@ export const removeFromCart = (productId, cartItems) => {
 };
 
 export const increaseQuantity = (productId, cartItems) => {
+  console.log("🚀 ~ increaseQuantity ~ cartItems:", cartItems)
+  console.log("🚀 ~ increaseQuantity ~ productId:", productId)
+  console.log("🚀 ~ increaseQuantity ~ increaseQuantity:asdassdds hobaaaaa");
+
   const updatedCartItems = cartItems.map((item) =>
     item.productId === productId
       ? item.quantity < 9

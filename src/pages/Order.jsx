@@ -6,19 +6,23 @@ import UserPanelLayout from "../layouts/UserPanelLayout";
 import { getWithoutAuth, postWithoutAuth } from "../api/apiCalls";
 import ErrorWhileLoadingAlert from "../components/alert-component/ErrorWhileLoadingAlert";
 import TripleSpinner from "../components/spinner-components/TripleSpinner";
+import { useDispatch, useSelector } from "react-redux";
+import { use } from "react";
 
 const Order = () => {
-  const orderType = CAFE_ORDER;
+
+  const user = useSelector((state) => state.user.userInfo);
+  const orderInfo = useSelector((state) => state.order);
+  console.log("🚀 ~ Order ~ orderInfo:", orderInfo)
+
+  const [order, setOrder] = useState({
+    userId: user.userId,
+    ...orderInfo,
+  });
+  const orderType = order.orderType;
   const steps = OrderSteps(orderType);
   const [currentStep, setCurrentStep] = useState(0);
-  const [order, setOrder] = useState({
-    userId: 1,
-    basket: [
-      { id: 1, quantity: 2 },
-      { id: 2, quantity: 1 },
-    ],
-    orderType,
-  });
+
   const [isLoading, setIsLoading] = useState(false);
 
   const saveInitialOrder = async () => {
@@ -44,7 +48,11 @@ const Order = () => {
   };
 
   useEffect(() => {
+
+  if (order.basket.length > 0) 
     saveInitialOrder();
+ 
+  
   }, []);
 
   const [body, setBody] = useState(null);

@@ -1,10 +1,11 @@
 import React from "react";
 
 const CafeOrderKeyValuePairs = ({ order }) => {
+
   if (!order || !order.basket || order.basket.length === 0) {
     return <div>No order data yet...</div>;
   }
-
+  console.log("🚀 ~ CafeOrderKeyValuePairs ~ order:", order.basket);
   const pairs = [
     { "Name Surname": order.userId },
     {
