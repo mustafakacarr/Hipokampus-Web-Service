@@ -7,6 +7,7 @@ const cafeOrder = {
   ],
   orderType,
 };
+
 const cateringOrder = {
   //Cafe order mockup
   userId: 1,
@@ -20,6 +21,7 @@ const packageOrder = {
   packageId: 1,
   periodId: 1,
 };
+
 const ticketOrder = {
   userId: 1,
   eventId: 1,
