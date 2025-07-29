@@ -195,12 +195,11 @@ const PDPA = () => {
                       <br />
                       To exercise these rights, you can deliver your request
                       along with documents that identify you to our Company
-                      located at Akarca Mah. Mustafa Kemal Bulv. No:173/B,
-                      Fethiye, Muğla, either by hand with a wet signature or
-                      send it to{" "}
+                      located Antalya, either by hand with a wet signature or
+                      send it to
                       <a href="mailto:">
                         info@inwork.com
-                      </a>{" "}
+                      </a>
                       with a registered electronic mail (KEP), secure electronic
                       signature, or mobile signature.
                
