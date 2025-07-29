@@ -83,7 +83,7 @@ const Cafe = () => {
       dispatch(fillOrder(order));
       navigate("/order");
     }
-  }
+  };
 
   function showNoItemsNotification() {
     const noItemsToast = document.getElementById("noItemsToast");
@@ -273,6 +273,6 @@ const Cafe = () => {
       )}
     </UserPanelLayout>
   );
-}
+};
 
 export default Cafe;

@@ -9,7 +9,6 @@ import { CAFE_ORDER } from "../../constants/OrderType";
 import { useSelector } from "react-redux";
 
 const initialState = {
-  basket: [],
   orderType: CAFE_ORDER,
 };
 
@@ -19,7 +18,7 @@ export const orderSlice = createSlice({
   reducers: {
     fillOrder: (state, action) => {
       return {
-        ...action.payload,
+          ...action.payload,
       };
     },
   },

@@ -1,8 +1,14 @@
-import { faAnglesRight, faArrowRight, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAnglesRight,
+  faArrowRight,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { fillPackage } from "../../features/package/packageSlice";
 import { useDispatch } from "react-redux";
+import { MEETING_ROOM_ORDER } from "../../constants/OrderType";
+import { fillOrder } from "../../features/order/orderSlice";
 
 const PackageCard = ({ data, index }) => {
   const [selectedPeriodId, setSelectedPeriodId] = useState(2);
@@ -18,19 +24,22 @@ const PackageCard = ({ data, index }) => {
   const dispatch = useDispatch();
 
   const fillPackageOrder = () => {
+    const packageOrder = {};
 
-    const packageOrder = {}
+    packageOrder.packageId = data.packageId;
+    packageOrder.periodId = selectedPeriodId;
 
-    packageOrder.packageId = data.packageId
-    packageOrder.periodId = selectedPeriodId
-    packageOrder.packageName = data.packageName
-    packageOrder.packagePrice = price
-    packageOrder.packageType = data.packageType
-    packageOrder.serviceType = data.serviceType
+    dispatch(fillPackage(packageOrder));
+  };
 
-    dispatch(fillPackage(packageOrder))
-  }
-  
+  const fillOrderDetails = () => {
+    const order = {
+      packageId: data.packageId,
+      periodId: selectedPeriodId,
+      orderType: MEETING_ROOM_ORDER,
+    };
+    dispatch(fillOrder(order));
+  };
   return (
     <div
       key={index}
@@ -65,7 +74,10 @@ const PackageCard = ({ data, index }) => {
           </ul>
         </div>
         <div className="card-footer packages-card-footer">
-          <button onClick={fillPackageOrder} className="btn btn-success btn-lg my-3 d-flex mx-auto">
+          <button
+            onClick={fillPackageOrder}
+            className="btn btn-success btn-lg my-3 d-flex mx-auto"
+          >
             Buy It
             <FontAwesomeIcon
               className="my-auto ms-2"
