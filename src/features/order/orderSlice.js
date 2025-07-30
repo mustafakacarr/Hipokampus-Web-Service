@@ -1,15 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {
-  addToCart,
-  decreaseQuantity,
-  increaseQuantity,
-  removeFromCart,
-} from "../../components/cafe-components/BasketOperations";
-import { CAFE_ORDER } from "../../constants/OrderType";
-import { useSelector } from "react-redux";
 
 const initialState = {
-  orderType: CAFE_ORDER,
+  orderType: null,
 };
 
 export const orderSlice = createSlice({

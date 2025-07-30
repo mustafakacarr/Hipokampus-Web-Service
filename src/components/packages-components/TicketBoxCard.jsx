@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fillPackage } from "../../features/package/packageSlice";
+import { fillOrder } from "../../features/order/orderSlice";
 
 const TicketBoxCard = ({ data, index , descriptionless=false}) => {
   const [selectedPeriodId, setSelectedPeriodId] = useState(2);
@@ -23,13 +24,18 @@ const TicketBoxCard = ({ data, index , descriptionless=false}) => {
 
     ticketBoxOrder.packageId = data.packageId
     ticketBoxOrder.periodId = selectedPeriodId
-    ticketBoxOrder.packageName = data.packageName
-    ticketBoxOrder.packagePrice = price
-    ticketBoxOrder.packageType = data.packageType
-    ticketBoxOrder.serviceType = data.serviceType
 
     dispatch(fillPackage(ticketBoxOrder))
   }
+
+  const fillOrderDetails = () => {
+      const order = {
+        packageId: data.packageId,
+        periodId: selectedPeriodId,
+        orderType: MEETING_ROOM_ORDER,
+      };
+      dispatch(fillOrder(order));
+  };
 
   return (
     <div

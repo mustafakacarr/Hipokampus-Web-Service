@@ -1,9 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { TICKET_ORDER } from "../../constants/OrderType";
+import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    eventId: null,
-    orderType: TICKET_ORDER
+    eventId: null
 };
 
 export const ticketSlice = createSlice({

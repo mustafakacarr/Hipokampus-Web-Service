@@ -1,11 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CATERING_ORDER } from "../../constants/OrderType";
 
 const initialState = {
     firstGroupFoodId: null,
     secondGroupFoodId: null,
     thirdGroupFoodId: null,
-    orderType: CATERING_ORDER
 };
 
 export const cateringSlice = createSlice({
