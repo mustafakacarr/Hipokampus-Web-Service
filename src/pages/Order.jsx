@@ -5,7 +5,7 @@ import UserPanelLayout from "../layouts/UserPanelLayout";
 import { postWithoutAuth } from "../api/apiCalls";
 import TripleSpinner from "../components/spinner-components/TripleSpinner";
 import { useSelector } from "react-redux";
-import { initialPayloadByOrderType } from "../components/order-components/OrderOperations";
+import { initialPayloadByOrderType, setResponseByOrderType } from "../components/order-components/OrderOperations";
 
 const Order = () => {
   const user = useSelector((state) => state.user.userInfo);
@@ -35,9 +35,10 @@ const Order = () => {
 
       const response = await postWithoutAuth("/api/v1.0/orders/cart", payload);
 
+      const additionalResponse = setResponseByOrderType(orderType, response);
       setOrder((prevOrder) => ({
         ...prevOrder,
-        ...setResponseByOrderType(orderType, response),
+        ...additionalResponse,
         totalPrice: response.data.totalPrice,
       }));
     } catch (error) {

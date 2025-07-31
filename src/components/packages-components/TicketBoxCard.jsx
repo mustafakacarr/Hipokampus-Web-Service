@@ -4,10 +4,12 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fillPackage } from "../../features/package/packageSlice";
 import { fillOrder } from "../../features/order/orderSlice";
+import { useNavigate } from "react-router-dom";
 
 const TicketBoxCard = ({ data, index , descriptionless=false}) => {
   const [selectedPeriodId, setSelectedPeriodId] = useState(2);
-
+  const packageOrder = {};
+const navigate=useNavigate();
   const findPriceByPeriodId = () => {
     const period = data.prices.find(
       (item) => item.periodId == selectedPeriodId
@@ -19,24 +21,14 @@ const TicketBoxCard = ({ data, index , descriptionless=false}) => {
   const dispatch = useDispatch();
 
   const fillTicketBoxOrder = () => {
+    packageOrder.packageId = data.packageId;
+    packageOrder.periodId = selectedPeriodId;
+    packageOrder.orderType = data.serviceType;
 
-    const ticketBoxOrder = {}
+    dispatch(fillOrder(packageOrder));
 
-    ticketBoxOrder.packageId = data.packageId
-    ticketBoxOrder.periodId = selectedPeriodId
-
-    dispatch(fillPackage(ticketBoxOrder))
-  }
-
-  const fillOrderDetails = () => {
-      const order = {
-        packageId: data.packageId,
-        periodId: selectedPeriodId,
-        orderType: MEETING_ROOM_ORDER,
-      };
-      dispatch(fillOrder(order));
+    navigate("/order");
   };
-
   return (
     <div
       key={index}
