@@ -5,8 +5,23 @@ import {
   faChevronRight,
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
+import { fillOrder } from "../../features/order/orderSlice";
+import { useNavigate } from "react-router-dom";
 
 const EventsCard = ({ data, index }) => {
+  const eventOrder = {}
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  const fillEventOrder = () => {
+    eventOrder.eventId = data.eventId
+    eventOrder.eventType = data.eventType
+
+    dispatch(fillOrder(eventOrder));
+    navigate("/order");
+  };
+
   return (
     <div className="px-1 px-md-2 col-12 col-md-6 col-xl-4 mb-4 mb-md-3">
       <div className="card h-100">
@@ -35,7 +50,7 @@ const EventsCard = ({ data, index }) => {
             <span>Ticket Price: </span>
             <span className="fw-bold fs-4">{data.ticketPrice}₺</span>
           </div>
-          <button className="btn btn-success">
+          <button onClick={fillEventOrder} className="btn btn-success">
             <FontAwesomeIcon icon={faChevronRight} className="me-2" />
             Buy Ticket
           </button>

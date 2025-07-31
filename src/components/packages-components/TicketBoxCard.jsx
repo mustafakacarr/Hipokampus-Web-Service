@@ -7,9 +7,11 @@ import { fillOrder } from "../../features/order/orderSlice";
 import { useNavigate } from "react-router-dom";
 
 const TicketBoxCard = ({ data, index , descriptionless=false}) => {
+  
   const [selectedPeriodId, setSelectedPeriodId] = useState(2);
   const packageOrder = {};
-const navigate=useNavigate();
+  const navigate = useNavigate();
+
   const findPriceByPeriodId = () => {
     const period = data.prices.find(
       (item) => item.periodId == selectedPeriodId
@@ -29,6 +31,7 @@ const navigate=useNavigate();
 
     navigate("/order");
   };
+
   return (
     <div
       key={index}
