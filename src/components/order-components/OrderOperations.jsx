@@ -16,7 +16,7 @@ export const initialPayloadByOrderType = (order, orderType, payload) => {
     payload.secondGroupMealId = 0;
     payload.thirddGroupMealId = 0;
   } else if (orderType === EVENT) {
-    payload.eventId = 0;
+    payload.eventId = order.eventId;
   } else {
     console.warn("Unsupported order type:", orderType);
     return;
