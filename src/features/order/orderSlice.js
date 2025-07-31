@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { CAFE_ORDER } from "../../constants/OrderType";
 
 const initialState = {
-  orderType: null,
+  orderType: CAFE_ORDER,
 };
 
 export const orderSlice = createSlice({

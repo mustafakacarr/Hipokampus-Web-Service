@@ -50,14 +50,7 @@ function RightCartSummary({ order }) {
         </div>
         <hr />
         <div className="pb-1">
-          {order.basket.map((item, index) => (
-            <div key={index} className="d-flex justify-content-between mb-1">
-              <span>
-                {item.quantity} x {item.cafeProductName}
-              </span>
-              <span>{item.totalPrice} $</span>
-            </div>
-          ))}
+    
 
           <hr />
 

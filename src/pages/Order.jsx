@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
 import OrderLayout from "../layouts/OrderLayout";
 import OrderSteps from "../components/order-components/OrderSteps";
-import { CAFE_ORDER } from "../constants/OrderType";
 import UserPanelLayout from "../layouts/UserPanelLayout";
-import { getWithoutAuth, postWithoutAuth } from "../api/apiCalls";
-import ErrorWhileLoadingAlert from "../components/alert-component/ErrorWhileLoadingAlert";
+import { postWithoutAuth } from "../api/apiCalls";
 import TripleSpinner from "../components/spinner-components/TripleSpinner";
-import { useDispatch, useSelector } from "react-redux";
-import { use } from "react";
+import { useSelector } from "react-redux";
+import { initialPayloadByOrderType } from "../components/order-components/OrderOperations";
 
 const Order = () => {
-
   const user = useSelector((state) => state.user.userInfo);
   const orderInfo = useSelector((state) => state.order);
-  console.log("🚀 ~ Order ~ orderInfo:", orderInfo)
 
   const [order, setOrder] = useState({
     userId: user.userId,
@@ -26,36 +22,35 @@ const Order = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const saveInitialOrder = async () => {
-    const orderedProducts = order.basket.reduce((acc, item) => {
-      acc[item.id] = item.quantity;
-      return acc;
-    }, {});
-    setIsLoading(true);
-    const request = await postWithoutAuth("/api/v1.0/orders/cart", {
+    let payload = {
       userId: order.userId,
-      orderedProducts,
       serviceType: order.orderType,
       paymentType: "BANK_TRANSFER",
-    });
-    console.log("🚀 ~ saveInitialOrder ~ request:", request);
+    };
 
-    setOrder((prevOrder) => ({
-      ...prevOrder,
-      basket: request.data.orderedProducts,
-      totalPrice: request.data.totalPrice,
-    }));
-    setIsLoading(false);
+    initialPayloadByOrderType(order, orderType, payload);
+
+    try {
+      setIsLoading(true);
+
+      const response = await postWithoutAuth("/api/v1.0/orders/cart", payload);
+
+      setOrder((prevOrder) => ({
+        ...prevOrder,
+        ...setResponseByOrderType(orderType, response),
+        totalPrice: response.data.totalPrice,
+      }));
+    } catch (error) {
+      console.error("Error while saving order:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {
-
-  if (order.basket.length > 0) 
     saveInitialOrder();
- 
-  
   }, []);
 
-  const [body, setBody] = useState(null);
   const handleOnClick = () => {
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1);

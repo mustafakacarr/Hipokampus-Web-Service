@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  packageId: null,
-  periodId: null,
+  packageId: 0,
+  periodId: 0,
 };
 
 export const packageSlice = createSlice({

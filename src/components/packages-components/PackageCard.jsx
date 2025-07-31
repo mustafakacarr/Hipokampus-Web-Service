@@ -9,9 +9,12 @@ import { fillPackage } from "../../features/package/packageSlice";
 import { useDispatch } from "react-redux";
 import { MEETING_ROOM_ORDER } from "../../constants/OrderType";
 import { fillOrder } from "../../features/order/orderSlice";
+import { useNavigate } from "react-router-dom";
 
 const PackageCard = ({ data, index }) => {
   const [selectedPeriodId, setSelectedPeriodId] = useState(2);
+  const navigate = useNavigate();
+  const packageOrder = {};
 
   const findPriceByPeriodId = () => {
     const period = data.prices.find(
@@ -24,23 +27,15 @@ const PackageCard = ({ data, index }) => {
   const dispatch = useDispatch();
 
   const fillPackageOrder = () => {
-    const packageOrder = {};
-
     packageOrder.packageId = data.packageId;
     packageOrder.periodId = selectedPeriodId;
+    packageOrder.orderType = data.serviceType;
 
-    dispatch(fillPackage(packageOrder));
+    dispatch(fillOrder(packageOrder));
+
+    navigate("/order");
   };
 
-  const fillOrderDetails = () => {
-    const order = {
-      packageId: data.packageId,
-      periodId: selectedPeriodId,
-      orderType: MEETING_ROOM_ORDER,
-    };
-    dispatch(fillOrder(order));
-  };
-  
   return (
     <div
       key={index}

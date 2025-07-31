@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    eventId: null
+    eventId: 0
 };
 
 export const ticketSlice = createSlice({

@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    firstGroupFoodId: null,
-    secondGroupFoodId: null,
-    thirdGroupFoodId: null,
+    firstGroupFoodId: 0,
+    secondGroupFoodId: 0,
+    thirdGroupFoodId: 0,
 };
 
 export const cateringSlice = createSlice({
