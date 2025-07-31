@@ -1,4 +1,4 @@
-import { CAFE_ORDER, CATERING_ORDER, PACKAGE_ORDER_TYPES, EVENT } from "../../constants/OrderType";
+import { CAFE_ORDER, CATERING_ORDER, PACKAGE_ORDER_TYPES, EVENT } from "../constants/OrderType";
 
 export const initialPayloadByOrderType = (order, orderType, payload) => {
   if (orderType === CAFE_ORDER) {
