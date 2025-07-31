@@ -13,7 +13,7 @@ import {
   VIRTUAL_OFFICE_ORDER,
   CATERING_ORDER,
   CAFE_ORDER,
-  TICKET_ORDER,
+  EVENT,
   COWORKING_SPACE_ORDER,
 } from "../../constants/OrderType";
 
@@ -40,7 +40,7 @@ const getCustomStep = (orderType) => {
       return CateringOrderSteps;
     case CAFE_ORDER:
       return CafeOrderSteps;
-    case TICKET_ORDER:
+    case EVENT:
     case COWORKING_SPACE_ORDER:
     default:
       return false;

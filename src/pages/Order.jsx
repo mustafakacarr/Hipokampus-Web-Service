@@ -15,6 +15,7 @@ const Order = () => {
     userId: user.userId,
     ...orderInfo,
   });
+  
   const orderType = order.orderType;
   const steps = OrderSteps(orderType);
   const [currentStep, setCurrentStep] = useState(0);
@@ -22,6 +23,7 @@ const Order = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const saveInitialOrder = async () => {
+
     let payload = {
       userId: order.userId,
       serviceType: order.orderType,
@@ -75,7 +77,7 @@ const Order = () => {
         >
           {steps[currentStep].component}
         </OrderLayout>
-      )}{" "}
+      )}
     </UserPanelLayout>
   );
 };

@@ -6,7 +6,7 @@ import CafeOrderKeyValuePairs from "./right-card-contents/CafeOrderKeyValuePairs
 import {
   CATERING_ORDER,
   MEETING_ROOM_ORDER,
-  TICKET_ORDER,
+  EVENT,
   CAFE_ORDER,
 } from "../../constants/OrderType";
 
@@ -18,7 +18,7 @@ function RightCartSummary({ order }) {
   const findPairsContent = () => {
     let pairComponent = null;
     switch (orderType) {
-      case TICKET_ORDER:
+      case EVENT:
         pairComponent = <TicketOrderKeyValuePairs order={order} />;
         break;
       case MEETING_ROOM_ORDER:

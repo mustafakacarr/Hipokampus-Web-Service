@@ -6,7 +6,6 @@ const MyTickets = () => {
     return (
       <UserPanelLayout>
             <div>My Tickets will be here</div>
-           
             <MyTicketList></MyTicketList>
       </UserPanelLayout>
     );

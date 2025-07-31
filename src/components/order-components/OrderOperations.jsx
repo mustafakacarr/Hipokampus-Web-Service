@@ -1,4 +1,4 @@
-import { CAFE_ORDER, CATERING_ORDER, PACKAGE_ORDER_TYPES, TICKET_ORDER } from "../../constants/OrderType";
+import { CAFE_ORDER, CATERING_ORDER, PACKAGE_ORDER_TYPES, EVENT } from "../../constants/OrderType";
 
 export const initialPayloadByOrderType = (order, orderType, payload) => {
   if (orderType === CAFE_ORDER) {
@@ -15,7 +15,7 @@ export const initialPayloadByOrderType = (order, orderType, payload) => {
     payload.firstGroupMealId = 0;
     payload.secondGroupMealId = 0;
     payload.thirddGroupMealId = 0;
-  } else if (orderType === TICKET_ORDER) {
+  } else if (orderType === EVENT) {
     payload.eventId = 0;
   } else {
     console.warn("Unsupported order type:", orderType);

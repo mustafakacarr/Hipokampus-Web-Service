@@ -8,6 +8,7 @@ import {
 import { useDispatch } from "react-redux";
 import { fillOrder } from "../../features/order/orderSlice";
 import { useNavigate } from "react-router-dom";
+import { EVENT } from "../../constants/OrderType";
 
 const EventsCard = ({ data, index }) => {
   const eventOrder = {}
@@ -16,7 +17,7 @@ const EventsCard = ({ data, index }) => {
 
   const fillEventOrder = () => {
     eventOrder.eventId = data.eventId
-    eventOrder.eventType = data.eventType
+    eventOrder.orderType = EVENT
 
     dispatch(fillOrder(eventOrder));
     navigate("/order");

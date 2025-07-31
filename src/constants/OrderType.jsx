@@ -1,5 +1,5 @@
 export const MEETING_ROOM_ORDER = "MEETING_ROOM";
-export const TICKET_ORDER = "TICKET"
+export const EVENT = "EVENT"
 export const VIRTUAL_OFFICE_ORDER = "VIRTUAL_OFFICE";
 export const CATERING_ORDER = "CATERING";
 export const CAFE_ORDER = "CAFE";
