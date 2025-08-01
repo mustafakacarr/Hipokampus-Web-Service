@@ -2,8 +2,8 @@ import { React, useState, useEffect } from "react";
 import UserPanelLayout from "../layouts/UserPanelLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBellConcierge,
   faCircleInfo,
-  faReceipt,
   faRectangleList,
 } from "@fortawesome/free-solid-svg-icons";
 import TripleSpinner from "../components/spinner-components/TripleSpinner"
@@ -27,10 +27,6 @@ const Catering = () => {
   const [groupOne, setGroupOne] = useState(undefined);
   const [groupTwo, setGroupTwo] = useState(undefined);
   const [groupThree, setGroupThree] = useState(undefined);
-
-  const groupTwoTitle = document.getElementById("groupTwoTitle");
-  const groupThreeTitle = document.getElementById("groupThreeTitle");
-  const cateringOrderCard = document.getElementById("cateringOrderCard");
 
   const [cateringData, setCateringData] = useState([])
   const [foodsData, setFoodsData] = useState([])
@@ -97,17 +93,17 @@ const Catering = () => {
         !isLoading && !isAlert &&
         <>
           <div className="d-flex justify-content-center mt-2 mb-0 col col-md-9 mx-auto">
-            <div className="alert alert-info w-100 mx-3 py-2" role="alert">
+            <div className="catering-jumbotron w-100 mx-3 p-3 rounded-3" role="alert">
               <p className="my-2">
-                <FontAwesomeIcon icon={faCircleInfo} className="me-2" />
+                <FontAwesomeIcon icon={faCircleInfo} className="me-2 text-primary" />
                 You can choose one from each group.
               </p>
-              <p className="my-2">
-                <FontAwesomeIcon icon={faCircleInfo} className="me-2" />
+              <p className="mt-2 mb-4">
+                <FontAwesomeIcon icon={faCircleInfo} className="me-2 text-primary" />
                 You can place your order until 12:00. Your orders will be ready
                 between 13.30-14.00.
               </p>
-              <h5 className="text-center mx-5 my-2">
+              <h5 className="text-center mx-5 mt-2 mb-3">
                 Group 1 <span className="catering-sign">+ </span>
                 Group 2 <span className="catering-sign">+ </span>
                 Group 3 <span className="catering-sign">= </span>
@@ -116,7 +112,7 @@ const Catering = () => {
             </div>
           </div>
 
-          <h5 className="text-center mx-5 mb-3">
+          <h5 className="text-center mx-5 my-3 fw-bold text-secondary">
             INWORK {currentDate} DAILY CATERING LIST
           </h5>
           <hr className="mx-5 mb-3" />
@@ -229,8 +225,8 @@ const Catering = () => {
                 className="card text-center mx-auto catering-order-card"
               >
                 <h4 className="card-header mb-2">
-                  <FontAwesomeIcon icon={faReceipt} />
-                  <span className="ms-2">Quick Meal Order</span>
+                  <FontAwesomeIcon icon={faBellConcierge} />
+                  <span className="ms-2 fw-bold">Quick Meal Order</span>
                 </h4>
                 <div className="card-body row gx-0 gap-2">
                   <div className="input-group mb-1">
@@ -321,7 +317,7 @@ const Catering = () => {
                     </select>
                   </div>
                   <hr className="my-2" />
-                  <a href="#" className="btn btn-success">
+                  <a href="#" className="btn btn-success fw-bold">
                     Create Order
                   </a>
                 </div>
