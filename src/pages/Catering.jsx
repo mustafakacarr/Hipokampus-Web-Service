@@ -149,7 +149,7 @@ const Catering = () => {
                         <label
                           key={index}
                           onClick={() => handleGroupOne(item.productId, true)}
-                          className="col-sm-12 col-md-6 col-lg-4 col-xl-3 px-5 px-md-2 catering-card d-flex"
+                          className="col-sm-4 col-md-3 col-lg-2 catering-card"
                         >
                           <input
                             type="radio"
@@ -158,17 +158,12 @@ const Catering = () => {
                             checked={item.productId == groupOne}
                             readOnly
                           />
-                          <div className="card mx-4 mx-sm-0 d-flex card-input w-100">
+                          <div className="card mx-4 mx-sm-0 d-flex card-input mx-auto">
                             <img
                               src={"data:image/jpg;base64," + item.image.file}
                               className="card-img-top catering-card-image"
                               alt="..."
                             />
-                            <div className="card-body">
-                              <p className="card-text fw-bold text-center fs-5">
-                                {item.productName}
-                              </p>
-                            </div>
                           </div>
                         </label>
                       ))}
@@ -184,7 +179,7 @@ const Catering = () => {
                       <label
                         key={index}
                         onClick={() => handleGroupTwo(item.productId, true)}
-                        className="col-sm-12 col-md-6 col-lg-4 col-xl-3 px-5 px-md-2 catering-card d-flex"
+                        className="col-sm-4 col-md-3 col-lg-2 catering-card"
                       >
                         <input
                           type="radio"
@@ -193,17 +188,12 @@ const Catering = () => {
                           checked={item.productId == groupTwo}
                           readOnly
                         />
-                        <div className="card mx-4 mx-sm-0 d-flex card-input w-100">
+                        <div className="card mx-4 mx-sm-0 d-flex card-input mx-auto">
                           <img
                             src={"data:image/jpg;base64," + item.image.file}
                             className="card-img-top catering-card-image"
                             alt="..."
                           />
-                          <div className="card-body">
-                            <p className="card-text fw-bold text-center fs-5">
-                              {item.productName}
-                            </p>
-                          </div>
                         </div>
                       </label>
                     ))}
@@ -219,7 +209,7 @@ const Catering = () => {
                       <label
                         key={index}
                         onClick={() => handleGroupThree(item.productId, true)}
-                        className="col-sm-12 col-md-6 col-lg-4 col-xl-3 px-5 px-md-2 catering-card d-flex"
+                        className="col-sm-4 col-md-3 col-lg-2 catering-card"
                       >
                         <input
                           type="radio"
@@ -228,17 +218,12 @@ const Catering = () => {
                           checked={item.productId == groupThree}
                           readOnly
                         />
-                        <div className="card mx-4 mx-sm-0 d-flex card-input w-100">
+                        <div className="card mx-4 mx-sm-0 d-flex card-input mx-auto">
                           <img
                             src={"data:image/jpg;base64," + item.image.file}
                             className="card-img-top catering-card-image"
                             alt="..."
                           />
-                          <div className="card-body">
-                            <p className="card-text fw-bold text-center fs-5">
-                              {item.productName}
-                            </p>
-                          </div>
                         </div>
                       </label>
                     ))}

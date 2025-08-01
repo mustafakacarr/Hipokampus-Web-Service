@@ -111,13 +111,14 @@ body {
   padding: 10px;
 
   @media (max-width: 576px) {
-    min-width: 400px !important;
-    max-width: 500px !important;
+    min-width: 160px !important;
+    max-width: 160px !important;
   }
 }
 
 .catering-card-image {
-  height: 150px;
+  height: 75px;
+  border-radius: 0.25rem;
 }
 
 .package-card {
