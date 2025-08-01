@@ -459,6 +459,16 @@ body {
   margin: 10px auto;
 }
 
+.dashboard-jumbotron {
+  background-color: #f8f9fa;
+  border: 2px solid rgb(5, 5, 5, 0.1);
+}
+
+.secondary-dashboard-jumbotron {
+  background-color: #f8f9fa;
+  border: 2px solid var(--bs-primary);
+}
+
 .order-status-failed {
   padding: 10px;
   text-align: center;
