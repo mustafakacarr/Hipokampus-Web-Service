@@ -5,7 +5,7 @@ import UserPanelLayout from "../layouts/UserPanelLayout";
 import { postWithoutAuth } from "../api/apiCalls";
 import TripleSpinner from "../components/spinner-components/TripleSpinner";
 import { useSelector } from "react-redux";
-import { initialPayloadByOrderType, setResponseByOrderType } from "../components/order-components/OrderOperations";
+import { initialPayloadByOrderType, setResponseByOrderType } from "../utils/OrderOperations";
 
 const Order = () => {
   const user = useSelector((state) => state.user.userInfo);
