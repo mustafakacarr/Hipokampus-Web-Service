@@ -139,23 +139,56 @@ const Catering = () => {
           <div className="row gx-0">
             <div className="col-12 col-xl-8">
               <div className="pb-4 px-1 px-xxl-2">
-                <div className="row gx-0 gap-3">
-                  <div className="row gx-0 pb-4 justify-content-center justify-content-md-start">
-                    <div className="text-center text-secondary mb-2 fw-bold fs-4">
-                      <FontAwesomeIcon icon={faRectangleList} /> Group 1
+                <div className="row gx-0">
+                  <div className="col-sm-4 px-1 py-3 py-sm-0">
+                    <div className="gap-0 py-4 justify-content-center justify-content-md-start rounded catering-group">
+                      <div className="text-center text-secondary mb-2 fw-bold fs-4">
+                        <FontAwesomeIcon icon={faRectangleList} /> Group 1
+                      </div>
+                      {
+                        groupOneData.map((item, index) => (
+                          <label
+                            key={index}
+                            onClick={() => handleGroupOne(item.productId, true)}
+                            className="col-sm-12 col-md-6 catering-card"
+                          >
+                            <input
+                              type="radio"
+                              name="group-1-radio"
+                              className="catering-input"
+                              checked={item.productId == groupOne}
+                              readOnly
+                            />
+                            <div className="card mx-4 mx-sm-0 d-flex card-input mx-auto">
+                              <img
+                                src={"data:image/jpg;base64," + item.image.file}
+                                className="card-img-top catering-card-image"
+                                alt="..."
+                              />
+                            </div>
+                          </label>
+                        ))}
                     </div>
-                    {
-                      groupOneData.map((item, index) => (
+                  </div>
+                  <div className="col-sm-4 px-1 py-3 py-sm-0">
+                    <div className="gap-0 py-4 justify-content-center justify-content-md-start rounded catering-group">
+                      <div
+                        id="groupTwoTitle"
+                        className="text-center text-secondary mb-2 fw-bold fs-4"
+                      >
+                        <FontAwesomeIcon icon={faRectangleList} /> Group 2
+                      </div>
+                      {groupTwoData.map((item, index) => (
                         <label
                           key={index}
-                          onClick={() => handleGroupOne(item.productId, true)}
-                          className="col-sm-4 col-md-3 col-lg-2 catering-card"
+                          onClick={() => handleGroupTwo(item.productId, true)}
+                          className="col-sm-12 col-md-6 catering-card"
                         >
                           <input
                             type="radio"
-                            name="group-1-radio"
+                            name="group-2-radio"
                             className="catering-input"
-                            checked={item.productId == groupOne}
+                            checked={item.productId == groupTwo}
                             readOnly
                           />
                           <div className="card mx-4 mx-sm-0 d-flex card-input mx-auto">
@@ -167,66 +200,41 @@ const Catering = () => {
                           </div>
                         </label>
                       ))}
-                  </div>
-                  <div className="row gx-0 gap-0 pt-3 py-4 justify-content-center justify-content-md-start">
-                    <div
-                      id="groupTwoTitle"
-                      className="text-center text-secondary mb-2 fw-bold fs-4"
-                    >
-                      <FontAwesomeIcon icon={faRectangleList} /> Group 2
                     </div>
-                    {groupTwoData.map((item, index) => (
-                      <label
-                        key={index}
-                        onClick={() => handleGroupTwo(item.productId, true)}
-                        className="col-sm-4 col-md-3 col-lg-2 catering-card"
-                      >
-                        <input
-                          type="radio"
-                          name="group-2-radio"
-                          className="catering-input"
-                          checked={item.productId == groupTwo}
-                          readOnly
-                        />
-                        <div className="card mx-4 mx-sm-0 d-flex card-input mx-auto">
-                          <img
-                            src={"data:image/jpg;base64," + item.image.file}
-                            className="card-img-top catering-card-image"
-                            alt="..."
-                          />
-                        </div>
-                      </label>
-                    ))}
                   </div>
-                  <div className="row gx-0 gap-0 pt-3 py-4 justify-content-center justify-content-md-start">
+                  <div className="col-sm-4 px-1 py-3 py-sm-0">
                     <div
-                      id="groupThreeTitle"
-                      className="text-center text-secondary mb-2 fw-bold fs-4"
+                      className="gap-0 py-4 justify-content-center justify-content-md-start rounded catering-group"
                     >
-                      <FontAwesomeIcon icon={faRectangleList} /> Group 3
-                    </div>
-                    {groupThreeData.map((item, index) => (
-                      <label
-                        key={index}
-                        onClick={() => handleGroupThree(item.productId, true)}
-                        className="col-sm-4 col-md-3 col-lg-2 catering-card"
+                      <div
+                        id="groupThreeTitle"
+                        className="text-center text-secondary mb-2 fw-bold fs-4"
                       >
-                        <input
-                          type="radio"
-                          name="group-3-radio"
-                          className="catering-input"
-                          checked={item.productId == groupThree}
-                          readOnly
-                        />
-                        <div className="card mx-4 mx-sm-0 d-flex card-input mx-auto">
-                          <img
-                            src={"data:image/jpg;base64," + item.image.file}
-                            className="card-img-top catering-card-image"
-                            alt="..."
+                        <FontAwesomeIcon icon={faRectangleList} /> Group 3
+                      </div>
+                      {groupThreeData.map((item, index) => (
+                        <label
+                          key={index}
+                          onClick={() => handleGroupThree(item.productId, true)}
+                          className="col-sm-12 col-md-6 catering-card"
+                        >
+                          <input
+                            type="radio"
+                            name="group-3-radio"
+                            className="catering-input"
+                            checked={item.productId == groupThree}
+                            readOnly
                           />
-                        </div>
-                      </label>
-                    ))}
+                          <div className="card mx-4 mx-sm-0 d-flex card-input mx-auto">
+                            <img
+                              src={"data:image/jpg;base64," + item.image.file}
+                              className="card-img-top catering-card-image"
+                              alt="..."
+                            />
+                          </div>
+                        </label>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
