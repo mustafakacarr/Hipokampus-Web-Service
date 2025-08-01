@@ -71,33 +71,17 @@ const Catering = () => {
       food.type === "THIRD_GROUP"
   )
 
-  function handleGroupOne(meal, isCardClick) {
-    if (isCardClick) {
-      setGroupOne(meal);
-      groupTwoTitle.scrollIntoView();
-    } else {
-      setGroupOne(meal);
-    }
+  function handleGroupOne(meal) {
+    setGroupOne(meal);
   }
 
-  function handleGroupTwo(meal, isCardClick) {
-    if (isCardClick) {
-      setGroupTwo(meal);
-      groupThreeTitle.scrollIntoView();
-    } else {
-      setGroupTwo(meal);
-    }
+  function handleGroupTwo(meal) {
+    setGroupTwo(meal);
   }
 
-  function handleGroupThree(meal, isCardClick) {
-    if (isCardClick) {
-      setGroupThree(meal);
-      cateringOrderCard.scrollIntoView();
-    } else {
-      setGroupThree(meal);
-    }
+  function handleGroupThree(meal) {
+    setGroupThree(meal);
   }
-
 
   return (
     <UserPanelLayout>
@@ -149,7 +133,7 @@ const Catering = () => {
                         groupOneData.map((item, index) => (
                           <label
                             key={index}
-                            onClick={() => handleGroupOne(item.productId, true)}
+                            onClick={() => handleGroupOne(item.productId)}
                             className="col-sm-12 col-md-6 catering-card"
                           >
                             <input
@@ -181,7 +165,7 @@ const Catering = () => {
                       {groupTwoData.map((item, index) => (
                         <label
                           key={index}
-                          onClick={() => handleGroupTwo(item.productId, true)}
+                          onClick={() => handleGroupTwo(item.productId)}
                           className="col-sm-12 col-md-6 catering-card"
                         >
                           <input
@@ -215,7 +199,7 @@ const Catering = () => {
                       {groupThreeData.map((item, index) => (
                         <label
                           key={index}
-                          onClick={() => handleGroupThree(item.productId, true)}
+                          onClick={() => handleGroupThree(item.productId)}
                           className="col-sm-12 col-md-6 catering-card"
                         >
                           <input
