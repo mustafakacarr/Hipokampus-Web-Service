@@ -9,6 +9,10 @@ import {
 import TripleSpinner from "../components/spinner-components/TripleSpinner"
 import { getWithoutAuth } from "../api/apiCalls"
 import ErrorWhileLoadingAlert from "../components/alert-component/ErrorWhileLoadingAlert"
+import { fillOrder } from "../features/order/orderSlice"
+import { useNavigate } from "react-router-dom"
+import { CATERING_ORDER } from "../constants/OrderType"
+import { useDispatch } from "react-redux"
 
 function getDate() {
   var today = new Date();
@@ -35,6 +39,9 @@ const Catering = () => {
   const [isAlert, setIsAlert] = useState(false)
 
   const [currentDate, setCurrentDate] = useState(getDate);
+
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const fetchCateringData = async () => {
     try {
@@ -79,6 +86,18 @@ const Catering = () => {
     setGroupThree(meal);
   }
 
+  const cateringOrder = {}
+
+  const fillCateringOrder = () => {
+    cateringOrder.firstMealId = groupOne
+    cateringOrder.secondMealId = groupTwo
+    cateringOrder.thirdMealId = groupThree
+    cateringOrder.orderType = CATERING_ORDER
+
+    dispatch(fillOrder(cateringOrder));
+    navigate("/order");
+  };
+
   return (
     <UserPanelLayout>
       {
@@ -105,10 +124,10 @@ const Catering = () => {
               </p>
               <p className="my-2">
                 <FontAwesomeIcon icon={faCircleInfo} className="me-2 text-primary" />
-                  Group 1 <span className="catering-sign">+ </span>
-                  Group 2 <span className="catering-sign">+ </span>
-                  Group 3 <span className="catering-sign">= </span>
-                  {cateringData.price}₺
+                Group 1 <span className="catering-sign">+ </span>
+                Group 2 <span className="catering-sign">+ </span>
+                Group 3 <span className="catering-sign">= </span>
+                {cateringData.price}₺
               </p>
             </div>
           </div>
@@ -318,7 +337,7 @@ const Catering = () => {
                     </select>
                   </div>
                   <hr className="my-2" />
-                  <a href="#" className="btn btn-success fw-bold">
+                  <a onClick={fillCateringOrder} href="#" className="btn btn-success fw-bold">
                     Create Order
                   </a>
                 </div>

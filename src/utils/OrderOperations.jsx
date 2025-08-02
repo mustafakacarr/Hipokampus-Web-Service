@@ -12,9 +12,9 @@ export const initialPayloadByOrderType = (order, orderType, payload) => {
     payload.packageId = order.packageId;
     payload.periodId = order.periodId;
   } else if (orderType === CATERING_ORDER) {
-    payload.firstGroupMealId = 0;
-    payload.secondGroupMealId = 0;
-    payload.thirddGroupMealId = 0;
+    payload.firstGroupMealId = order.firstMealId;
+    payload.secondGroupMealId = order.secondMealId;
+    payload.thirdGroupMealId = order.thirdMealId;
   } else if (orderType === EVENT) {
     payload.eventId = order.eventId;
   } else {
