@@ -89,11 +89,12 @@ const Catering = () => {
   const cateringOrder = {}
 
   const fillCateringOrder = () => {
+    cateringOrder.dailyMealId = cateringData.dailyMealId
     cateringOrder.firstMealId = groupOne
     cateringOrder.secondMealId = groupTwo
     cateringOrder.thirdMealId = groupThree
     cateringOrder.orderType = CATERING_ORDER
-
+    
     dispatch(fillOrder(cateringOrder));
     navigate("/order");
   };
