@@ -8,7 +8,6 @@ import {
     faUtensils,
     faWallet,
     faUser,
-    faMessage,
     faFaceSmile,
     faCaretDown,
     faBriefcase,
@@ -119,14 +118,6 @@ const UserPanelOffcanvas = () => {
                             to="/benefits">
                             <FontAwesomeIcon icon={faFaceSmile} size="lg" />
                             <span className="ms-2">Benefits</span>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
-                            to="/messages">
-                            <FontAwesomeIcon icon={faMessage} size="lg" />
-                            <span className="ms-2">Messages</span>
                         </NavLink>
                     </li>
                     <li>

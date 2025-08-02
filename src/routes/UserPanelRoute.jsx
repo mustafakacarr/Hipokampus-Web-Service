@@ -1,9 +1,6 @@
 import Cafe from "../pages/Cafe";
 import Packages from "../pages/Packages";
 import Catering from "../pages/Catering";
-import SignIn from "../pages/SignIn";
-import SignUp from "../pages/SignUp";
-import PasswordRecovery from "../pages/PasswordRecovery";
 import Dashboard from "../pages/Dashboard";
 import Events from "../pages/Events";
 import Announcements from "../pages/Announcements";
@@ -13,7 +10,6 @@ import Campaigns from "../pages/Campaigns";
 import OrderHistory from "../pages/OrderHistory";
 import MyTickets from "../pages/MyTickets";
 import Order from "../pages/Order";
-import Messages from "../pages/Messages";
 import VirtualOffice from "../pages/VirtualOffice";
 import CoworkingSpace from "../pages/CoworkingSpace";
 import MeetingRoom from "../pages/MeetingRoom";
@@ -67,10 +63,6 @@ var UserPanelRoute = [
   {
     path: "/order",
     component: <Order />,
-  },
-  {
-    path: "/messages",
-    component: <Messages />,
   },
   {
     path: "/virtual-office",
