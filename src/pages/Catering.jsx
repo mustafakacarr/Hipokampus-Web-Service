@@ -98,17 +98,18 @@ const Catering = () => {
                 <FontAwesomeIcon icon={faCircleInfo} className="me-2 text-primary" />
                 You can choose one from each group.
               </p>
-              <p className="mt-2 mb-4">
+              <p className="my-2">
                 <FontAwesomeIcon icon={faCircleInfo} className="me-2 text-primary" />
                 You can place your order until 12:00. Your orders will be ready
                 between 13.30-14.00.
               </p>
-              <h5 className="text-center mx-5 mt-2 mb-3">
-                Group 1 <span className="catering-sign">+ </span>
-                Group 2 <span className="catering-sign">+ </span>
-                Group 3 <span className="catering-sign">= </span>
-                {cateringData.price}₺
-              </h5>
+              <p className="my-2">
+                <FontAwesomeIcon icon={faCircleInfo} className="me-2 text-primary" />
+                  Group 1 <span className="catering-sign">+ </span>
+                  Group 2 <span className="catering-sign">+ </span>
+                  Group 3 <span className="catering-sign">= </span>
+                  {cateringData.price}₺
+              </p>
             </div>
           </div>
 
@@ -121,7 +122,7 @@ const Catering = () => {
               <div className="pb-4 px-1 px-xxl-2">
                 <div className="row gx-0">
                   <div className="col-sm-4 px-1 py-3 py-sm-0">
-                    <div className="gap-0 py-4 justify-content-center justify-content-md-start rounded catering-group">
+                    <div className="gap-0 py-4 h-100 justify-content-center justify-content-md-start rounded catering-group">
                       <div className="text-center text-secondary mb-2 fw-bold fs-4">
                         <FontAwesomeIcon icon={faRectangleList} /> Group 1
                       </div>
@@ -151,7 +152,7 @@ const Catering = () => {
                     </div>
                   </div>
                   <div className="col-sm-4 px-1 py-3 py-sm-0">
-                    <div className="gap-0 py-4 justify-content-center justify-content-md-start rounded catering-group">
+                    <div className="gap-0 py-4 h-100 justify-content-center justify-content-md-start rounded catering-group">
                       <div
                         id="groupTwoTitle"
                         className="text-center text-secondary mb-2 fw-bold fs-4"
@@ -184,7 +185,7 @@ const Catering = () => {
                   </div>
                   <div className="col-sm-4 px-1 py-3 py-sm-0">
                     <div
-                      className="gap-0 py-4 justify-content-center justify-content-md-start rounded catering-group"
+                      className="gap-0 py-4 h-100 justify-content-center justify-content-md-start rounded catering-group"
                     >
                       <div
                         id="groupThreeTitle"
@@ -226,7 +227,7 @@ const Catering = () => {
               >
                 <h4 className="card-header mb-2">
                   <FontAwesomeIcon icon={faBellConcierge} />
-                  <span className="ms-2 fw-bold">Quick Meal Order</span>
+                  <span className="ms-2 fw-bold">Order Meal</span>
                 </h4>
                 <div className="card-body row gx-0 gap-2">
                   <div className="input-group mb-1">
