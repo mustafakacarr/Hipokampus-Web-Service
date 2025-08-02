@@ -46,12 +46,16 @@ function RightCartSummary({ order }) {
           Cart Summary
         </h5>
         <div className="d-flex flex-column">
-          <div className="d-flex pt-3 pb-1">{findPairsContent()}</div>
+          <div className="d-flex justify-content-between mt-2 mb-2">
+            <span>
+              <strong style={{ whiteSpace: "nowrap" }}>Order Code:</strong>
+            </span>
+            <span className="fw-bolder">{order.orderCode}</span>
+          </div>{" "}
+          <div className="d-flex pt-1 pb-1">{findPairsContent()}</div>
         </div>
         <hr />
         <div className="pb-1">
-    
-
           <hr />
 
           <div className="d-flex justify-content-between">
