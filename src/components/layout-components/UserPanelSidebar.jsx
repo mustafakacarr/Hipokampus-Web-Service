@@ -9,24 +9,16 @@ import {
     faWallet,
     faUser,
     faFaceSmile,
-    faCaretDown,
-    faBriefcase,
-    faUserGroup,
-    faHandshake,
     faHome,
     faTag,
-    faClover
+    faClover,
+    faLayerGroup
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import useWindowSize from "../../hooks/useWindowSize";
 import { useSelector } from "react-redux";
 
 const UserPanelSidebar = () => {
-
-    const [rotateCaret, setRotateCaret] = useState("false")
-    const handleCaretRotate = () => setRotateCaret(!rotateCaret)
-    const rotate = rotateCaret ? "rotate(-90deg)" : "rotate(0)"
-
     const { width } = useWindowSize()
 
     let user = useSelector((state) => state.user.userInfo)
@@ -174,77 +166,24 @@ const UserPanelSidebar = () => {
                                 ? "user-panel-sidebar-active"
                                 : "user-panel-sidebar-not-active"
                         }
+                        to="/subscriptions"
+                    >
+                        <FontAwesomeIcon icon={faLayerGroup} size="lg" />
+                        <span className="ms-2">Subscriptions</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        className={(navOption) =>
+                            navOption.isActive
+                                ? "user-panel-sidebar-active"
+                                : "user-panel-sidebar-not-active"
+                        }
                         to="/order"
                     >
                         <FontAwesomeIcon icon={faWallet} size="lg" />
                         <span className="ms-2">Order</span>
                     </NavLink>
-                </li>
-                <li className="mt-3 mb-4">
-                    <a
-                        className="align-items-center rounded collapsed ps-0 text-decoration-none text-dark dropdown-button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#subscribed-services-collapse"
-                        onClick={handleCaretRotate}
-                        aria-expanded="false"
-                    >
-                        <FontAwesomeIcon
-                            icon={faCaretDown}
-                            size="xl"
-                            rotation={270}
-                            style={{ transform: rotate, transition: "all 0.35s linear" }}
-                            color="#1e03a8"
-                        />
-                        <span className="ms-2 subscribed-services-text text-dark">
-                            Subscribed Services
-                        </span>
-                    </a>
-                    <div className="collapse" id="subscribed-services-collapse">
-                        <ul className="btn-toggle-nav list-unstyled sidebar-subscribed-services mt-3 pb-1 my-2 ms-4 gap-3 d-flex row">
-                            <li>
-                                <NavLink
-                                    className={(navOption) =>
-                                        navOption.isActive
-                                            ? "user-panel-sidebar-active"
-                                            : "user-panel-sidebar-not-active"
-                                    }
-                                    to="/virtual-office"
-                                >
-                                    <FontAwesomeIcon icon={faBriefcase} size="lg" />
-                                    <span className="ms-2">Virtual Office</span>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    className={(navOption) =>
-                                        navOption.isActive
-                                            ? "user-panel-sidebar-active"
-                                            : "user-panel-sidebar-not-active"
-                                    }
-                                    to="/coworking-space"
-                                >
-                                    <FontAwesomeIcon
-                                        icon={faUserGroup}
-                                        size="lg"
-                                    />
-                                    <span className="ms-2">Coworking Space</span>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    className={(navOption) =>
-                                        navOption.isActive
-                                            ? "user-panel-sidebar-active"
-                                            : "user-panel-sidebar-not-active"
-                                    }
-                                    to="/meeting-room"
-                                >
-                                    <FontAwesomeIcon icon={faHandshake} size="lg" />
-                                    <span className="ms-2">Meeting Room</span>
-                                </NavLink>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
             </ul>
         </div>

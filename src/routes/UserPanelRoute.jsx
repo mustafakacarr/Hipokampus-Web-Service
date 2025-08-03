@@ -10,10 +10,8 @@ import Campaigns from "../pages/Campaigns";
 import OrderHistory from "../pages/OrderHistory";
 import MyTickets from "../pages/MyTickets";
 import Order from "../pages/Order";
-import VirtualOffice from "../pages/VirtualOffice";
-import CoworkingSpace from "../pages/CoworkingSpace";
-import MeetingRoom from "../pages/MeetingRoom";
 import PageNotFound from "../pages/PageNotFound";
+import Subscriptions from "../pages/Subscriptions";
 
 var UserPanelRoute = [
   {
@@ -65,16 +63,8 @@ var UserPanelRoute = [
     component: <Order />,
   },
   {
-    path: "/virtual-office",
-    component: <VirtualOffice />,
-  },
-  {
-    path: "/coworking-space",
-    component: <CoworkingSpace />,
-  },
-  {
-    path: "/meeting-room",
-    component: <MeetingRoom />,
+    path: "/subscriptions",
+    component: <Subscriptions />,
   },
   {
     path: "*",

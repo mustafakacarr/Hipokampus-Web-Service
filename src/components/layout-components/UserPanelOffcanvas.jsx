@@ -9,10 +9,7 @@ import {
     faWallet,
     faUser,
     faFaceSmile,
-    faCaretDown,
-    faBriefcase,
-    faUserGroup,
-    faHandshake,
+    faLayerGroup,
     faHome,
     faTag
 } from "@fortawesome/free-solid-svg-icons";
@@ -122,49 +119,24 @@ const UserPanelOffcanvas = () => {
                     </li>
                     <li>
                         <NavLink
+                            className={(navOption) =>
+                                navOption.isActive
+                                    ? "user-panel-sidebar-active"
+                                    : "user-panel-sidebar-not-active"
+                            }
+                            to="/subscriptions"
+                        >
+                            <FontAwesomeIcon icon={faLayerGroup} size="lg" />
+                            <span className="ms-2">Subscriptions</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
                             className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
                             to="/order">
                             <FontAwesomeIcon icon={faWallet} size="lg" />
                             <span className="ms-2">Order</span>
                         </NavLink>
-                    </li>
-                    <hr />
-                    <li>
-                        <a className="align-items-center rounded collapsed ps-0 text-decoration-none text-dark dropdown-button"
-                            data-bs-toggle="collapse" data-bs-target="#subscribed-services-collapse"
-                            onClick={handleCaretRotate} aria-expanded="false">
-                            <FontAwesomeIcon icon={faCaretDown} size="lg" rotation={270}
-                                style={{ transform: rotate, transition: "all 0.35s linear" }} />
-                            <span className="ms-2 subscribed-services-text">Subscribed Services</span>
-                        </a>
-                        <div className="collapse" id="subscribed-services-collapse">
-                            <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 my-2 ms-4 gap-3 mt-3 d-flex row">
-                                <li>
-                                    <NavLink
-                                        className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
-                                        to="/virtual-office">
-                                        <FontAwesomeIcon icon={faBriefcase} size="lg" />
-                                        <span className="ms-2">Virtual Office</span>
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
-                                        to="/coworking-space">
-                                        <FontAwesomeIcon icon={faUserGroup} size="lg" />
-                                        <span className="ms-2">Coworking Space</span>
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
-                                        to="/meeting-room">
-                                        <FontAwesomeIcon icon={faHandshake} size="lg" />
-                                        <span className="ms-2">Meeting Room</span>
-                                    </NavLink>
-                                </li>
-                            </ul>
-                        </div>
                     </li>
                 </ul>
                 <hr className="mb-3 mt-5" />

@@ -1,12 +1,12 @@
 import React from "react";
 import UserPanelLayout from "../layouts/UserPanelLayout";
 
-const VirtualOffice = () => {
+const Subscriptions = () => {
   return (
     <UserPanelLayout>
-        <h1>Virtual Office</h1>
+        <h1>Subscriptions</h1>
     </UserPanelLayout>
   );
 };
 
-export default VirtualOffice;
+export default Subscriptions;
