@@ -1,12 +1,27 @@
 import React from "react";
 import UserPanelLayout from "../layouts/UserPanelLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBriefcase, faFaceAngry, faHandshake, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { faBriefcase, faFaceAngry, faHandshake, faLayerGroup, faPlus, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 
 const Subscriptions = () => {
   return (
     <UserPanelLayout>
       <div className="row align-items-md-stretch pb-3 pe-1 pe-sm-2 ps-sm-1">
+        <div className="col-12 p-2">
+          <div
+            className="subscriptions-jumbotron p-2 mt-1 border rounded-3 d-flex justify-content-between">
+            <span className="fw-bold fs-4 d-flex" style={{alignSelf: "center"}}>
+              <FontAwesomeIcon className="mx-2 text-primary" style={{marginTop: "6px"}} icon={faLayerGroup} />
+              Subscriptions
+            </span>
+            <span className="text-primary">
+              <button className="btn btn-outline-primary ms-4">
+                <FontAwesomeIcon className="mx-2" icon={faPlus} />
+                <span className="fw-bold">Add Subscription</span>
+              </button>
+            </span>
+          </div>
+        </div>
         <div className="col-md-6 p-2">
           <div className="h-100 subscriptions-jumbotron p-5 my-3 my-md-0 border rounded-3">
             <h3 className="fw-bold">
