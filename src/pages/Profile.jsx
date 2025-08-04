@@ -31,7 +31,7 @@ const Profile = () => {
   return (
     <UserPanelLayout>
       <div className="mt-3 mx-1 mx-md-3 mx-lg-5">
-        <div className="border rounded mx-auto py-1 px-3" style={{ maxWidth: "1100px", backgroundColor: "#fafafa" }}>
+        <div className="rounded-3 mx-auto py-1 px-3 profile-jumbotron">
           <div className="row gx-2 mt-3">
             <div className="col-12 col-md-6 col-lg-3 py-1">
               <button onClick={() => handleContentSelect("PersonalInformation")}

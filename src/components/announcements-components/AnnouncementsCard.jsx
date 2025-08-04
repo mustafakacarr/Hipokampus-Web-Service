@@ -11,7 +11,6 @@ const AnnouncementsCard = ({ data, index }) => {
     >
       <div
         className="card announcement-card text-dark mb-3 h-100"
-        style={{ backgroundColor: "#f9f9f9" }}
       >
         <div className="card-body h-100 announcement-card-title">
           <div className="announcement-card-title fw-bold text-center">

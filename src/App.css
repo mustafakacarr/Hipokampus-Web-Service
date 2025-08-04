@@ -78,6 +78,9 @@ body {
   max-width: 350px;
   min-width: 125px;
   min-height: 200px;
+
+  background-color: #fefefe;
+  border: 2px solid rgb(5, 5, 5, 0.1);
 }
 
 .cafe-card-wrapper {
@@ -88,6 +91,9 @@ body {
 }
 
 .cafe-card {
+  background-color: #fefefe;
+  border: 2px solid rgb(5, 5, 5, 0.1);
+
   @media (max-width: 576px) {
     min-width: 250px !important;
     max-width: 325px !important;
@@ -351,7 +357,8 @@ body {
 }
 
 .benefits-card {
-  background-color: #f8f9fa;
+  background-color: #fefefe;
+  border: 2px solid rgb(5, 5, 5, 0.1);
   height: 100%;
 }
 
@@ -361,7 +368,8 @@ body {
 }
 
 .events-card {
-  border: 2px solid var(--bs-primary);
+  background-color: #fefefe;
+  border: 2px solid rgb(5, 5, 5, 0.1);
   border-radius: 0.375rem;
   min-height: 450px;
 }
@@ -388,13 +396,19 @@ body {
 }
 
 .campaigns-card {
-  background-color: #f8f9fa;
+  background-color: #fefefe;
+  border: 2px solid rgb(5, 5, 5, 0.1);
   height: 100%;
 }
 
 .campaigns-card-description {
   font-size: 16px;
   font-weight: 500;
+}
+
+.announcement-card {
+  background-color: #fefefe;
+  border: 2px solid rgb(5, 5, 5, 0.1);
 }
 
 .announcement-card-title {
@@ -457,6 +471,12 @@ body {
   padding-top: 0px;
   text-align: start;
   margin: 10px auto;
+}
+
+.profile-jumbotron {
+  max-width: 1100px;
+  background-color: #fefefe;
+  border: 2px solid rgb(5, 5, 5, 0.1);
 }
 
 .dashboard-jumbotron {

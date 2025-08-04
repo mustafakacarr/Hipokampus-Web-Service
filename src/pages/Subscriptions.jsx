@@ -1,7 +1,10 @@
-import React from "react";
-import UserPanelLayout from "../layouts/UserPanelLayout";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBriefcase, faFaceAngry, faHandshake, faLayerGroup, faPlus, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import React from "react"
+import UserPanelLayout from "../layouts/UserPanelLayout"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faBriefcase, faHandshake, faLayerGroup, faPlus, faUserGroup
+} from "@fortawesome/free-solid-svg-icons"
+import { NavLink } from "react-router-dom"
 
 const Subscriptions = () => {
   return (
@@ -10,15 +13,17 @@ const Subscriptions = () => {
         <div className="col-12 p-2">
           <div
             className="subscriptions-jumbotron p-2 mt-1 border rounded-3 d-flex justify-content-between">
-            <span className="fw-bold fs-4 d-flex" style={{alignSelf: "center"}}>
-              <FontAwesomeIcon className="mx-2 text-primary" style={{marginTop: "6px"}} icon={faLayerGroup} />
+            <span className="fw-bold fs-4 d-flex" style={{ alignSelf: "center" }}>
+              <FontAwesomeIcon className="mx-1 text-primary" style={{ marginTop: "6px" }} icon={faLayerGroup} />
               Subscriptions
             </span>
             <span className="text-primary">
-              <button className="btn btn-outline-primary ms-4">
-                <FontAwesomeIcon className="mx-2" icon={faPlus} />
-                <span className="fw-bold">Add Subscription</span>
-              </button>
+              <NavLink to={"/packages"}>
+                <button className="btn btn-outline-primary ms-3">
+                  <FontAwesomeIcon className="me-1" icon={faPlus} />
+                  <span className="fw-bold">Add Package</span>
+                </button>
+              </NavLink>
             </span>
           </div>
         </div>
@@ -41,7 +46,10 @@ const Subscriptions = () => {
               <br />
               Corporate Address: Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum consectetur quidem perferendis, LOREM/IPSUM
             </p>
-            <button className="btn btn-outline-primary" type="button">Operations</button>
+            <div className="btn-group">
+              <button className="btn btn-outline-primary" type="button">Operations</button>
+              <button className="btn btn-outline-primary" type="button">Manage Your Shipments</button>
+            </div>
           </div>
         </div>
         <div className="col-md-6 p-2">
@@ -80,7 +88,7 @@ const Subscriptions = () => {
           </div>
         </div>
       </div>
-    </UserPanelLayout>
+    </UserPanelLayout >
   );
 };
 
