@@ -33,18 +33,18 @@ const Subscriptions = () => {
               <FontAwesomeIcon className="me-2 text-primary" icon={faBriefcase} />
               Virtual Office
             </h3>
-            <p className="pt-3 pb-2">
-              Start Date: 14/8/2024
+            <p className="pt-3 pb-2 lh-lg">
+              <strong>Start Date:</strong> 14/8/2024
               <br />
-              End Date: 12/7/2025
+              <strong>End Date:</strong> 12/7/2025
               <br />
-              Corporate Name: OrderFast
+              <strong>Corporate Name:</strong> OrderFast
               <br />
-              Tax Office: Lorem
+              <strong>Tax Office:</strong> Lorem
               <br />
-              Tax Number: 123123
+              <strong>Tax Number:</strong> 123123
               <br />
-              Corporate Address: Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum consectetur quidem perferendis, LOREM/IPSUM
+              <strong>Corporate Address:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum consectetur quidem perferendis, LOREM/IPSUM
             </p>
             <div className="btn-group">
               <button className="btn btn-outline-primary" type="button">Operations</button>
@@ -58,12 +58,12 @@ const Subscriptions = () => {
               <FontAwesomeIcon className="me-2 text-primary" icon={faUserGroup} />
               Coworking Space
             </h3>
-            <p className="pt-3 pb-2">
-              Start Date: 14/8/2024
+            <p className="pt-3 pb-2 lh-lg">
+              <strong>Start Date:</strong> 14/8/2024
               <br />
-              End Date: 12/7/2025
+              <strong>End Date:</strong> 12/7/2025
               <br />
-              Remained Usage Right: 4
+              <strong>Remained Usage Right:</strong> 4
             </p>
             <button className="btn btn-outline-primary" type="button">Operations</button>
           </div>
@@ -74,15 +74,14 @@ const Subscriptions = () => {
               <FontAwesomeIcon className="me-2 text-primary" icon={faHandshake} />
               Meeting Room
             </h3>
-            <p className="pt-3 pb-2">
-              Start Date: 14/8/2024
+            <p className="pt-3 pb-2 lh-lg">
+              <strong>Start Date:</strong> 14/8/2024
               <br />
-              End Date: 12/7/2025
+              <strong>End Date:</strong> 12/7/2025
               <br />
-              Corporate Name: OrderFast
+              <strong>Corporate Name:</strong> OrderFast
               <br />
-              Office Id: 456456
-              <br />
+              <strong>Office Id:</strong> 456456
             </p>
             <button className="btn btn-outline-primary" type="button">Operations</button>
           </div>
