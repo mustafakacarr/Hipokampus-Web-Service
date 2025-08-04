@@ -479,6 +479,16 @@ body {
   border: 2px solid rgb(5, 5, 5, 0.1);
 }
 
+.order-container {
+  background-color: #fefefe;
+  border: 2px solid rgb(5, 5, 5, 0.1);
+}
+
+.order-card {
+  background-color: #fefefe;
+  border: 2px solid rgb(5, 5, 5, 0.1);
+}
+
 .order-status-failed {
   padding: 10px;
   text-align: center;

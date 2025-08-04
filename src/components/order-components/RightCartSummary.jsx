@@ -37,10 +37,9 @@ function RightCartSummary({ order }) {
   };
 
   return (
-    <div className="card">
-      <div className="card-body">
+      <div className="order-card rounded-3 p-3">
         <h5
-          className="card-title text-center fw-bold text-primary pt-1"
+          className="card-title text-center fw-bold text-primary pt-1 mb-3"
           style={{ fontSize: "22px" }}
         >
           Cart Summary
@@ -50,7 +49,7 @@ function RightCartSummary({ order }) {
             <span>
               <strong style={{ whiteSpace: "nowrap" }}>Order Code:</strong>
             </span>
-            <span className="fw-bolder">{order.orderCode}</span>
+            <span className="fw-bolder mb-2">{order.orderCode}</span>
           </div>{" "}
           <div className="d-flex pt-1 pb-1">{findPairsContent()}</div>
         </div>
@@ -64,7 +63,6 @@ function RightCartSummary({ order }) {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
