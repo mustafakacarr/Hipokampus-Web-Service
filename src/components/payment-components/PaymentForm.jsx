@@ -161,7 +161,7 @@ function PaymentForm() {
               <center>
                 <h5>
                   You can pay it to cashier as cash or credit card and start to
-                  use your service fastly.{" "}
+                  use your service fastly.
                 </h5>
                 <img
                   className="text-center"

@@ -169,7 +169,7 @@ const Cafe = () => {
               <div className="card text-center cart-card mx-auto">
                 <h4 className="card-header">
                   <FontAwesomeIcon icon={faCartShopping} />
-                  <span className="ms-2">Cart</span>
+                  <span className="ms-2 fw-bold">Cart</span>
                 </h4>
                 <div className="card-body cart-card-body">
                   {basket.length > 0 ? (
