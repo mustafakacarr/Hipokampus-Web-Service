@@ -3,11 +3,17 @@ import UserPanelHeader from "../components/layout-components/UserPanelHeader";
 import UserPanelFooter from "../components/layout-components/UserPanelFooter";
 import UserPanelSidebar from "../components/layout-components/UserPanelSidebar";
 import useWindowSize from "../hooks/useWindowSize";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const UserPanelLayout = ({ children }) => {
+  const { width } = useWindowSize();
+  const user = useSelector((state) => state.user.userInfo);
 
-  const { width } = useWindowSize()
-
+  const navigate = useNavigate();
+  if (!user) 
+    navigate("/");
+  else 
   return (
     <div className="site-wrapper mx-auto">
       <div className="row g-0">
@@ -17,21 +23,19 @@ const UserPanelLayout = ({ children }) => {
           style={
             width >= 576
               ? {
-                position: "fixed",
-                overflowY: "scroll",
-                borderRight: "2px solid rgb(5, 5, 5, 0.1)",
-                maxWidth: "270px",
-                backgroundColor: "#FFF9F7",
-                zIndex: 100
-              }
+                  position: "fixed",
+                  overflowY: "scroll",
+                  borderRight: "2px solid rgb(5, 5, 5, 0.1)",
+                  maxWidth: "270px",
+                  backgroundColor: "#FFF9F7",
+                  zIndex: 100,
+                }
               : {}
           }
         >
           <UserPanelSidebar />
         </div>
-        <div
-          className="col-sm-8 col-md-9 col-xl-10 offset-sm-4 offset-md-3 offset-xl-2"
-        >
+        <div className="col-sm-8 col-md-9 col-xl-10 offset-sm-4 offset-md-3 offset-xl-2">
           {width < 576 ? <div style={{ marginTop: "95px" }}></div> : <br />}
           <div className="user-content-wrapper container-fluid mx-auto min-vh-100">
             {children}
@@ -41,10 +45,12 @@ const UserPanelLayout = ({ children }) => {
             style={
               width >= 576
                 ? {
-                  paddingLeft: "40px",
-                  paddingRight: "70px"
-                }
-                : {} }>
+                    paddingLeft: "40px",
+                    paddingRight: "70px",
+                  }
+                : {}
+            }
+          >
             <hr />
             <UserPanelFooter />
           </div>

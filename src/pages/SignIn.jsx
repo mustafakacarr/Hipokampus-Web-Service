@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signUserIn } from "../features/user/userSlice";
-import axios from "axios";
 import { postWithoutAuth } from "../api/apiCalls";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import ClassicalBSAlert from "../components/alert-component/ClassicalBSAlert";
-import { faCheckCircle, faExclamationCircle, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 
 const SignIn = () => {
   const [username, setUsername] = useState("");
@@ -16,7 +15,6 @@ const SignIn = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const dispatch = useDispatch();
-  const history = useNavigate();
   const handleSignIn = async () => {
     if (username === "" || password === "") {
       setError("Username and password cannot be empty");

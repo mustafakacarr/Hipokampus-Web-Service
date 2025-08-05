@@ -56,7 +56,6 @@ function RightCartSummary({ order }) {
         </div>
         <hr />
         <div className="pb-1">
-          <hr />
 
           <div className="d-flex justify-content-between">
             <strong>TOTAL:</strong>

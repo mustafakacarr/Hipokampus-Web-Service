@@ -1,13 +1,9 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import UserPanelRoute from "./routes/UserPanelRoute";
-import OrderRoutes from "./routes/OrderRoutes";
 import DefaultRoutes from "./routes/DefaultRoutes";
-import { Provider, useSelector } from "react-redux";
 
 function App() {
-  const user = useSelector((state) => state.user.userInfo);
-
   return (
     <>
       <BrowserRouter>
