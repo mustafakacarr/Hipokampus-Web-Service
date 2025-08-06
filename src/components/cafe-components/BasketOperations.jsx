@@ -16,7 +16,9 @@ export const addToCart = (product, cartItems) => {
   const existingItem = cartItems.find(
     (item) => item.productId === product.productId
   );
-
+  if (!product.inStock) {
+    throw new Error("There is no stock for the product");
+  }
   if (existingItem) {
     const updatedCartItems = cartItems.map((item) =>
       item.productId === product.productId

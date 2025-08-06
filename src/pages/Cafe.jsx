@@ -96,6 +96,7 @@ const Cafe = () => {
   );
 
   const addToCartHandler = (product) => {
+    
     dispatch(addItem(product));
   };
   const increaseQuantityHandler = (productId) => {

@@ -27,7 +27,7 @@ const CafeProductCard = ({ item, index, addToCartOnClick }) => {
       <div
         key={index}
         className={
-          "card mx-5 cafe-card mx-sm-0 rounded-3"
+          "card mx-5 cafe-card mx-sm-0 rounded-3 h-100"
           + (item.inStock ? "" : " out-of-stock-card")
         }
       >
@@ -52,6 +52,7 @@ const CafeProductCard = ({ item, index, addToCartOnClick }) => {
           <p className={"card-text mt-3" + (item.inStock ? "" : " opacity-25")}>
             <b>{item.price} ₺</b>
           </p>
+          {item.inStock ? (
           <div className="justify-content-center my-1 row">
             <div className={"d-flex col-auto gx-0" + (item.inStock ? "" : " opacity-25")}>
               <a className="btn" onClick={handleDecrease}>
@@ -62,7 +63,7 @@ const CafeProductCard = ({ item, index, addToCartOnClick }) => {
                 <FontAwesomeIcon icon={faPlus} />
               </a>
             </div>
-            <div className={"col-auto" + (item.inStock ? "" : " opacity-25")}>
+            <div className={"col-auto"}>
               <a
                 className="btn btn-success ms-0 px-4"
                 onClick={() => addToCartOnClick(product)}
@@ -70,7 +71,7 @@ const CafeProductCard = ({ item, index, addToCartOnClick }) => {
                 <FontAwesomeIcon icon={faCartShopping} />
               </a>
             </div>
-          </div>
+          </div>) : "" }
         </div>
       </div>
     </div>
