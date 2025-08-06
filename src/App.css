@@ -101,6 +101,12 @@ body {
   }
 }
 
+.out-of-stock-card {
+  background: rgba(255, 255, 255, 0.25);
+  filter: brightness(85%);
+  pointer-events: none;
+}
+
 .cafe-basket {
   border: none;
 }

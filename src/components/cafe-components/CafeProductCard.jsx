@@ -24,19 +24,36 @@ const CafeProductCard = ({ item, index, addToCartOnClick }) => {
 
   return (
     <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12 px-4 px-md-2 mt-4 cafe-card-wrapper">
-      <div key={index} className="card mx-5 cafe-card mx-sm-0 rounded-3">
+      <div
+        key={index}
+        className={
+          "card mx-5 cafe-card mx-sm-0 rounded-3"
+          + (item.inStock ? "" : " out-of-stock-card")
+        }
+      >
         <img
           src={"data:image/jpg;base64," + item.image.file}
-          className="card-img-top cafe-card-image"
+          className={"card-img-top cafe-card-image" + (item.inStock ? "" : " opacity-25")}
           alt="Cafe Card Image"
         />
         <div className="card-body text-center mt-2">
-          <h5 className="card-title text-primary">{item.productName}</h5>
-          <p className="card-text mt-3">
+          {
+            item.inStock ? "" :
+              <text className="btn btn-primary fw-bold z-3 position-fixed"
+                style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+              >
+                Out of Stock
+              </text>
+          }
+          <h5 className={"card-title text-primary"
+            + (item.inStock ? "" : " opacity-25")}>
+            {item.productName}
+          </h5>
+          <p className={"card-text mt-3" + (item.inStock ? "" : " opacity-25")}>
             <b>{item.price} ₺</b>
           </p>
           <div className="justify-content-center my-1 row">
-            <div className="d-flex col-auto gx-0">
+            <div className={"d-flex col-auto gx-0" + (item.inStock ? "" : " opacity-25")}>
               <a className="btn" onClick={handleDecrease}>
                 <FontAwesomeIcon icon={faMinus} />
               </a>
@@ -45,7 +62,7 @@ const CafeProductCard = ({ item, index, addToCartOnClick }) => {
                 <FontAwesomeIcon icon={faPlus} />
               </a>
             </div>
-            <div className="col-auto">
+            <div className={"col-auto" + (item.inStock ? "" : " opacity-25")}>
               <a
                 className="btn btn-success ms-0 px-4"
                 onClick={() => addToCartOnClick(product)}
