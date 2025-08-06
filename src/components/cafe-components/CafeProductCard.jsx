@@ -49,29 +49,38 @@ const CafeProductCard = ({ item, index, addToCartOnClick }) => {
             + (item.inStock ? "" : " opacity-25")}>
             {item.productName}
           </h5>
-          <p className={"card-text mt-3" + (item.inStock ? "" : " opacity-25")}>
-            <b>{item.price} ₺</b>
-          </p>
-          {item.inStock ? (
-          <div className="justify-content-center my-1 row">
-            <div className={"d-flex col-auto gx-0" + (item.inStock ? "" : " opacity-25")}>
-              <a className="btn" onClick={handleDecrease}>
-                <FontAwesomeIcon icon={faMinus} />
-              </a>
-              <strong className="my-auto mx-auto">{quantity}</strong>
-              <a className="btn" onClick={handleIncrease}>
-                <FontAwesomeIcon icon={faPlus} />
-              </a>
-            </div>
-            <div className={"col-auto"}>
-              <a
-                className="btn btn-success ms-0 px-4"
-                onClick={() => addToCartOnClick(product)}
-              >
-                <FontAwesomeIcon icon={faCartShopping} />
-              </a>
-            </div>
-          </div>) : "" }
+          {
+            item.inStock ?
+              <p className="card-text mt-3">
+                <b>{item.price} ₺</b>
+              </p>
+              :
+              ""
+          }
+          {
+            item.inStock ? (
+              <div className="justify-content-center my-1 row">
+                <div className="d-flex col-auto gx-0">
+                  <a className="btn" onClick={handleDecrease}>
+                    <FontAwesomeIcon icon={faMinus} />
+                  </a>
+                  <strong className="my-auto mx-auto">{quantity}</strong>
+                  <a className="btn" onClick={handleIncrease}>
+                    <FontAwesomeIcon icon={faPlus} />
+                  </a>
+                </div>
+                <div className={"col-auto"}>
+                  <a
+                    className="btn btn-success ms-0 px-4"
+                    onClick={() => addToCartOnClick(product)}
+                  >
+                    <FontAwesomeIcon icon={faCartShopping} />
+                  </a>
+                </div>
+              </div>)
+              :
+              ""
+          }
         </div>
       </div>
     </div>
