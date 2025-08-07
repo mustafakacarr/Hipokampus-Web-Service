@@ -1,5 +1,3 @@
-import { Exception } from "sass";
-
 function showCafeQuantityNotification() {
   const cafeQuantityToast = document.getElementById("cafeQuantityToast");
   const quantityErrorToast =

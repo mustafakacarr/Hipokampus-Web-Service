@@ -15,7 +15,7 @@ import {
   decreaseQuantity,
   increaseQuantity,
   removeFromCart,
-} from "../components/cafe-components/BasketOperations";
+} from "../utils/BasketOperations"
 import ErrorWhileLoadingAlert from "../components/alert-component/ErrorWhileLoadingAlert";
 import TripleSpinner from "../components/spinner-components/TripleSpinner";
 import { getWithoutAuth } from "../api/apiCalls";

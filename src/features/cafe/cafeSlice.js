@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addToCart, decreaseQuantity, increaseQuantity, removeFromCart } from "../../components/cafe-components/BasketOperations";
-
+import { addToCart, decreaseQuantity, increaseQuantity, removeFromCart } from "../../utils/BasketOperations"
 const initialState = {
   items: [], 
 };
