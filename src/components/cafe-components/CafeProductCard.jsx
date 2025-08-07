@@ -3,6 +3,7 @@ import {
   faCartShopping,
   faMinus,
   faPlus,
+  faXmark
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -42,6 +43,9 @@ const CafeProductCard = ({ item, index, addToCartOnClick }) => {
               <text className="btn btn-primary fw-bold z-3 position-fixed"
                 style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
               >
+                <p className="mb-1 pb-0 fw-bold">
+                  <FontAwesomeIcon icon={faXmark} size="xl" />
+                </p>
                 Out of Stock
               </text>
           }
