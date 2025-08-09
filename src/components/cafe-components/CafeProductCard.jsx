@@ -9,7 +9,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CafeProductCard = ({ item, index, addToCartOnClick }) => {
   const [quantity, setQuantity] = useState(1);
-  let product = { productId: item.productId, productName: item.productName, quantity };
+  let product = {
+    productId: item.productId,
+    productName: item.productName,
+    quantity,
+    inStock: item.inStock,
+  };
 
   useEffect(() => {
     product.quantity = quantity;

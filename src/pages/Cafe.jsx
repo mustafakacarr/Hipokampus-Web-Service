@@ -10,12 +10,6 @@ import {
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import CafeProductCard from "../components/cafe-components/CafeProductCard";
-import {
-  addToCart,
-  decreaseQuantity,
-  increaseQuantity,
-  removeFromCart,
-} from "../utils/BasketOperations"
 import ErrorWhileLoadingAlert from "../components/alert-component/ErrorWhileLoadingAlert";
 import TripleSpinner from "../components/spinner-components/TripleSpinner";
 import { getWithoutAuth } from "../api/apiCalls";
@@ -26,7 +20,7 @@ import {
   addQuantity,
   reduceQuantity,
 } from "../features/cafe/cafeSlice";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { fillOrder } from "../features/order/orderSlice";
 import { CAFE_ORDER } from "../constants/OrderType";
 
@@ -96,7 +90,6 @@ const Cafe = () => {
   );
 
   const addToCartHandler = (product) => {
-    
     dispatch(addItem(product));
   };
   const increaseQuantityHandler = (productId) => {
