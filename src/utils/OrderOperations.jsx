@@ -25,7 +25,6 @@ export const initialPayloadByOrderType = (order, orderType, payload) => {
 };
 
 export const setResponseByOrderType = (orderType, response) => {
-  console.log("🚀 ~ setResponseByOrderType ~ response:", response)
   if (orderType === CAFE_ORDER) {
     return {
       basket: response.data.orderedProducts,

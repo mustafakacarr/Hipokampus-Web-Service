@@ -14,7 +14,6 @@ const UserPanelNavbar = () => {
   const handleLogout = () => {
     dispatch(signUserOut());
     history("/");
-      console.log("🚀 ~ handleLogout ~ User logged out");
   };
   return (
     <nav

@@ -26,7 +26,7 @@ const ProfilePersonalInformation = () => {
       setFirstName(firstName);
       setLastName(lastName);
     } catch (error) {
-      console.log("🚀 ~ fetchUserDetails ~ error", error);
+      Error(error);
     }
   };
 
@@ -45,7 +45,6 @@ const ProfilePersonalInformation = () => {
     } catch (error) {
       setIsError(true);
       setIsSuccess(false);
-      console.log("🚀 ~ fetchUserDetails ~ error", error);
     }
   };
 
