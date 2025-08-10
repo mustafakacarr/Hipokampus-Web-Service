@@ -1,11 +1,11 @@
 import React from "react";
 
-const CateringOrderKeyValuePairs = () => {
+const CateringOrderKeyValuePairs = ({ order }) => {
   const pairs = [
-    { "Name Surname": "John Doe" },
-    { "First Meal": "Lorem" },
-    { "Second Meal": "Ipsum" },
-    { "Third Meal": "Dolor" },
+    { "Name Surname": order.userId },
+    { "First Meal": order.firstMealId },
+    { "Second Meal": order.secondMealId },
+    { "Third Meal": order.thirdMealId },
   ];
   return (
     <div className="w-100">
