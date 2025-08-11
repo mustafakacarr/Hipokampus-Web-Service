@@ -29,14 +29,19 @@ export const setResponseByOrderType = (orderType, response) => {
     return {
       basket: response.data.orderedProducts,
       totalPrice: response.data.totalPrice,
-    };
+    }
   } else if (PACKAGE_ORDER_TYPES.includes(orderType)) {
     return {
       packageName: response.data.packageName,
       packageDescription: response.data.packageDescription,
       periodName: response.data.periodName,
-    };
+    }
   } else if (orderType === CATERING_ORDER) {
-    return;
+    return
+  } else if (orderType === EVENT) {
+    console.log(response)
+    return {
+      eventName: response.data.eventName
+    }
   }
 };

@@ -1,17 +1,16 @@
 import React from "react";
 
-const TicketOrderKeyValuePairs = () => {
+const TicketOrderKeyValuePairs = ({ order }) => {
   const pairs = [
-    { "Event Date: ": "28.03.2024 22:34" },
-    { "Ticket Price: ": "100 TRY" },
-    { "VAT: ": "342" },
+    { "Event Name": order.eventName},
+    { "Ticket Price": order.totalPrice}
   ];
   return (
-    <div>
+    <div className="w-100">
       {pairs.map((pair, index) => (
         <div key={index}>
           {Object.entries(pair).map(([key, value]) => (
-            <div key={key}>
+            <div key={key} className="d-flex justify-content-between mt-1 mb-2">
               <span>
                 <strong>{key}</strong>:
               </span>
