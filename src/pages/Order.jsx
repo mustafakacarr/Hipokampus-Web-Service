@@ -42,7 +42,8 @@ const Order = () => {
         ...prevOrder,
         ...additionalResponse,
         totalPrice: response.data.totalPrice,
-        orderCode:response.data.orderCode,
+        orderCode: response.data.orderCode,
+        userName: response.data.username
       }));
     } catch (error) {
       console.error("Error while saving order:", error);

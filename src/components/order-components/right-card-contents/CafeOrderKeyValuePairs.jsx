@@ -7,7 +7,7 @@ const CafeOrderKeyValuePairs = ({ order }) => {
   }
   
   const pairs = [
-    { "Name Surname": order.userId },
+    { "Name": order.userName },
     {
       Basket: order.basket
         .map((item) => `${item.quantity}x ${item.cafeProductName}`)

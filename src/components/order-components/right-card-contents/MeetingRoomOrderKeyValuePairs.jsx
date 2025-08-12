@@ -1,7 +1,8 @@
 import React from "react";
 
-const MeetingRoomOrderKeyValuePairs = () => {
+const MeetingRoomOrderKeyValuePairs = ({ order }) => {
   const pairs = [
+    { "Name": order.userName },
     { "Office Name ": "GARDEN B1" },
     { "Office Quota ": "100 Person" },
     { "Package ": "Package Package" },
