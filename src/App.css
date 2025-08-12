@@ -291,15 +291,20 @@ body {
 .user-panel-sidebar-active {
   color: #ffffff;
   text-decoration: none;
-  vertical-align: sub;
   font-weight: 500;
+  background-color: rgba(240, 244, 255, 0.10);
+  display: flow-root;
+  padding: 5px;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(240, 244, 255, 0.25);
 }
 
 .user-panel-sidebar-not-active {
   color: #a6a6a6;
   font-weight: 500;
   text-decoration: none;
-  vertical-align: sub;
+  display: flow-root;
+  padding: 6px;
 }
 
 .user-panel-sidebar-not-active:hover {
@@ -324,15 +329,20 @@ body {
 .user-panel-offcanvas-active {
   color: #ffffff;
   text-decoration: none;
-  vertical-align: sub;
   font-weight: 500;
+  background-color: rgba(240, 244, 255, 0.10);
+  display: flow-root;
+  padding: 5px;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(240, 244, 255, 0.25);
 }
 
 .user-panel-offcanvas-not-active {
   color: #a6a6a6;
   font-weight: 500;
   text-decoration: none;
-  vertical-align: sub;
+  display: flow-root;
+  padding: 6px;
 }
 
 .user-panel-offcanvas-not-active:hover {

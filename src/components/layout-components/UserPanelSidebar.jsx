@@ -40,7 +40,7 @@ const UserPanelSidebar = () => {
             <label className="fs-5 fw-bold sidebar-welcome py-3 mt-4">
                 <FontAwesomeIcon icon={faClover} size="lg" className="me-2" />Welcome, {user.username}!
             </label>
-            <ul className="nav nav-pills flex-column mb-auto gap-4 mt-4">
+            <ul className="nav nav-pills flex-column mb-auto gap-3 mt-4">
                 <li>
                     <NavLink
                         className={(navOption) =>
