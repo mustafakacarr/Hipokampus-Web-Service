@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import TicketOrderKeyValuePairs from "./right-card-contents/TicketOrderKeyValuePairs";
 import MeetingRoomOrderKeyValuePairs from "./right-card-contents/MeetingRoomOrderKeyValuePairs";
+import CoworkingSpaceOrderKeyValuePairs from "./right-card-contents/CoworkingSpaceOrderKeyValuePairs"
+import VirtualOfficeOrderKeyValuePairs from "./right-card-contents/VirtualOfficeOrderKeyValuePairs"
 import CateringOrderKeyValuePairs from "./right-card-contents/CateringOrderKeyValuePairs";
 import CafeOrderKeyValuePairs from "./right-card-contents/CafeOrderKeyValuePairs";
 import {
   CATERING_ORDER,
   MEETING_ROOM_ORDER,
+  COWORKING_SPACE_ORDER,
+  VIRTUAL_OFFICE_ORDER,
   EVENT,
   CAFE_ORDER,
 } from "../../constants/OrderType";
@@ -24,6 +28,12 @@ function RightCartSummary({ order }) {
       case MEETING_ROOM_ORDER:
         pairComponent = <MeetingRoomOrderKeyValuePairs order={order} />;
         break;
+      case COWORKING_SPACE_ORDER:
+        pairComponent = <CoworkingSpaceOrderKeyValuePairs order={order} />;
+        break;
+      case VIRTUAL_OFFICE_ORDER:
+        pairComponent = <VirtualOfficeOrderKeyValuePairs order={order} />;
+        break;
       case CATERING_ORDER:
         pairComponent = <CateringOrderKeyValuePairs order={order} />;
         break;
@@ -37,31 +47,31 @@ function RightCartSummary({ order }) {
   };
 
   return (
-      <div className="order-card rounded-3 p-3">
-        <h5
-          className="card-title text-center fw-bold text-primary pt-1 mb-3"
-          style={{ fontSize: "22px" }}
-        >
-          Cart Summary
-        </h5>
-        <div className="d-flex flex-column">
-          <div className="d-flex justify-content-between mt-2 mb-2">
-            <span>
-              <strong style={{ whiteSpace: "nowrap" }}>Order Code:</strong>
-            </span>
-            <span className="fw-bolder mb-2">{order.orderCode}</span>
-          </div>{" "}
-          <div className="d-flex pt-1 pb-1">{findPairsContent()}</div>
-        </div>
-        <hr />
-        <div className="pb-1">
+    <div className="order-card rounded-3 p-3">
+      <h5
+        className="card-title text-center fw-bold text-primary pt-1 mb-3"
+        style={{ fontSize: "22px" }}
+      >
+        Cart Summary
+      </h5>
+      <div className="d-flex flex-column">
+        <div className="d-flex justify-content-between mt-2 mb-2">
+          <span>
+            <strong style={{ whiteSpace: "nowrap" }}>Order Code:</strong>
+          </span>
+          <span className="fw-bolder mb-2">{order.orderCode}</span>
+        </div>{" "}
+        <div className="d-flex pt-1 pb-1">{findPairsContent()}</div>
+      </div>
+      <hr />
+      <div className="pb-1">
 
-          <div className="d-flex justify-content-between">
-            <strong>TOTAL:</strong>
-            <strong>{order.totalPrice} $</strong>
-          </div>
+        <div className="d-flex justify-content-between">
+          <strong>TOTAL:</strong>
+          <strong>{order.totalPrice} $</strong>
         </div>
       </div>
+    </div>
   );
 }
 
