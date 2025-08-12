@@ -145,7 +145,7 @@ body {
 }
 
 .offer-card {
-  border: 3px solid var(--bs-secondary);
+  border: 2px solid var(--bs-dark);
   border-radius: 0.375rem;
   background-color: #f8f9fa;
 }
@@ -172,7 +172,7 @@ body {
 }
 
 .package-offer-text {
-  color: var(--bs-secondary);
+  color: var(--bs-dark);
   align-self: center;
 }
 
@@ -294,7 +294,7 @@ body {
   font-weight: 500;
   background-color: rgba(240, 244, 255, 0.10);
   display: flow-root;
-  padding: 5px;
+  padding: 7px;
   border-radius: 0.25rem;
   border: 1px solid rgba(240, 244, 255, 0.25);
 }
@@ -304,12 +304,17 @@ body {
   font-weight: 500;
   text-decoration: none;
   display: flow-root;
-  padding: 6px;
+  padding: 8px;
 }
 
 .user-panel-sidebar-not-active:hover {
   color: #fefefe;
   font-weight: 500;
+  background-color: rgba(240, 244, 255, 0.10);
+  display: flow-root;
+  padding: 7px;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(240, 244, 255, 0.25);
 }
 
 .subscribed-services-text {
@@ -332,7 +337,7 @@ body {
   font-weight: 500;
   background-color: rgba(240, 244, 255, 0.10);
   display: flow-root;
-  padding: 5px;
+  padding: 7px;
   border-radius: 0.25rem;
   border: 1px solid rgba(240, 244, 255, 0.25);
 }
@@ -342,12 +347,17 @@ body {
   font-weight: 500;
   text-decoration: none;
   display: flow-root;
-  padding: 6px;
+  padding: 8px;
 }
 
 .user-panel-offcanvas-not-active:hover {
   color: #fefefe;
   font-weight: 500;
+  background-color: rgba(240, 244, 255, 0.10);
+  display: flow-root;
+  padding: 7px;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(240, 244, 255, 0.25);
 }
 
 .offcanvas-link {

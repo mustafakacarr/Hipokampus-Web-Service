@@ -21,8 +21,8 @@ const Packages = () => {
 
   const getButtonClassName = (name) => {
     return packageFilter === name
-      ? "btn btn-outline-secondary active"
-      : "btn btn-outline-secondary";
+      ? "btn btn-outline-dark active"
+      : "btn btn-outline-dark";
   };
 
   const serviceNames = ["Coworking Space", "Virtual Office", "Meeting Room"];
@@ -103,7 +103,7 @@ const Packages = () => {
                     GET AN OFFER FOR CUSTOMIZED SOLUTIONS
                   </span>
                   <button
-                    className="btn btn-secondary btn-lg fs-5 fw-bold col-12 col-md-3 mt-4 mt-md-0"
+                    className="btn btn-dark btn-lg fs-5 fw-bold col-12 col-md-3 mt-4 mt-md-0"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
                   >

@@ -49,12 +49,12 @@ const UserPanelNavbar = () => {
         <UserPanelOffcanvas />
         <div className="d-flex justify-content-end align-items-center">
           <button
-            className="btn"
-            style={{color: "#212631"}}
+            className="btn btn-outline-dark rounded-pill px-4"
+            style={{border: "2px solid var(--bs-dark)"}}
             onClick={() => handleLogout()}
           >
             <FontAwesomeIcon icon={faRightFromBracket} size="xl" />
-            <span className="fw-bold h5 ms-2">Sign out</span>
+            <span className="fw-bold h6 ms-2">Sign out</span>
           </button>
         </div>
       </div>

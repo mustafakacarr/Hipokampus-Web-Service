@@ -47,7 +47,7 @@ const UserPanelOffcanvas = () => {
                 <label className="fs-5 fw-bold sidebar-welcome pb-3 pt-2 mb-2">
                     <FontAwesomeIcon icon={faClover} size="lg" className="me-2" />Welcome, {user.username}!
                 </label>
-                <ul className="nav nav-pills flex-column mb-auto gap-3 mt-2">
+                <ul className="nav nav-pills flex-column mb-auto gap-2 mt-2">
                     <li>
                         <NavLink
                             className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}
