@@ -37,9 +37,12 @@ export const setResponseByOrderType = (orderType, response) => {
       periodName: response.data.periodName,
     }
   } else if (orderType === CATERING_ORDER) {
-    return
+    return {
+      firstGroupFoodName: response.data.firstGroupFood.productName,
+      secondGroupFoodName: response.data.secondGroupFood.productName,
+      thirdGroupFoodName: response.data.thirdGroupFood.productName
+    }
   } else if (orderType === EVENT) {
-    console.log(response)
     return {
       eventName: response.data.eventName
     }
