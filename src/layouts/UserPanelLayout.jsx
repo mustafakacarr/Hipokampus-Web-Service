@@ -25,9 +25,8 @@ const UserPanelLayout = ({ children }) => {
               ? {
                   position: "fixed",
                   overflowY: "scroll",
-                  borderRight: "2px solid rgb(5, 5, 5, 0.1)",
                   maxWidth: "270px",
-                  backgroundColor: "#FFF9F7",
+                  backgroundColor: "#121212",
                   zIndex: 100,
                 }
               : {}

@@ -2,7 +2,7 @@ import React from "react";
 
 const PageNotFound = () => {
 
-    let userName = sessionStorage.getItem("userName")
+    let username = sessionStorage.getItem("username")
 
     return (
         <>
@@ -14,7 +14,7 @@ const PageNotFound = () => {
                     <p className="lead mb-4">
                         The page you’re looking for doesn’t exist.
                     </p>
-                    <a href={(userName) ? "/dashboard" : "/"}className="btn btn-primary">Go Back</a>
+                    <a href={(username) ? "/dashboard" : "/"}className="btn btn-primary">Go Back</a>
                 </div>
             </div>
         </>

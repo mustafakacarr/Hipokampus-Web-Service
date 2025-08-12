@@ -2,7 +2,7 @@ import React from "react";
 
 const TicketOrderKeyValuePairs = ({ order }) => {
   const pairs = [
-    { "Name": order.userName }, 
+    { "Username": order.username }, 
     { "Event Name": order.eventName},
     { "Ticket Price": order.totalPrice}
   ];

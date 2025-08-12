@@ -2,7 +2,7 @@ import React from "react";
 
 const MeetingRoomOrderKeyValuePairs = ({ order }) => {
   const pairs = [
-    { "Name": order.userName },
+    { "Username": order.username },
     { "Office Name ": "GARDEN B1" },
     { "Office Quota ": "100 Person" },
     { "Package ": "Package Package" },

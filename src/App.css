@@ -285,26 +285,25 @@ body {
 }
 
 .sidebar-welcome {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ccffcc;
 }
 
 .user-panel-sidebar-active {
-  color: #1e03a8;
+  color: #ffffff;
   text-decoration: none;
   vertical-align: sub;
   font-weight: 500;
 }
 
 .user-panel-sidebar-not-active {
-  color: var(--bs-secondary);
+  color: #a6a6a6;
   font-weight: 500;
   text-decoration: none;
   vertical-align: sub;
 }
 
 .user-panel-sidebar-not-active:hover {
-  color: #3768fb;
+  color: #fefefe;
   font-weight: 500;
 }
 
@@ -319,25 +318,25 @@ body {
 }
 
 .user-panel-offcanvas {
-  background-color: #FFF9F7;
+  background-color: #121212;
 }
 
 .user-panel-offcanvas-active {
-  color: var(--bs-primary);
+  color: #ffffff;
   text-decoration: none;
   vertical-align: sub;
   font-weight: 500;
 }
 
 .user-panel-offcanvas-not-active {
-  color: var(--bs-secondary);
+  color: #a6a6a6;
   font-weight: 500;
   text-decoration: none;
   vertical-align: sub;
 }
 
 .user-panel-offcanvas-not-active:hover {
-  color: #3768fb;
+  color: #fefefe;
   font-weight: 500;
 }
 

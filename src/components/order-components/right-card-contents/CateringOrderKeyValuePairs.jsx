@@ -3,7 +3,7 @@ import React from "react";
 const CateringOrderKeyValuePairs = ({ order }) => {
 
   const pairs = [
-    { "Name": order.userName },
+    { "Username": order.username },
     { "First Meal": order.firstGroupFoodName },
     { "Second Meal": order.secondGroupFoodName },
     { "Third Meal": order.thirdGroupFoodName },

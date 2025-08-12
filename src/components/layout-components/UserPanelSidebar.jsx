@@ -33,7 +33,7 @@ const UserPanelSidebar = () => {
                 className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none brand-logo"
             >
                 <img
-                    src="src/assets/images/InWorkLogoAndText.png"
+                    src="src/assets/images/InWorkLogoAndTextLight.png"
                     style={{ width: "75%", maxWidth: "220px", maxHeight: "50px" }}
                 />
             </a>

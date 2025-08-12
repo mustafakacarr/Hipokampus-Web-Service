@@ -11,34 +11,42 @@ import {
     faFaceSmile,
     faLayerGroup,
     faHome,
-    faTag
+    faTag,
+    faClover
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faLinkedin, faThreads, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons"
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const UserPanelOffcanvas = () => {
 
-    const [rotateCaret, setRotateCaret] = useState("false")
-    const handleCaretRotate = () => setRotateCaret(!rotateCaret)
-    const rotate = rotateCaret ? "rotate(-90deg)" : "rotate(0)"
+    let user = useSelector((state) => state.user.userInfo)
 
     return (
-        <div className="user-panel-offcanvas offcanvas offcanvas-start border" data-bs-scroll="true"
-            data-bs-backdrop="true" tabIndex="-1" id="userPanelOffcanvas" aria-labelledby="userPanelOffcanvas">
-            <div className="offcanvas-header">
+        <div className="user-panel-offcanvas offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            data-bs-theme="dark"
+            data-bs-backdrop="true"
+            tabIndex="-1"
+            id="userPanelOffcanvas"
+            aria-labelledby="userPanelOffcanvas">
+            <div className="offcanvas-header my-3">
                 <a
                     href="/"
                     className="d-flex align-items-center me-md-auto text-decoration-none brand-logo"
                 >
                     <img
-                        src="src/assets/images/InWorkLogoAndText.png"
+                        src="src/assets/images/InWorkLogoAndTextLight.png"
                         width={160}
                         height={40}
                     />
                 </a>
                 <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div className="offcanvas-body border-top scrollbar-hidden mt-2">
+            <div className="offcanvas-body border-top scrollbar-hidden mt-0">
+                <label className="fs-5 fw-bold sidebar-welcome pb-3 pt-2 mb-2">
+                    <FontAwesomeIcon icon={faClover} size="lg" className="me-2" />Welcome, {user.username}!
+                </label>
                 <ul className="nav nav-pills flex-column mb-auto gap-4 mt-2">
                     <li>
                         <NavLink
@@ -141,36 +149,36 @@ const UserPanelOffcanvas = () => {
                 </ul>
                 <hr className="mb-3 mt-5" />
                 <div className="text-center py-4 mb-3">
-                    <p>© 2025 InWork Coworking Space</p>
+                    <p style={{ color: "#a6a6a6" }}>© 2025 InWork Coworking Space</p>
                     <ul className="list-unstyled d-flex justify-content-center">
                         <li>
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.facebook.com">
-                                <FontAwesomeIcon icon={faFacebook} style={{ color: "#1e03a8" }} size="xl" />
+                                <FontAwesomeIcon icon={faFacebook} style={{ color: "#d5ffff" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="http://www.twitter.com">
-                                <FontAwesomeIcon icon={faXTwitter} style={{ color: "#1e03a8" }} size="xl" />
+                                <FontAwesomeIcon icon={faXTwitter} style={{ color: "#d5ffff" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.instagram.com">
-                                <FontAwesomeIcon icon={faInstagram} style={{ color: "#1e03a8" }} size="xl" />
+                                <FontAwesomeIcon icon={faInstagram} style={{ color: "#d5ffff" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.youtube.com">
-                                <FontAwesomeIcon icon={faYoutube} style={{ color: "#1e03a8" }} size="xl" />
+                                <FontAwesomeIcon icon={faYoutube} style={{ color: "#d5ffff" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.linkedin.com">
-                                <FontAwesomeIcon icon={faLinkedin} style={{ color: "#1e03a8" }} size="xl" />
+                                <FontAwesomeIcon icon={faLinkedin} style={{ color: "#d5ffff" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.threads.net">
-                                <FontAwesomeIcon icon={faThreads} style={{ color: "#1e03a8" }} size="xl" />
+                                <FontAwesomeIcon icon={faThreads} style={{ color: "#d5ffff" }} size="xl" />
                             </a>
                         </li>
                     </ul>
