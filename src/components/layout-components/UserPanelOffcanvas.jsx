@@ -145,32 +145,32 @@ const UserPanelOffcanvas = () => {
                     <ul className="list-unstyled d-flex justify-content-center">
                         <li>
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.facebook.com">
-                                <FontAwesomeIcon icon={faFacebook} style={{ color: "#d5ffff" }} size="xl" />
+                                <FontAwesomeIcon icon={faFacebook} style={{ color: "#f2f2f2" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="http://www.twitter.com">
-                                <FontAwesomeIcon icon={faXTwitter} style={{ color: "#d5ffff" }} size="xl" />
+                                <FontAwesomeIcon icon={faXTwitter} style={{ color: "#f2f2f2" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.instagram.com">
-                                <FontAwesomeIcon icon={faInstagram} style={{ color: "#d5ffff" }} size="xl" />
+                                <FontAwesomeIcon icon={faInstagram} style={{ color: "#f2f2f2" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.youtube.com">
-                                <FontAwesomeIcon icon={faYoutube} style={{ color: "#d5ffff" }} size="xl" />
+                                <FontAwesomeIcon icon={faYoutube} style={{ color: "#f2f2f2" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.linkedin.com">
-                                <FontAwesomeIcon icon={faLinkedin} style={{ color: "#d5ffff" }} size="xl" />
+                                <FontAwesomeIcon icon={faLinkedin} style={{ color: "#f2f2f2" }} size="xl" />
                             </a>
                         </li>
                         <li className="ms-3">
                             <a rel="noopener noreferrer nofollow" target="_blank" className="link-dark" href="https://www.threads.net">
-                                <FontAwesomeIcon icon={faThreads} style={{ color: "#d5ffff" }} size="xl" />
+                                <FontAwesomeIcon icon={faThreads} style={{ color: "#f2f2f2" }} size="xl" />
                             </a>
                         </li>
                     </ul>

@@ -54,8 +54,8 @@ const Cafe = () => {
 
   const getButtonClassName = (id) => {
     return selectedCategoryId === id
-      ? "btn btn-outline-secondary active"
-      : "btn btn-outline-secondary";
+      ? "btn btn-outline-dark active"
+      : "btn btn-outline-dark";
   };
 
   function handleCafeItems(selectedFilter) {
