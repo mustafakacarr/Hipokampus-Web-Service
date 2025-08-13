@@ -22,15 +22,16 @@ const UserPanelSidebar = () => {
     return width < 576 ? null : (
         <div
             className="d-flex flex-column flex-shrink-0 px-3 pb-3 h-100 my-2"
-            style={{ minHeight: "600px", paddingTop: "16px" , minWidth: "200px"}}
+            style={{ minHeight: "600px", paddingTop: "16px", minWidth: "200px" }}
         >
             <a
                 href="/"
-                className="d-flex align-items-center mb-3 mb-md-2 me-md-auto text-decoration-none brand-logo"
+                className="d-flex mx-auto align-items-center mb-3 mb-md-2 me-md-auto text-decoration-none brand-logo"
             >
                 <img
+                    className="mx-auto"
                     src="src/assets/images/InWorkLogoAndTextLight.png"
-                    style={{ width: "75%", maxWidth: "220px", maxHeight: "50px"}}
+                    style={{ width: "75%", maxWidth: "220px", maxHeight: "50px" }}
                 />
             </a>
             <ul className="nav nav-pills flex-column mb-auto gap-2 mt-4">
