@@ -1,13 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const CafeOrderKeyValuePairs = ({ order }) => {
+
 
   if (!order || !order.basket || order.basket.length === 0) {
     return <div>No order data yet...</div>;
   }
-  
+    const user= useSelector((state) => state.user.userInfo);
   const pairs = [
-    { "Username": order.username },
+    { "Name": user.firstName + " " + user.lastName },
     {
       Basket: order.basket
         .map((item) => `${item.quantity}x ${item.cafeProductName}`)
