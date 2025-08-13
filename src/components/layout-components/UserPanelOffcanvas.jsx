@@ -11,17 +11,12 @@ import {
     faFaceSmile,
     faLayerGroup,
     faHome,
-    faTag,
-    faClover
+    faTag
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faLinkedin, faThreads, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons"
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 const UserPanelOffcanvas = () => {
-
-    let user = useSelector((state) => state.user.userInfo)
-
     return (
         <div className="user-panel-offcanvas offcanvas offcanvas-start"
             data-bs-scroll="true"
@@ -44,10 +39,7 @@ const UserPanelOffcanvas = () => {
                 <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body border-top scrollbar-hidden mt-0">
-                <label className="fs-5 fw-bold sidebar-welcome pb-3 pt-2 mb-2">
-                    <FontAwesomeIcon icon={faClover} size="lg" className="me-2" />Welcome, {user.username}!
-                </label>
-                <ul className="nav nav-pills flex-column mb-auto gap-2 mt-2">
+                <ul className="nav nav-pills flex-column mb-auto gap-2 mt-3">
                     <li>
                         <NavLink
                             className={(navOption) => (navOption.isActive ? 'user-panel-offcanvas-active' : "user-panel-offcanvas-not-active")}

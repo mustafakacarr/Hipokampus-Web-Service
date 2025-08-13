@@ -11,17 +11,13 @@ import {
     faFaceSmile,
     faHome,
     faTag,
-    faClover,
     faLayerGroup
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import useWindowSize from "../../hooks/useWindowSize";
-import { useSelector } from "react-redux";
 
 const UserPanelSidebar = () => {
     const { width } = useWindowSize()
-
-    let user = useSelector((state) => state.user.userInfo)
 
     return width < 576 ? null : (
         <div
@@ -30,16 +26,13 @@ const UserPanelSidebar = () => {
         >
             <a
                 href="/"
-                className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none brand-logo"
+                className="d-flex align-items-center mb-3 mb-md-2 me-md-auto text-decoration-none brand-logo"
             >
                 <img
                     src="src/assets/images/InWorkLogoAndTextLight.png"
                     style={{ width: "75%", maxWidth: "220px", maxHeight: "50px" }}
                 />
             </a>
-            <label className="fs-5 fw-bold sidebar-welcome py-3 mt-4">
-                <FontAwesomeIcon icon={faClover} size="lg" className="me-2" />Welcome, {user.username}!
-            </label>
             <ul className="nav nav-pills flex-column mb-auto gap-2 mt-4">
                 <li>
                     <NavLink
@@ -54,7 +47,6 @@ const UserPanelSidebar = () => {
                         <span className="ms-2">Dashboard</span>
                     </NavLink>
                 </li>
-
                 <li>
                     <NavLink
                         className={(navOption) =>
